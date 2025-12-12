@@ -3,6 +3,7 @@
 
 \usepackage{D:/Documents/Latex/Latex_Template/NotesTeXV3_test}
 \usepackage{subfiles}
+\usepackage{natbib}
 
 \special{dvipdfmx:config z 0}
 
@@ -18,4 +19,15 @@
 	\maketitle
     \pagestyle{fancynotes}
 	\newpage
+
+\subfile{Literature_review/Chapter_0.tex}
+
+\newpage
+\subfile{Chapter1_SQG/Chapter1.tex}
+
+
+\vfill
+\bibliographystyle{abbrvnat}
+\bibliography{citation}
+
 \end{document}

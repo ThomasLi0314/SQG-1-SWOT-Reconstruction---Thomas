@@ -1,10 +1,10 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.10.2)  10 DEC 2025 21:48
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.10.2)  12 DEC 2025 13:41
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**d:/Documents/College/Research/Oceangrophy/Shafer_Project/Notes/SQG-1-SWOT-Reconstruction---Thomas/SQG_notes/Chapter1_SQG/Chapter1
-(d:/Documents/College/Research/Oceangrophy/Shafer_Project/Notes/SQG-1-SWOT-Reconstruction---Thomas/SQG_notes/Chapter1_SQG/Chapter1.tex
+**d:/Documents/College/Research/Oceangrophy/Shafer_Project/Notes/SQG-1-SWOT-Reconstruction---Thomas/SQG_notes/Literature_review/Chapter_0
+(d:/Documents/College/Research/Oceangrophy/Shafer_Project/Notes/SQG-1-SWOT-Reconstruction---Thomas/SQG_notes/Literature_review/Chapter_0.tex
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
 (d:/Program Files/texlive/2024/texmf-dist/tex/latex/subfiles/subfiles.cls
@@ -945,8 +945,8 @@ Package: titlesec 2023/10/27 v2.16 Sectioning titles
 \titlewidthfirst=\dimen340
 )) (d:/Program Files/texlive/2024/texmf-dist/tex/latex/subfiles/subfiles.sty
 Package: subfiles 2020/11/14 v2.2 Multi-file projects (package)
-) (d:/Documents/Latex/Latex_Template/Custom_Commands.tex))) (./Chapter1.aux)
-\openout1 = `Chapter1.aux'.
+) (d:/Documents/Latex/Latex_Template/Custom_Commands.tex))) (./Chapter_0.aux)
+\openout1 = `Chapter_0.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 3.
 LaTeX Font Info:    ... okay on input line 3.
@@ -973,9 +973,9 @@ LaTeX Font Info:    ... okay on input line 3.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 3.
 LaTeX Font Info:    ... okay on input line 3.
 Package hyperref Info: Link coloring ON on input line 3.
- (./Chapter1.out) (./Chapter1.out)
+ (./Chapter_0.out) (./Chapter_0.out)
 \@outlinefile=\write4
-\openout4 = `Chapter1.out'.
+\openout4 = `Chapter_0.out'.
 
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: changepage package is loaded.
@@ -1030,23 +1030,30 @@ Package: pdflscape-nometadata 2022-10-28 v0.13 Display of landscape pages in PDF
 Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
 )
 Package pdflscape Info: Auto-detected driver: dvipdfm (xetex) on input line 98.
-)) [1
+))
 
-] (./Chapter1.aux)
+Package natbib Warning: Citation `DuEtAl_24' on page 1 undefined on input line 7.
+
+
+Package natbib Warning: There were undefined citations.
+
+[1
+
+] (./Chapter_0.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
-Package rerunfilecheck Info: File `Chapter1.out' has not changed.
-(rerunfilecheck)             Checksum: DCED223A570A63E659E05856503F28A7;214.
+Package rerunfilecheck Info: File `Chapter_0.out' has not changed.
+(rerunfilecheck)             Checksum: A35233670D558EB7CFC419C1ED2FA7F4;274.
  ) 
 Here is how much of TeX's memory you used:
- 32951 strings out of 474773
- 644677 string characters out of 5755059
+ 32959 strings out of 474773
+ 644825 string characters out of 5755059
  1921842 words of memory out of 5000000
- 54535 multiletter control sequences out of 15000+600000
- 576986 words of font info for 46 fonts, out of 8000000 for 9000
+ 54542 multiletter control sequences out of 15000+600000
+ 585978 words of font info for 49 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 136i,11n,138p,662b,332s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 136i,11n,138p,668b,332s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on Chapter1.pdf (1 page).
+Output written on Chapter_0.pdf (1 page).
