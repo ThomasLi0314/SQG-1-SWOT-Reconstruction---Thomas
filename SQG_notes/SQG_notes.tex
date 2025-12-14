@@ -4,10 +4,13 @@
 \usepackage{D:/Documents/Latex/Latex_Template/NotesTeXV3_test}
 \usepackage{subfiles}
 \usepackage{natbib}
+\usepackage{booktabs} % For professional table rules (lines)
+\usepackage{ltablex}
 
 \special{dvipdfmx:config z 0}
 
-\input{D://Documents/Latex/Latex_Template/Custom_Commands.tex}
+\input{D:/Documents/Latex/Latex_Template/Custom_Commands.tex}
+\input{../SQG_commands.tex}
 
 \begin{document}
     \title{{Lecture Notes on Surface Quasi-Geostrophic}\\{\normalsize{\itshape Academic Semester: Fall 2025}}}
@@ -20,6 +23,63 @@
     \pagestyle{fancynotes}
 	\newpage
 
+\begin{tabularx}{\textwidth}{@{} c X c X @{}} 
+
+% --- Header ---
+\caption{Glossary of Variables and Operators}\\
+\toprule
+\multicolumn{2}{c}{\textbf{Variables and Operators}} & \multicolumn{2}{c}{\textbf{}} \\
+\cmidrule(r){1-2} \cmidrule(l){3-4}
+\textbf{Symbol} & \textbf{Variable and Operators} & \textbf{Symbol} & \textbf{Description} \\
+\midrule
+\endfirsthead
+
+% --- Header for Subsequent Pages (if it spans multiple pages) ---
+\toprule
+\multicolumn{2}{c}{\textbf{Group 1 (Cont.)}} & \multicolumn{2}{c}{\textbf{Group 2 (Cont.)}} \\
+\cmidrule(r){1-2} \cmidrule(l){3-4}
+\textbf{Symbol} & \textbf{Description} & \textbf{Symbol} & \textbf{Description} \\
+\midrule
+\endhead
+
+% --- Footer ---
+\bottomrule
+\multicolumn{4}{r}{\textit{Continued on next page...}} \\
+\endfoot
+\bottomrule
+\endlastfoot
+
+% --- CONTENT ROWS ---
+% Use & to separate columns and \\ to end the row.
+
+$\mathbf{v}(x,y,z,t)$          & Full 3-dimensional Velocity & $\nabla$ & 2D Gradient Operator 
+               \\ 
+\addlinespace[10pt] % Adds vertical space between rows
+
+        $\mathbf{u}(x,y,z,t)$& 2-dimensional velocity, in $x$ and $y$ direction& $\nabla_3$  
+       &  3D Gradient  \\ 
+\addlinespace[10pt]
+
+ & & & \\
+\addlinespace[10pt]
+
+&&& \\
+\addlinespace[10pt]
+
+&&& \\
+\addlinespace[10pt]
+
+&&& \\
+\addlinespace[10pt]
+
+&&& \\
+\addlinespace[10pt]
+
+% ... Add more rows here ...
+
+\end{tabularx}
+
+\newpage
 \subfile{Literature_review/Chapter_0.tex}
 
 \newpage

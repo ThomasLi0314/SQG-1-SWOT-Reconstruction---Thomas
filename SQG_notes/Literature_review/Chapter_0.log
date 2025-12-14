@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.10.2)  12 DEC 2025 13:41
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.10.2)  14 DEC 2025 10:26
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -945,7 +945,27 @@ Package: titlesec 2023/10/27 v2.16 Sectioning titles
 \titlewidthfirst=\dimen340
 )) (d:/Program Files/texlive/2024/texmf-dist/tex/latex/subfiles/subfiles.sty
 Package: subfiles 2020/11/14 v2.2 Multi-file projects (package)
-) (d:/Documents/Latex/Latex_Template/Custom_Commands.tex))) (./Chapter_0.aux)
+) (d:/Program Files/texlive/2024/texmf-dist/tex/latex/ltablex/ltablex.sty
+Package: ltablex 2014/08/13 v1.1 Modified tabularx
+ (d:/Program Files/texlive/2024/texmf-dist/tex/latex/tools/longtable.sty
+Package: longtable 2023-11-01 v4.19 Multi-page Table package (DPC)
+\LTleft=\skip83
+\LTright=\skip84
+\LTpre=\skip85
+\LTpost=\skip86
+\LTchunksize=\count383
+\LTcapwidth=\dimen341
+\LT@head=\box142
+\LT@firsthead=\box143
+\LT@foot=\box144
+\LT@lastfoot=\box145
+\LT@gbox=\box146
+\LT@cols=\count384
+\LT@rows=\count385
+\c@LT@tables=\count386
+\c@LT@chunks=\count387
+\LT@p@ftn=\toks63
+)) (d:/Documents/Latex/Latex_Template/Custom_Commands.tex) (../../SQG_commands.tex))) (./Chapter_0.aux)
 \openout1 = `Chapter_0.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 3.
@@ -979,13 +999,17 @@ Package hyperref Info: Link coloring ON on input line 3.
 
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: changepage package is loaded.
-\caption@adjustwidth@hsize=\dimen341
-\caption@adjustwidth@linewidth=\dimen342
+\caption@adjustwidth@hsize=\dimen342
+\caption@adjustwidth@linewidth=\dimen343
 Package caption Info: float package is loaded.
 Package caption Info: listings package is loaded.
+Package caption Info: longtable package is loaded.
+ (d:/Program Files/texlive/2024/texmf-dist/tex/latex/caption/ltcaption.sty
+Package: ltcaption 2021/01/08 v1.4c longtable captions (AR)
+)
 Package caption Info: wrapfig package is loaded.
 Package caption Info: End \AtBeginDocument code.
-\@sidenotes@extrawidth=\skip83
+\@sidenotes@extrawidth=\skip87
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
@@ -1021,7 +1045,7 @@ Package caption Info: End \AtBeginDocument code.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-\c@lstlisting=\count383
+\c@lstlisting=\count388
 (d:/Program Files/texlive/2024/texmf-dist/tex/latex/pdflscape/pdflscape.sty
 Package: pdflscape 2022-10-27 v0.13 Display of landscape pages in PDF
  (d:/Program Files/texlive/2024/texmf-dist/tex/latex/pdflscape/pdflscape-nometadata.sty
@@ -1031,29 +1055,87 @@ Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
 )
 Package pdflscape Info: Auto-detected driver: dvipdfm (xetex) on input line 98.
 ))
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 8.
+ (d:/Program Files/texlive/2024/texmf-dist/tex/latex/lm/ot1lmr.fd
+File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 8.
+ (d:/Program Files/texlive/2024/texmf-dist/tex/latex/lm/omllmm.fd
+File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 8.
+ (d:/Program Files/texlive/2024/texmf-dist/tex/latex/lm/omslmsy.fd
+File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 8.
+ (d:/Program Files/texlive/2024/texmf-dist/tex/latex/lm/omxlmex.fd
+File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10> on input line 8.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <7> on input line 8.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <5> on input line 8.
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 8.
+ (d:/Program Files/texlive/2024/texmf-dist/tex/latex/jknapltx/ursfs.fd
+File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
+)
+LaTeX Font Info:    Trying to load font information for U+msa on input line 8.
+ (d:/Program Files/texlive/2024/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 8.
+ (d:/Program Files/texlive/2024/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+Overfull \hbox (3.49998pt too wide) in paragraph at lines 8--8
+\T1/lmr/m/n/10 prox-i-ma-tion. It es-sen-tially re-fines the QG equa-tions by ac-count-ing for non-geostrophic (ageostrophic)
+ []
 
-Package natbib Warning: Citation `DuEtAl_24' on page 1 undefined on input line 7.
+Package marginnote Info: Margin note 1.1 is on absolute page 1 on input line 10.
+Package marginnote Info: right page because not two side mode on input line 10.
+Package marginnote Info: xpos seems to be 325.58891pt on input line 10.
+Package marginnote Info: Margin note 1.2 is on absolute page 1 on input line 14.
+Package marginnote Info: right page because not two side mode on input line 14.
+Package marginnote Info: xpos seems to be 311.39151pt on input line 14.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <8> on input line 14.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <6> on input line 14.
+Package marginnote Info: Margin note 1.3 is on absolute page 1 on input line 28.
+Package marginnote Info: right page because not two side mode on input line 28.
+Package marginnote Info: xpos seems to be 228.13113pt on input line 28.
+Package marginnote Info: Margin note 1.4 is on absolute page 1 on input line 33.
+Package marginnote Info: right page because not two side mode on input line 33.
+Package marginnote Info: xpos seems to be 204.28085pt on input line 33.
 
+LaTeX Warning: Reference `sec:QGone model' on page 1 undefined on input line 35.
 
-Package natbib Warning: There were undefined citations.
-
+Package marginnote Info: Margin note 1.5 is on absolute page 2 on input line 40.
+Package marginnote Info: right page because not two side mode on input line 40.
+Package marginnote Info: xpos seems to be 455.587pt on input line 40.
 [1
 
-] (./Chapter_0.aux)
+] [2] (./Chapter_0.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
+
+
+LaTeX Warning: There were undefined references.
+
 Package rerunfilecheck Info: File `Chapter_0.out' has not changed.
-(rerunfilecheck)             Checksum: A35233670D558EB7CFC419C1ED2FA7F4;274.
+(rerunfilecheck)             Checksum: 8045C92E486AD5D891D5A19A68F7808C;662.
  ) 
 Here is how much of TeX's memory you used:
- 32959 strings out of 474773
- 644825 string characters out of 5755059
- 1921842 words of memory out of 5000000
- 54542 multiletter control sequences out of 15000+600000
- 585978 words of font info for 49 fonts, out of 8000000 for 9000
+ 33344 strings out of 474773
+ 651985 string characters out of 5755059
+ 1936842 words of memory out of 5000000
+ 54853 multiletter control sequences out of 15000+600000
+ 639927 words of font info for 100 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 136i,11n,138p,668b,332s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 136i,13n,138p,752b,426s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on Chapter_0.pdf (1 page).
+Output written on Chapter_0.pdf (2 pages).
