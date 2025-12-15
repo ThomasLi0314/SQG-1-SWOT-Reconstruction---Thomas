@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.10.2)  13 DEC 2025 23:58
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.10.2)  14 DEC 2025 23:14
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1168,19 +1168,19 @@ Package marginnote Info: right page because not two side mode on input line 40.
 Package marginnote Info: xpos seems to be 455.587pt on input line 40.
 [2]) [3] (./Chapter1_SQG/Chapter1.tex
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <14.4> on input line 7.
+(Font)              <14.4> on input line 15.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 7.
+(hyperref)                removing `math shift' on input line 15.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 7.
+(hyperref)                removing `superscript' on input line 15.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 7.
+(hyperref)                removing `math shift' on input line 15.
 
 )
 No file SQG_notes.bbl.
@@ -1190,13 +1190,13 @@ LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
 Package rerunfilecheck Info: File `SQG_notes.out' has not changed.
-(rerunfilecheck)             Checksum: 9D3C7DAB7BC1E08756C35B7D7CAA3C29;972.
+(rerunfilecheck)             Checksum: CBE8A06CA2BD8E5771DCB791689952C1;1308.
  ) 
 Here is how much of TeX's memory you used:
- 33453 strings out of 474773
- 653748 string characters out of 5755059
+ 33454 strings out of 474773
+ 653759 string characters out of 5755059
  1931842 words of memory out of 5000000
- 54938 multiletter control sequences out of 15000+600000
+ 54939 multiletter control sequences out of 15000+600000
  686406 words of font info for 123 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  116i,15n,121p,776b,573s stack positions out of 10000i,1000n,20000p,200000b,200000s

@@ -1,8 +1,107 @@
 \documentclass[../SQG_notes.tex]{subfiles}
 
 \begin{document}
+    \section{Quasi-Geostrophic Equations}
+    In this section, I introduce some basic equations in QG theories. Building a foundation for SQG, eSQG and other variations introduced later. The analysis is already in a \textbf{stratified ocean}. 
+    \subsection{Governing Equations}
+    Momentum Equation
+    \begin{equation}
+        \frac{\D \mathbf{u}}{\D t} + \mathbf{f} \times \mathbf{u} = -\frac{\nabla p}{\rho} \label{momentum equation}
+    \end{equation}
+    Mass Conservation 
+    \begin{equation}
+        \frac{\D \rho}{\D t} + \rho \nabla \cdot \mathbf{v} = 0
+    \end{equation}
+    We are in a \textbf{stratified ocean}. Breaking the total state variables into a "hydrostatic reference state" (which depends only on $z$) and a "dynamic perturbation" (which moves the fluid): 
+    
+    \begin{equation}
+        \rho = \tilde{\rho}(z) + \rho_1(x,y,z,t) \label{stratified density}
+    \end{equation}
+    and 
+    \begin{equation}
+        p = p_0(z) + p_1(x,y,z,t) \label{stratifies pressure}
+    \end{equation}
+    Then RHS of Eq \ref{momentum equation} becomes 
+    \[ -\frac{1}{\rho} \nabla p_1 \sim -\frac{1}{\rho_0}\nabla p_1\]
+    Define the \textbf{Kinematic Presure}
+    \begin{equation}
+        \phi = \frac{p_1}{\rho_0}
+    \end{equation}
+    Momentum Equation becomes 
+    \begin{equation}
+        \boxed{\frac{\mathrm{D} \mathbf{u}}{\mathrm{D} t}+\mathbf{f} \times \mathbf{u} = -\nabla \phi} \label{momentum equation}
+    \end{equation}
+    Hydrostatic balance is a state of equilibrium in a fluid where the upward force of pressure exactly balances the downward force of gravity.
+    \begin{equation}
+        -g\tilde{\rho} = \frac{\dr p_0}{\dr z} \label{hydrostatic balance}
+    \end{equation}
+    In Ocean, we assume the velocity field is divergent free. THen the mass conservation yeilds
+    \[ \frac{\p \rho_1}{\p t} + \nabla \cdot ((\tilde{\rho} + \rho_1)\mathbf{v}) = 0 \qrq \boxed{\nabla \cdot (\tilde{\rho}\mathbf{v}) = 0} \]
+    \begin{remark}
+        Here we drop the $\p_t \rho_1$ term under the \textbf{Anelastic assumption}. Essentially by eliminating this partial derivative, we assume the fluid is anelastic, so sound wave is not supported \mn{or less important} in the system. 
+    \end{remark}
+    Next we define the Buoyancy :
+    \begin{equation}
+        b = -g\frac{\rho}{\bar{\rho}_0} \label{Buoyancy}
+    \end{equation}
+    Here $\brho$ is a constant reference density. The the divergent free condition implies 
+    \begin{equation}
+        \boxed{\frac{\D b}{\D t} = 0} \label{Buoyancy equation}
+    \end{equation}
+    And thus the Hydrostatic balance equation Eq \ref{hydrostatic balance} implies 
+    \begin{equation}
+        \boxed{\frac{\p \phi}{\p z} = b}
+    \end{equation}
+    All the Boxed Equation together is the \textbf{Hydrostatic Anelastic Equations for Stratified Flow}. If we consider the perturbation of Buoyancy 
+    \[ b = \tilde{b}(z) + b_1(x,y,z,t)\]
+    Expand Eq \ref{Buoyancy equation} can be writen as 
+    \begin{equation}
+        \boxed{\frac{\D b_1}{\D t} + w \frac{\dr b}{\dr z} = 0} \mn{this is the more familiar buoyancy equation we see in lecture}
+    \end{equation}
+    In a more familiar form we define 
+    \[ N^2 = \frac{\dr b}{\dr z} = -g \frac{\tilde{\rho}_z}{\brho}\]
+    Which is the \textbf{Brunt Vasala Frequency}.
+
+    \subsection{Scaling Analysis}
+    To simplify our equation, we introduce some scalings. 
+    \[
+    (x, y) \sim L, \quad(u, v) \sim U, \quad t \sim \frac{L}{U}, \quad z \sim H, \quad f \sim f_0
+    \]
+    Introduce the \textbf{Rosbby Number}:
+    \begin{equation}
+        \text{Ro} = \frac{U}{f_0 L}
+    \end{equation}
+    Now let $\phi = \tilde{\phi}(z) + \phi_1(x,y,z,t)$. Then since the gradient in Eq \ref{momentum equation} is horizontal, we can replace $\phi$ by $\phi_1$. Now suppose  
+    \[
+    |\mathbf{f} \times \mathbf{u}| \sim\left|\nabla \phi_1\right|
+    \]
+    From Hydrostatic balance we have 
+    \[ b \sim \frac{f_0 UL}{H}\]
+    Then 
+    \[
+    \frac{\left(\partial b^{\prime} / \partial z\right)}{N^2} \sim R o \frac{L^2}{L_d^2}
+    \]
+    Where we have the deformation radius as a function of $z$. 
+    \[ L_d = \frac{NL}{f_0}\]
+    Introduce dimensionless variables
+    \[
+(\widehat{u}, \widehat{v})=U^{-1}(u, v) \quad \widehat{w}=\frac{L}{U H} w, \quad \widehat{f}=f_0^{-1} f, \quad \widehat{\phi}=\frac{\phi^{\prime}}{f_0 U L}, \quad \widehat{b}=\frac{H}{f_0 U L} b^{\prime}
+    \]
+    \begin{remark}
+    We then have dimensionless equation of motion for Anelastic Assumption \mn{often people drop the hat for simplicity. However in the first derivation I keep everything with a hat.}
+        \begin{align}
+            \text{Momentum Equation} :\quad & \Ro \frac{\D \widehat{\mathbf{u}}}{\D t} + \hatf \times \hatu = -\nabla \hatphi \\
+            \text{Buoyancy Equation} :\quad& \Ro \frac{\D \widehat{b}}{\D t} + \left(\frac{L_d}{L}\right)^2 \widehat{w} = 0 \\
+            \text{Hydrostatic Balance}:\quad & \frac{\p \hatphi}{\p \widehat{z}} = \widehat{b} \\
+            \text{Continuity} :\quad& \widehat{\nabla} \cdot \hatu + \frac{1}{\tilde{\rho}} \frac{\p \tilde{\rho} \widehat{w}}{\p \widehat{z}} = 0
+        \end{align}
+    \end{remark}
+    \subsection{Quasi-Geostrophic Potential Vorticity Equation}
+
+
     \section{Surface Quasi-Geostrophic Balance}
-    I did some modification.
+    
+
 
     \section{$\QGone$ Model}
 

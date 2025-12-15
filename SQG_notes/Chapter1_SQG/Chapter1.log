@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.10.2)  10 DEC 2025 21:48
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.10.2)  15 DEC 2025 02:50
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -909,27 +909,28 @@ Package: ulem 2019/11/18
 \c@solution=\count367
 \c@problem=\count368
 \c@property=\count369
-\c@definition=\count370
-\c@corollary=\count371
-\c@lemma=\count372
-\c@proposition=\count373
-\c@explanation=\count374
-\c@fact=\count375
-\c@remark=\count376
-\c@reminder=\count377
-\c@result=\count378
-\c@intu=\count379
-\c@solu=\count380
-\c@example=\count381
+\c@equations=\count370
+\c@definition=\count371
+\c@corollary=\count372
+\c@lemma=\count373
+\c@proposition=\count374
+\c@explanation=\count375
+\c@fact=\count376
+\c@remark=\count377
+\c@reminder=\count378
+\c@result=\count379
+\c@intu=\count380
+\c@solu=\count381
+\c@example=\count382
  (d:/Program Files/texlive/2024/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2024/02/21 1.10 listings language file
 )
 \auth@toks=\toks59
 \affil@toks=\toks60
 \email@toks=\toks61
-\c@email@counter=\count382
+\c@email@counter=\count383
 \affiliationsSep=\skip80
-LaTeX Font Info:    Trying to load font information for OT1+phv on input line 759.
+LaTeX Font Info:    Trying to load font information for OT1+phv on input line 776.
  (d:/Program Files/texlive/2024/texmf-dist/tex/latex/psnfss/ot1phv.fd
 File: ot1phv.fd 2020/03/25 scalable font definitions for OT1/phv.
 ) (d:/Program Files/texlive/2024/texmf-dist/tex/latex/titlesec/titlesec.sty
@@ -945,7 +946,31 @@ Package: titlesec 2023/10/27 v2.16 Sectioning titles
 \titlewidthfirst=\dimen340
 )) (d:/Program Files/texlive/2024/texmf-dist/tex/latex/subfiles/subfiles.sty
 Package: subfiles 2020/11/14 v2.2 Multi-file projects (package)
-) (d:/Documents/Latex/Latex_Template/Custom_Commands.tex))) (./Chapter1.aux)
+) (d:/Program Files/texlive/2024/texmf-dist/tex/latex/ltablex/ltablex.sty
+Package: ltablex 2014/08/13 v1.1 Modified tabularx
+ (d:/Program Files/texlive/2024/texmf-dist/tex/latex/tools/longtable.sty
+Package: longtable 2023-11-01 v4.19 Multi-page Table package (DPC)
+\LTleft=\skip83
+\LTright=\skip84
+\LTpre=\skip85
+\LTpost=\skip86
+\LTchunksize=\count384
+\LTcapwidth=\dimen341
+\LT@head=\box142
+\LT@firsthead=\box143
+\LT@foot=\box144
+\LT@lastfoot=\box145
+\LT@gbox=\box146
+\LT@cols=\count385
+\LT@rows=\count386
+\c@LT@tables=\count387
+\c@LT@chunks=\count388
+\LT@p@ftn=\toks63
+)) (d:/Documents/Latex/Latex_Template/Custom_Commands.tex) (../../SQG_commands.tex))) (./Chapter1.aux
+
+LaTeX Warning: Label `momentum equation' multiply defined.
+
+)
 \openout1 = `Chapter1.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 3.
@@ -979,13 +1004,17 @@ Package hyperref Info: Link coloring ON on input line 3.
 
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: changepage package is loaded.
-\caption@adjustwidth@hsize=\dimen341
-\caption@adjustwidth@linewidth=\dimen342
+\caption@adjustwidth@hsize=\dimen342
+\caption@adjustwidth@linewidth=\dimen343
 Package caption Info: float package is loaded.
 Package caption Info: listings package is loaded.
+Package caption Info: longtable package is loaded.
+ (d:/Program Files/texlive/2024/texmf-dist/tex/latex/caption/ltcaption.sty
+Package: ltcaption 2021/01/08 v1.4c longtable captions (AR)
+)
 Package caption Info: wrapfig package is loaded.
 Package caption Info: End \AtBeginDocument code.
-\@sidenotes@extrawidth=\skip83
+\@sidenotes@extrawidth=\skip87
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
@@ -1021,7 +1050,7 @@ Package caption Info: End \AtBeginDocument code.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-\c@lstlisting=\count383
+\c@lstlisting=\count389
 (d:/Program Files/texlive/2024/texmf-dist/tex/latex/pdflscape/pdflscape.sty
 Package: pdflscape 2022-10-27 v0.13 Display of landscape pages in PDF
  (d:/Program Files/texlive/2024/texmf-dist/tex/latex/pdflscape/pdflscape-nometadata.sty
@@ -1030,23 +1059,93 @@ Package: pdflscape-nometadata 2022-10-28 v0.13 Display of landscape pages in PDF
 Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
 )
 Package pdflscape Info: Auto-detected driver: dvipdfm (xetex) on input line 98.
-)) [1
+))
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 8.
+ (d:/Program Files/texlive/2024/texmf-dist/tex/latex/lm/ot1lmr.fd
+File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 8.
+ (d:/Program Files/texlive/2024/texmf-dist/tex/latex/lm/omllmm.fd
+File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 8.
+ (d:/Program Files/texlive/2024/texmf-dist/tex/latex/lm/omslmsy.fd
+File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 8.
+ (d:/Program Files/texlive/2024/texmf-dist/tex/latex/lm/omxlmex.fd
+File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10> on input line 8.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <7> on input line 8.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <5> on input line 8.
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 8.
+ (d:/Program Files/texlive/2024/texmf-dist/tex/latex/jknapltx/ursfs.fd
+File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
+)
+LaTeX Font Info:    Trying to load font information for U+msa on input line 8.
+ (d:/Program Files/texlive/2024/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 8.
+ (d:/Program Files/texlive/2024/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Trying to load font information for T1+lmss on input line 41.
+ (d:/Program Files/texlive/2024/texmf-dist/tex/latex/lm/t1lmss.fd
+File: t1lmss.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+Package hyperref Info: bookmark level for unknown remark defaults to 0 on input line 41.
+Package marginnote Info: Margin note 1.1 is on absolute page 1 on input line 41.
+Package marginnote Info: right page because not two side mode on input line 41.
+Package marginnote Info: xpos seems to be 425.2758pt on input line 41.
+ [1
 
-] (./Chapter1.aux)
+]
+Package marginnote Info: Margin note 2.1 is on absolute page 2 on input line 59.
+Package marginnote Info: right page because not two side mode on input line 59.
+Package marginnote Info: xpos seems to be 323.14133pt on input line 59.
+Package marginnote Info: Margin note 2.2 is on absolute page 3 on input line 91.
+Package marginnote Info: right page because not two side mode on input line 91.
+Package marginnote Info: xpos seems to be 397.97527pt on input line 91.
+ [2]
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <14.4> on input line 106.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 106.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `superscript' on input line 106.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 106.
+
+[3] (./Chapter1.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
+
+
+LaTeX Warning: There were multiply-defined labels.
+
 Package rerunfilecheck Info: File `Chapter1.out' has not changed.
-(rerunfilecheck)             Checksum: DCED223A570A63E659E05856503F28A7;214.
+(rerunfilecheck)             Checksum: 90FCFC5FE407B9355F9AE823ACBBB6B5;1082.
  ) 
 Here is how much of TeX's memory you used:
- 32951 strings out of 474773
- 644677 string characters out of 5755059
- 1921842 words of memory out of 5000000
- 54535 multiletter control sequences out of 15000+600000
- 576986 words of font info for 46 fonts, out of 8000000 for 9000
+ 33487 strings out of 474773
+ 655449 string characters out of 5755059
+ 1935842 words of memory out of 5000000
+ 54996 multiletter control sequences out of 15000+600000
+ 646392 words of font info for 95 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 136i,11n,138p,662b,332s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 136i,15n,138p,662b,924s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on Chapter1.pdf (1 page).
+Output written on Chapter1.pdf (3 pages).
