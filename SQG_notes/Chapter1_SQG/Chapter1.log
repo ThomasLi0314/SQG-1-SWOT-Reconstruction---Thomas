@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.10.2)  15 DEC 2025 02:50
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.10.2)  15 DEC 2025 15:02
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1112,22 +1112,50 @@ Package marginnote Info: Margin note 2.2 is on absolute page 3 on input line 91.
 Package marginnote Info: right page because not two side mode on input line 91.
 Package marginnote Info: xpos seems to be 397.97527pt on input line 91.
  [2]
+Package marginnote Info: Margin note 3.1 is on absolute page 3 on input line 101.
+Package marginnote Info: right page because not two side mode on input line 101.
+Package marginnote Info: xpos seems to be 122.44785pt on input line 101.
+ [3]
+Package marginnote Info: right page because not two side mode on input line 145.
+Package marginnote Info: xpos seems to be \@mn@currxpos  on input line 145.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <14.4> on input line 106.
+(Font)              <8> on input line 145.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <6> on input line 145.
+Package marginnote Info: Margin note 4.2 is on absolute page 4 on input line 145.
+Package marginnote Info: right page because not two side mode on input line 145.
+Package marginnote Info: xpos seems to be 305.00108pt on input line 145.
+Package marginnote Info: Margin note 4.3 is on absolute page 4 on input line 146.
+Package marginnote Info: right page because not two side mode on input line 146.
+Package marginnote Info: xpos seems to be 121.80933pt on input line 146.
+Package marginnote Info: Margin note 4.4 is on absolute page 4 on input line 148.
+Package marginnote Info: right page because not two side mode on input line 148.
+Package marginnote Info: xpos seems to be 297.06007pt on input line 148.
+ [4]
+Package hyperref Info: bookmark level for unknown explanation defaults to 0 on input line 182.
+ [5]
+Package marginnote Info: Margin note 6.1 is on absolute page 6 on input line 201.
+Package marginnote Info: right page because not two side mode on input line 201.
+Package marginnote Info: xpos seems to be 390.81023pt on input line 201.
+Package marginnote Info: Margin note 6.2 is on absolute page 6 on input line 205.
+Package marginnote Info: right page because not two side mode on input line 205.
+Package marginnote Info: xpos seems to be 167.14256pt on input line 205.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <14.4> on input line 209.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 106.
+(hyperref)                removing `math shift' on input line 209.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 106.
+(hyperref)                removing `superscript' on input line 209.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 106.
+(hyperref)                removing `math shift' on input line 209.
 
-[3] (./Chapter1.aux)
+[6] (./Chapter1.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
@@ -1136,16 +1164,22 @@ L3 programming layer <2024-02-20>
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package rerunfilecheck Info: File `Chapter1.out' has not changed.
-(rerunfilecheck)             Checksum: 90FCFC5FE407B9355F9AE823ACBBB6B5;1082.
+
+Package rerunfilecheck Warning: File `Chapter1.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `Chapter1.out':
+(rerunfilecheck)             Before: 47C22E8AD5D9DB2856533DEDF78A8CED;1092
+(rerunfilecheck)             After:  E742CAB9535319E2BCADCB9268723284;1323.
  ) 
 Here is how much of TeX's memory you used:
- 33487 strings out of 474773
- 655449 string characters out of 5755059
- 1935842 words of memory out of 5000000
- 54996 multiletter control sequences out of 15000+600000
- 646392 words of font info for 95 fonts, out of 8000000 for 9000
+ 33553 strings out of 474773
+ 656534 string characters out of 5755059
+ 1936842 words of memory out of 5000000
+ 55054 multiletter control sequences out of 15000+600000
+ 661937 words of font info for 113 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 136i,15n,138p,662b,924s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 136i,20n,138p,662b,1015s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on Chapter1.pdf (3 pages).
+Output written on Chapter1.pdf (6 pages).

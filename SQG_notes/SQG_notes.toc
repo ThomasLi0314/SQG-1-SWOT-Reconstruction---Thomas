@@ -3,5 +3,8 @@
 \contentsline {subsection}{\numberline {1.2}J.Wang et.al. Reconstructing the Ocean's Interior from Surface Data}{3}{subsection.1.2}%
 \contentsline {section}{\numberline {2}Quasi-Geostrophic Equations}{4}{section.2}%
 \contentsline {subsection}{\numberline {2.1}Governing Equations}{4}{subsection.2.1}%
-\contentsline {section}{\numberline {3}Surface Quasi-Geostrophic Balance}{4}{section.3}%
-\contentsline {section}{\numberline {4}$\text {QG}^{+1}$ Model}{4}{section.4}%
+\contentsline {subsection}{\numberline {2.2}Scaling Analysis}{5}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Quasi-Geostrophic Potential Vorticity Equation}{6}{subsection.2.3}%
+\contentsline {section}{\numberline {3}Surface Quasi-Geostrophic Equations}{9}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Surface Buoyancy Induced Dynamics}{10}{subsection.3.1}%
+\contentsline {section}{\numberline {4}$\text {QG}^{+1}$ Model}{10}{section.4}%
