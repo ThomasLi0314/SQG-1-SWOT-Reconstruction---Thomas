@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.10.2)  15 DEC 2025 15:02
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.10.2)  22 DEC 2025 23:55
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -900,6 +900,8 @@ LaTeX Font Info:    Overwriting math alphabet `\mathbbmss' in version `bold'
 \ULC@box=\box140
 Package: ulem 2019/11/18
 \ULdepth=\dimen335
+) (d:/Program Files/texlive/2024/texmf-dist/tex/latex/cancel/cancel.sty
+Package: cancel 2013/04/12 v2.2 Cancel math terms
 )
 \myoddoffset=\skip78
 \spacelength=\skip79
@@ -930,7 +932,7 @@ File: lstlang1.sty 2024/02/21 1.10 listings language file
 \email@toks=\toks61
 \c@email@counter=\count383
 \affiliationsSep=\skip80
-LaTeX Font Info:    Trying to load font information for OT1+phv on input line 776.
+LaTeX Font Info:    Trying to load font information for OT1+phv on input line 778.
  (d:/Program Files/texlive/2024/texmf-dist/tex/latex/psnfss/ot1phv.fd
 File: ot1phv.fd 2020/03/25 scalable font definitions for OT1/phv.
 ) (d:/Program Files/texlive/2024/texmf-dist/tex/latex/titlesec/titlesec.sty
@@ -1094,68 +1096,60 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 8.
  (d:/Program Files/texlive/2024/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for T1+lmss on input line 41.
+LaTeX Font Info:    Trying to load font information for T1+lmss on input line 47.
  (d:/Program Files/texlive/2024/texmf-dist/tex/latex/lm/t1lmss.fd
 File: t1lmss.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-Package hyperref Info: bookmark level for unknown remark defaults to 0 on input line 41.
-Package marginnote Info: Margin note 1.1 is on absolute page 1 on input line 41.
-Package marginnote Info: right page because not two side mode on input line 41.
-Package marginnote Info: xpos seems to be 425.2758pt on input line 41.
+Package hyperref Info: bookmark level for unknown remark defaults to 0 on input line 47.
+Package marginnote Info: Margin note 1.1 is on absolute page 2 on input line 47.
+Package marginnote Info: right page because not two side mode on input line 47.
+Package marginnote Info: xpos seems to be 425.2758pt on input line 47.
  [1
 
 ]
-Package marginnote Info: Margin note 2.1 is on absolute page 2 on input line 59.
-Package marginnote Info: right page because not two side mode on input line 59.
-Package marginnote Info: xpos seems to be 323.14133pt on input line 59.
-Package marginnote Info: Margin note 2.2 is on absolute page 3 on input line 91.
-Package marginnote Info: right page because not two side mode on input line 91.
-Package marginnote Info: xpos seems to be 397.97527pt on input line 91.
+Package marginnote Info: Margin note 2.1 is on absolute page 2 on input line 66.
+Package marginnote Info: right page because not two side mode on input line 66.
+Package marginnote Info: xpos seems to be 323.14133pt on input line 66.
  [2]
-Package marginnote Info: Margin note 3.1 is on absolute page 3 on input line 101.
-Package marginnote Info: right page because not two side mode on input line 101.
-Package marginnote Info: xpos seems to be 122.44785pt on input line 101.
+Package marginnote Info: Margin note 3.1 is on absolute page 3 on input line 98.
+Package marginnote Info: right page because not two side mode on input line 98.
+Package marginnote Info: xpos seems to be 401.25327pt on input line 98.
+Package marginnote Info: Margin note 3.2 is on absolute page 3 on input line 109.
+Package marginnote Info: right page because not two side mode on input line 109.
+Package marginnote Info: xpos seems to be 122.44785pt on input line 109.
  [3]
-Package marginnote Info: right page because not two side mode on input line 145.
-Package marginnote Info: xpos seems to be \@mn@currxpos  on input line 145.
+Package marginnote Info: right page because not two side mode on input line 153.
+Package marginnote Info: xpos seems to be \@mn@currxpos  on input line 153.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 145.
+(Font)              <8> on input line 153.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 145.
-Package marginnote Info: Margin note 4.2 is on absolute page 4 on input line 145.
-Package marginnote Info: right page because not two side mode on input line 145.
-Package marginnote Info: xpos seems to be 305.00108pt on input line 145.
-Package marginnote Info: Margin note 4.3 is on absolute page 4 on input line 146.
-Package marginnote Info: right page because not two side mode on input line 146.
-Package marginnote Info: xpos seems to be 121.80933pt on input line 146.
-Package marginnote Info: Margin note 4.4 is on absolute page 4 on input line 148.
-Package marginnote Info: right page because not two side mode on input line 148.
-Package marginnote Info: xpos seems to be 297.06007pt on input line 148.
+(Font)              <6> on input line 153.
+Package marginnote Info: Margin note 4.2 is on absolute page 4 on input line 153.
+Package marginnote Info: right page because not two side mode on input line 153.
+Package marginnote Info: xpos seems to be 305.00108pt on input line 153.
+Package marginnote Info: Margin note 4.3 is on absolute page 4 on input line 154.
+Package marginnote Info: right page because not two side mode on input line 154.
+Package marginnote Info: xpos seems to be 121.80933pt on input line 154.
+Package marginnote Info: Margin note 4.4 is on absolute page 4 on input line 156.
+Package marginnote Info: right page because not two side mode on input line 156.
+Package marginnote Info: xpos seems to be 297.06007pt on input line 156.
  [4]
-Package hyperref Info: bookmark level for unknown explanation defaults to 0 on input line 182.
- [5]
-Package marginnote Info: Margin note 6.1 is on absolute page 6 on input line 201.
-Package marginnote Info: right page because not two side mode on input line 201.
-Package marginnote Info: xpos seems to be 390.81023pt on input line 201.
-Package marginnote Info: Margin note 6.2 is on absolute page 6 on input line 205.
-Package marginnote Info: right page because not two side mode on input line 205.
-Package marginnote Info: xpos seems to be 167.14256pt on input line 205.
+Package hyperref Info: bookmark level for unknown theorem defaults to 0 on input line 183.
+ [5] [6]
+Package hyperref Info: bookmark level for unknown explanation defaults to 0 on input line 217.
+Package marginnote Info: Margin note 7.1 is on absolute page 8 on input line 236.
+Package marginnote Info: right page because not two side mode on input line 236.
+Package marginnote Info: xpos seems to be 390.81023pt on input line 236.
+ [7]
+Package marginnote Info: Margin note 8.1 is on absolute page 8 on input line 240.
+Package marginnote Info: right page because not two side mode on input line 240.
+Package marginnote Info: xpos seems to be 167.14256pt on input line 240.
+ [8]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <14.4> on input line 209.
+(Font)              <14.4> on input line 246.
 
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 209.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 209.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 209.
-
-[6] (./Chapter1.aux)
+Missing character: There is no 、 ("3001) in font rm-lmr10!
+[9] (./Chapter1.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
@@ -1164,22 +1158,16 @@ L3 programming layer <2024-02-20>
 
 LaTeX Warning: There were multiply-defined labels.
 
-
-Package rerunfilecheck Warning: File `Chapter1.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `Chapter1.out':
-(rerunfilecheck)             Before: 47C22E8AD5D9DB2856533DEDF78A8CED;1092
-(rerunfilecheck)             After:  E742CAB9535319E2BCADCB9268723284;1323.
+Package rerunfilecheck Info: File `Chapter1.out' has not changed.
+(rerunfilecheck)             Checksum: 7AC399D37283ECE2CDCBB98C46993CCD;1918.
  ) 
 Here is how much of TeX's memory you used:
- 33553 strings out of 474773
- 656534 string characters out of 5755059
+ 33612 strings out of 474773
+ 657634 string characters out of 5755059
  1936842 words of memory out of 5000000
- 55054 multiletter control sequences out of 15000+600000
- 661937 words of font info for 113 fonts, out of 8000000 for 9000
+ 55108 multiletter control sequences out of 15000+600000
+ 664922 words of font info for 114 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 136i,20n,138p,662b,1015s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 136i,20n,138p,662b,932s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on Chapter1.pdf (6 pages).
+Output written on Chapter1.pdf (9 pages).

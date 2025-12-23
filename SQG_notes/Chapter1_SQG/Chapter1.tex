@@ -35,11 +35,18 @@
     \begin{equation}
         -g\tdrho = \frac{\dr p_0}{\dr z} \label{hydrostatic balance}
     \end{equation}
-    In Ocean, we assume the velocity field is divergent free. THen the mass conservation yeilds
+    \subsubsection{Continuity Equation Approximatio}
+    The genearl continuity equation can always be expressed as 
+    \[ \frac{\D \rho}{\D t} + \rho \nabla \cdot u = 0\]
+    In Ocean, we assume that the fluid is \textbf{Incompressible} and wrote
+    \[ \frac{\D \rho}{\D t} = 0 \qquad \nabla \cdot \bu = 0\]
+    In Atmosphere, we use the \textbf{Anelastic Assumption}
+    Then the mass conservation yeilds
     \[ \frac{\p \rho_1}{\p t} + \nabla \cdot ((\tdrho + \rho_1)\mathbf{v}) = 0 \qrq \boxed{\nabla \cdot (\tdrho\mathbf{v}) = 0} \]
     \begin{remark}
-        Here we drop the $\p_t \rho_1$ term under the \textbf{Anelastic assumption}. Essentially by eliminating this partial derivative, we assume the fluid is anelastic, so sound wave is not supported \mn{or less important} in the system. 
+        Here we drop the $\p_t \rho_1$ term under the \textbf{Anelastic assumption}. Essentially by eliminating this partial derivative, we assume the fluid is anelastic, so sound wave is not supported \mn{or less important} in the system. However, this approximation is normally used for \textbf{deep atmospheric or stellar convertion} where density $\tilde{\rho}$ changes significantly with height.
     \end{remark}
+    For Oceanography, 
     Next we define the Buoyancy :
     \begin{equation}
         b = -g\frac{\rho}{\bar{\rho}_0} \label{Buoyancy}
@@ -79,21 +86,22 @@
     \[ b \sim \frac{f_0 UL}{H}\]
     Then 
     \[
-    \frac{\left(\partial b^{\prime} / \partial z\right)}{N^2} \sim R o \frac{L^2}{L_d^2}
+    \frac{\left(\partial b^{\prime} / \partial z\right)}{N^2}\sim \frac{f_0 UL}{(HN)^2} \sim R o \frac{L^2}{L_d^2}
     \]
     Where we have the deformation radius as a function of $z$. 
-    \[ L_d = \frac{NL}{f_0}\]
+    \[ L_d = \frac{NH}{f_0}\]
     Introduce dimensionless variables
     \[
 (\widehat{u}, \widehat{v})=U^{-1}(u, v) \quad \widehat{w}=\frac{L}{U H} w, \quad \widehat{f}=f_0^{-1} f, \quad \widehat{\phi}=\frac{\phi_1}{f_0 U L}, \quad \widehat{b}=\frac{H}{f_0 U L} b_1
     \]
     \begin{remark}
-    We then have dimensionless equation of motion for Anelastic Assumption \mn{often people drop the hat for simplicity. However in the first derivation I keep everything with a hat.}
+    We then have dimensionless equation of motion for Atmosphere or Ocean.  \mn{often people drop the hat for simplicity. However in the first derivation I keep everything with a hat.}
         \begin{align}
             \text{Momentum Equation} :\quad & \Ro \frac{\D \widehat{\bu}}{\D t} + \hatf \times \hatu = -\nabla \hatphi \label{dimensionless momentum equation} \\
-            \text{Buoyancy Equation} :\quad& \Ro \frac{\D \widehat{b}}{\D t} + \Bu \widehat{w} = 0 \\
-            \text{Hydrostatic Balance}:\quad & \frac{\p \hatphi}{\p \widehat{z}} = \widehat{b} \\
-            \text{Continuity} :\quad& \widehat{\nabla} \cdot \hatu + \frac{1}{\tdrho} \frac{\p \tdrho \widehat{w}}{\p \widehat{z}} = 0
+            \text{Buoyancy Equation} :\quad& \Ro \frac{\D \widehat{b}}{\D t} + \Bu \widehat{w} = 0 \label{dimensionless buoyancy equation}\\
+            \text{Hydrostatic Balance}:\quad & \frac{\p \hatphi}{\p \widehat{z}} = \widehat{b} \label{dimensionless hydrostatic balance equation}\\
+            \text{Continuity(\textbf{Atmosphere})} :\quad& \widehat{\nabla} \cdot \hatu + \frac{1}{\tdrho} \frac{\p \tdrho \widehat{w}}{\p \widehat{z}} = 0 \label{dimensionless continuity equation for atmosphere}\\ 
+            \text{Continuity(\textbf{Oceanography})} : \quad& \widehat{\nabla} \cdot \widehat{\bu} = 0 \label{dimensionless contiuity equation for ocean}
         \end{align}
         From now on I will drop the hats.
     \end{remark}
@@ -169,6 +177,32 @@
         \frac{\D g}{\D t} \left[ \nabla^2 \psi_g + f + \frac{f_0^2}{\tilde{\rho}}\frac{\p }{\p_z} \left( \frac{\tdrho}{N^2} \frac{\p \psi}{\p z}\right)\right] = 0 \label{QGPV equation}
     \end{equation}
 
+    \subsection{Ertel PV Conservation}
+
+    \begin{theorem}
+        The Ertel PV, denoted usually as $q$ or $Q$, is defined as:
+        \begin{equation}
+        Q = \frac{\boldsymbol{\omega}_a \cdot \nabla \psi}{\rho} \label{Ertel PV}
+        \end{equation}Where:
+        \begin{enumerate}
+            \item $\boldsymbol{\omega}_a = \nabla \times \mathbf{u} + 2\boldsymbol{\Omega}$ is the absolute vorticity.
+            \item $\psi$ is a conserved scalar (like potential temperature $\theta$ or density).
+            \item $\rho$ is the density.
+        \end{enumerate}
+    \end{theorem}
+    The derivation starts from the Momentum Equation
+    \[\frac{\D \mathbf{u}}{\D t} + \frac{1}{\rho}\nabla p = -2\boldsymbol{\Omega} \times \mathbf{u}\]
+    Use the vector identity then take Curl
+    \[ (\mathbf{u} \cdot \nabla)\mathbf{u} = \nabla(\frac{1}{2}\mathbf{u}^2) - \mathbf{u} \times (\nabla \times \mathbf{u})\]
+    We have 
+    \[\frac{\partial \boldsymbol{\omega}_a}{\partial t} - \nabla \times (\mathbf{u} \times \boldsymbol{\omega}_a) = \nabla \times \left( -\frac{1}{\rho}\nabla p \right)\]
+    Then apply the vector identity
+    \[\nabla \times (\frac{1}{\rho}\nabla p) = \frac{1}{\rho^2} \nabla \rho \times \nabla p\]
+    We get 
+    \begin{equation}
+        \frac{\D \boldsymbol{\omega}_a}{\D t} = (\boldsymbol{\omega}_a \cdot \nabla)\mathbf{u} - \boldsymbol{\omega}_a (\nabla \cdot \mathbf{u}) + \frac{\nabla \rho \times \nabla p}{\rho^2}
+    \end{equation}
+
     \newpage
     \section{Surface Quasi-Geostrophic Equations}
     The surface Quasi-Geostrophic Equation takes the problem to the next step, how could we retrive the interior motion from surface measurements such as SSH and SST. Recall the Buoyancy Equation
@@ -205,10 +239,38 @@
     \end{cases}\]
     The key assumption for SQG theories is that all the Potential vorticity is injected into the system by surface buoyancy. \mn{surface buoyancy is actually first order, so it is also called surface buoyancy anomoly in some context. }
     
+    \subsection{Retriving Vertical Velocity}
 
-
-    \section{$\QGone$ Model}
-
+    
+    \newpage
+    \section{\texorpdfstring{$\QGone$}{QG1} Model}
     \label{sec:QGone model}
+
+
+    The derivation starts from the same set of equations above. We set
+    \[ \epsilon = \Ro = \frac{U}{fL} \qquad \text{Bu} = \left( \frac{NH}{fL}\right)^2\]
+    The Derivation starts from Eq \ref{dimensionless buoyancy equation}, \ref{dimensionless contiuity equation for ocean}, \ref{dimensionless hydrostatic balance equation} and \ref{dimensionless momentum equation}. The \hyperref[Ertel PV]{Ertel Potential Vorticity} is conserved. In this case, the conserved quantity is the \textbf{total Buoyancy} since Eq \ref{dimensionless buoyancy equation} we define it as 
+    \[ b_{\text{tot}} = N^2z + b\]
+    and
+    \[ \bm{\omega}_a = \nabla_3 \times (u,v,0) + f\hat{z} = (-v_z, u_z, f + \xi)\]
+    Then 
+    \[ Q = \underbrace{fN^2}_{\text{Background}} + \underbrace{(N^2\xi + fb_z)}_{\text{Linear terms}} + \underbrace{(\xi b_z - v_zb_x + u_zb_y)}_{\text{Nonlinear terms}}\]
+    Use the vector identity 
+    \[ \nabla_3 \cdot (\bm{\omega}_a b_{\text{tot}}) = \bm{\omega} 、\cdot \nabla_3 \btot + \underbrace{\btot (\nabla \cdot \bm{\omega})}_{=0, \bm{\omega} = \nabla \times \cdot}\]
+    Then after scaling anlysis we have 
+    \[Q = N^2 f + \epsilon q\]
+    where 
+    \[ q = N^2 \xi + \frac{1}{\Bur} fb_z + \frac{\epsilon}{\Bur} \nabla_3 (\bm{\omega} \btot) \]
+    The first two term is the calssical Quasi Geostrophic Potential Vorticity. 
+    \begin{explanation}
+        Since here $N$ is constant and we assume the Boussinesq Equation, the third term in Eq \ref{temp QGPV} becomes,
+        \[ \frac{f_0}{\cancel{\rho}} \cancel{\rho} \frac{\p b}{\p z} 
+        \left( \frac{fL}{NH}\right)^2 \sim fb_z \frac{1}{\Bur}\]
+        The only difference here is the third second order ageostrophic quadratic correction we normally ignore in classical QG theories. 
+    \end{explanation}
+    
+
+
+
     
 \end{document}

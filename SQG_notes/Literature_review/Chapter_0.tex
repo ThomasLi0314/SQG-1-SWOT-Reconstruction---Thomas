@@ -42,7 +42,36 @@
         \item     Traditional studies assume the signal is dominated by barotropic and first baroclinic modes. However, these modes are typically calculated by \textbf{assuming buoyancy anomalies vanish at the surface}. 
         \item SQG theorys works as well. But it normaly assume $0$ interior PV. 
     \end{itemize}
-    The author introduced the \textbf{Interior plus surface QG} method. It is quasigeostrophic
+    The author introduced the \textbf{Interior plus surface QG} method. It is quasigeostrophic. As introduced in Chapter 2: 
+    \begin{enumerate}
+        \item Surface buoyancy anomoly contributes to the surface part of streamfunction $\psi^s$ : 
+        \[
+        \begin{gathered}
+        \mathcal{L} \Psi+f_0+\beta y=Q, \\
+        \mathcal{L}=\left(\frac{\partial^2}{\partial x^2}+\frac{\partial^2}{\partial y^2}+\frac{\partial}{\partial z} \frac{f_0^2}{N^2} \frac{\partial}{\partial z}\right), \quad \text { and }-H<z<0,
+        \end{gathered}
+        \]
+        Governing equation is 
+        \[
+        \mathcal{L} \psi^s=0
+        \]
+        Essentially, this is same in the SQG theory where we assume $0$ interior PV. With boundary condition : 
+        \[
+        \frac{\partial}{\partial z} \psi^s(\mathbf{x}, z, t)=b(\mathbf{x}, z, t) / f_0 \quad \text { at } \quad z=0,-H,
+        \]
+        \item The interior part is governed by 
+        \[
+        \frac{\partial}{\partial z} \frac{f_0^2}{N^2} \frac{\partial}{\partial z} \hat{\psi}^i-\kappa^2 \hat{\psi}^i=\hat{q}^i \quad \text { with } \quad \frac{d \hat{\psi}^i}{d z}=0 \quad \text { at } \quad z=0,-H .
+        \]
+    \end{enumerate}
+    However, the interior $q^i$ is not clear. 
+    \begin{remark}
+        This is the essential modification of this isQG model. They project the interior induced PV equation onto baroclinic modes and \textbf{impose additional boundary conditions to deduce the gravest modes.}
+    \end{remark}
+
+    \subsection{D.J. Muraki, C. Snyder & R. Rotunno 1999}
+
+    This is the origin of $\QGone$ theory. 
 
     
 \end{document}
