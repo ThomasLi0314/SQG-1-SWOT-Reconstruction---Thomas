@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.10.2)  19 DEC 2025 14:14
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.10.2)  24 DEC 2025 16:18
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -900,6 +900,8 @@ LaTeX Font Info:    Overwriting math alphabet `\mathbbmss' in version `bold'
 \ULC@box=\box140
 Package: ulem 2019/11/18
 \ULdepth=\dimen335
+) (d:/Program Files/texlive/2024/texmf-dist/tex/latex/cancel/cancel.sty
+Package: cancel 2013/04/12 v2.2 Cancel math terms
 )
 \myoddoffset=\skip78
 \spacelength=\skip79
@@ -930,7 +932,7 @@ File: lstlang1.sty 2024/02/21 1.10 listings language file
 \email@toks=\toks61
 \c@email@counter=\count383
 \affiliationsSep=\skip80
-LaTeX Font Info:    Trying to load font information for OT1+phv on input line 776.
+LaTeX Font Info:    Trying to load font information for OT1+phv on input line 778.
  (d:/Program Files/texlive/2024/texmf-dist/tex/latex/psnfss/ot1phv.fd
 File: ot1phv.fd 2020/03/25 scalable font definitions for OT1/phv.
 ) (d:/Program Files/texlive/2024/texmf-dist/tex/latex/titlesec/titlesec.sty
@@ -1137,10 +1139,10 @@ Package rerunfilecheck Info: File `Chapter_0.out' has not changed.
 (rerunfilecheck)             Checksum: 8045C92E486AD5D891D5A19A68F7808C;662.
  ) 
 Here is how much of TeX's memory you used:
- 33506 strings out of 474773
- 655684 string characters out of 5755059
+ 33549 strings out of 474773
+ 656465 string characters out of 5755059
  1936842 words of memory out of 5000000
- 55011 multiletter control sequences out of 15000+600000
+ 55050 multiletter control sequences out of 15000+600000
  645463 words of font info for 102 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  136i,13n,138p,752b,927s stack positions out of 10000i,1000n,20000p,200000b,200000s

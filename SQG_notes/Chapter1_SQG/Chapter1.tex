@@ -242,6 +242,8 @@
     \subsection{Retriving Vertical Velocity}
 
     
+
+
     \newpage
     \section{\texorpdfstring{$\QGone$}{QG1} Model}
     \label{sec:QGone model}
@@ -254,13 +256,21 @@
     and
     \[ \bm{\omega}_a = \nabla_3 \times (u,v,0) + f\hat{z} = (-v_z, u_z, f + \xi)\]
     Then 
-    \[ Q = \underbrace{fN^2}_{\text{Background}} + \underbrace{(N^2\xi + fb_z)}_{\text{Linear terms}} + \underbrace{(\xi b_z - v_zb_x + u_zb_y)}_{\text{Nonlinear terms}}\]
+    \begin{equation} Q = \underbrace{fN^2}_{\text{Background}} + \underbrace{(N^2\xi + fb_z)}_{\text{Linear terms, QGPV}} + \underbrace{(\xi b_z - v_zb_x + u_zb_y)}_{\text{Nonlinear terms}}\end{equation}
+    and
+    \[ q_{\text{QG}} = N^2 \xi + fb_z\]
     Use the vector identity 
-    \[ \nabla_3 \cdot (\bm{\omega}_a b_{\text{tot}}) = \bm{\omega} 、\cdot \nabla_3 \btot + \underbrace{\btot (\nabla \cdot \bm{\omega})}_{=0, \bm{\omega} = \nabla \times \cdot}\]
+    \[ \nabla_3 \cdot (\bm{\omega} b) = \bm{\omega} 、\cdot \nabla_3 b + \underbrace{b (\nabla \cdot \bm{\omega})}_{=0, \bm{\omega} = \nabla \times \cdot}\]
+    We note that 
+    \[ \xi b_z - v_z bx + u_z b_y = \bm{\omega} \cdot \nabla_3 b\]
+    where 
+    \[ \bm{\omega} = (-v_z, u_z, \xi) = (-v_z, u_z, v_x - u_y)\]
     Then after scaling anlysis we have 
     \[Q = N^2 f + \epsilon q\]
     where 
-    \[ q = N^2 \xi + \frac{1}{\Bur} fb_z + \frac{\epsilon}{\Bur} \nabla_3 (\bm{\omega} \btot) \]
+    \begin{equation}
+        q = N^2 \xi + \frac{1}{\Bur} fb_z + \frac{\epsilon}{\Bur} \nabla_3 \cdot (\bm{\omega} b) \label{Dimensionless PV}
+    \end{equation}
     The first two term is the calssical Quasi Geostrophic Potential Vorticity. 
     \begin{explanation}
         Since here $N$ is constant and we assume the Boussinesq Equation, the third term in Eq \ref{temp QGPV} becomes,
@@ -268,7 +278,80 @@
         \left( \frac{fL}{NH}\right)^2 \sim fb_z \frac{1}{\Bur}\]
         The only difference here is the third second order ageostrophic quadratic correction we normally ignore in classical QG theories. 
     \end{explanation}
-    
+
+    \subsection{\texorpdfstring{$\QGone$}{QG1} Vector Field}
+    In order to facilitate asymptotic approximation, the velocity field $\bu$ are writen as the Curl of a vector field $\bm{A}$. \mn{Changing three variables in velocity to $\bm{A}$}. One convention is writing 
+    \begin{equation}
+        \bm{A} = (-G, F, \Phi)
+    \end{equation}
+    and 
+    \[ \bu = \nabla \times \bm{A}\]
+    \[
+    \begin{aligned}
+    u & =-\Phi_y-F_z \\
+    v & =\Phi_x-G_z \\
+    w & =F_x+G_y
+    \end{aligned}
+    \]
+    However, this $\bm{A}$ isn't uniquely correspond to a velocity field. Since Gradient is Curl free, $\bu$ admits a gauge freedom in that the transformation 
+    \[ \bm{A} \rightarrow \bm{A} + \nabla_3 \Gamma\]
+    Left $\bu$ unchange. Now instead of assuming $\bm{A}$ is divergent free. \mn{if $\bm{A}$ is divergent free, then this is adding an additioal information to the system and $\bm{A}$ can be uniquely determined.} We fix the buoyancy to be roughly scaled version of $\nabla_3 \cdot \bm{A}$. 
+    \[ \nabla_3 \cdot \bm{A} = -G_x + F_y - \Phi_z \qrq b = f\Phi_z + \Bur \frac{N^2}{f}(G_x - F_y)\]
+    The advantage can be seen by calculating the QGPV Eq \ref{Dimensionless PV} (\textbf{Dimensionless form}) : 
+    \begin{equation}
+        q_{\text{QG}} = N^2 \xi + \frac{f}{\Bur}b_z = N^2(\Phi_{xx} + \Phi_{yy}) + \frac{f^2}{\Bur}\Phi_{zz} = \mcalL \Phi
+    \end{equation}
+    Where 
+    \begin{equation}
+        \mcalL = N^2 \nabla^2 + \frac{f^2}{\Bur}\p_{zz} \label{modified laplacian}
+    \end{equation} 
+    Then $\Phi$ is the only component related to the QGPV compare to dependence on all three component of velocity in the classical QGPV. When is the Buoyancy unchanged? \par
+    \begin{explanation}
+        Suppose we add a gradient to the original Vector Potential 
+        \[ \bm{A} \rightarrow \bm{A} + \nabla_3 \Gamma\]
+        Then 
+        \[ G \rightarrow G - \Gamma_x  \quad F \rightarrow F + \Gamma_y \rightarrow \Phi \rightarrow \Phi - \Gamma_z\]
+        And 
+        \[ b_{new} = \underbrace{\left[ f\Phi_z + \{Bu\}\frac{N^2}{f}(G_x - F_y) \right]}_{b_{origin}} - \underbrace{\left[ f\Gamma_{zz} + \{Bu\}\frac{N^2}{f}(\Gamma_{xx} + \Gamma_{yy}) \right]}_{b_{change}}\]
+        So in order to have $b_{new} = b_{origin}$. We have 
+        \begin{equation}
+            b_{change} =  f\Gamma_{zz} + \{Bu\}\frac{N^2}{f}(\Gamma_{xx} + \Gamma_{yy})  = \boxed{\mcalL(\Gamma) = 0} \label{unchanged buoyancy}
+        \end{equation}
+    \end{explanation}
+    Some Discussions
+    \begin{enumerate}
+        \item\textbf{In a triply-periodic domain} : \par Eq \ref{unchanged buoyancy} implies that $\Gamma$ is constant in the domain.
+        \item \textbf{Rigid Lid and flat bottom} : \par since $w = 0$ at upper and lower boundary, we have 
+        \[ F_x + G_y = 0\]
+    \end{enumerate}
+
+    \subsection{Evolution and Inversion Equations of \texorpdfstring{$\QGone$}{QG1}}
+    Assume 
+    \[ G^0 = F^0 = 0\]
+    and 
+    \[ \epsilon \ll 1 \qquad \Bur \sim O(1)\]
+    Then expand $\bm{A}$ asymptotically we have 
+    \begin{subequations}    
+        \begin{align}
+            u &= -\Phi_y^0 - \epsilon(\Phi_y^1 + F_z^1) \\
+            v &= \Phi_x^0 + \epsilon(\Phi_x^1 - G_z^1) \\
+            w &= 0 + \epsilon(F_x^1 + G_y^1) \\
+            b &= f\Phi_z^0 + \epsilon f\left( \Phi_z^1 + \Bur \frac{N^2}{f^2}(G_x^1 - F_y^1)\right)
+        \end{align}
+    \end{subequations}
+    Evaluate Eq \ref{Dimensionless PV} we have up to $O(\epsilon)$. 
+    \begin{align}
+        q &= N^2 (\nabla^2\Phi^0 + \nabla^2\Phi^1 - G_{zx}^1 + F_{zy}^1) + \frac{f^2}{\Bur}\Phi_z^0 + \epsilon \frac{f^2}{\Bur}\left( \Phi_z^1 + \Bur \frac{N^2}{f^2}(G_x^1 - F_y^1)\right) \nonumber \\
+        &+ \underbrace{\left[-\Phi_{xz}^0, -\Phi_{yz}^0,\nabla^2\Phi^0\right]}_{\text{This is } \bm{\omega} = (-v_z, u_z, \xi)} \cdot \underbrace{\left[f\Phi_{zx}^0, f\Phi_{zy}^0, f\Phi_{zz}^0\right]}_{\text{this is } \nabla_3 b} \nonumber \\
+        &= \boxed{\mcalL(\Phi^0) + \epsilon \mcalL(\Phi^1) + \epsilon \frac{f}{\Bur}\Big(-|\nabla\Phi_z^0|^2 + \Phi_{zz}^0\nabla^2\Phi^0\Big) + O(\epsilon^2)}
+    \end{align}
+    The surface Buoyancy from 
+    \begin{subequations}
+        \begin{align}
+            b^t &= f\Phi_z^0\Big|_{z = 0} + f\Phi_z^1\Big|_{z = 0} + O(\epsilon^2) \\
+            b^b &= f\Phi_z^0\Big|_{z = -H} + f\Phi_z^1\Big|_{z = -H} + O(\epsilon^2)  
+        \end{align}
+    \end{subequations}
 
 
 

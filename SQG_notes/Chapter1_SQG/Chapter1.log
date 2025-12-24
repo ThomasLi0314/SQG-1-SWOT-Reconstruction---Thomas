@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.10.2)  22 DEC 2025 23:55
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.10.2)  24 DEC 2025 16:18
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1146,10 +1146,19 @@ Package marginnote Info: right page because not two side mode on input line 240.
 Package marginnote Info: xpos seems to be 167.14256pt on input line 240.
  [8]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <14.4> on input line 246.
+(Font)              <14.4> on input line 248.
 
 Missing character: There is no 、 ("3001) in font rm-lmr10!
-[9] (./Chapter1.aux)
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <12> on input line 282.
+Package marginnote Info: Margin note 9.1 is on absolute page 9 on input line 283.
+Package marginnote Info: right page because not two side mode on input line 283.
+Package marginnote Info: xpos seems to be 143.65619pt on input line 283.
+[9]
+Package marginnote Info: Margin note 10.1 is on absolute page 10 on input line 298.
+Package marginnote Info: right page because not two side mode on input line 298.
+Package marginnote Info: xpos seems to be 372.13406pt on input line 298.
+ [10] [11] (./Chapter1.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
@@ -1159,15 +1168,15 @@ L3 programming layer <2024-02-20>
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `Chapter1.out' has not changed.
-(rerunfilecheck)             Checksum: 7AC399D37283ECE2CDCBB98C46993CCD;1918.
+(rerunfilecheck)             Checksum: 4F9663D41035789E0DFF66FF201E8121;2335.
  ) 
 Here is how much of TeX's memory you used:
- 33612 strings out of 474773
- 657634 string characters out of 5755059
+ 33637 strings out of 474773
+ 658050 string characters out of 5755059
  1936842 words of memory out of 5000000
- 55108 multiletter control sequences out of 15000+600000
- 664922 words of font info for 114 fonts, out of 8000000 for 9000
+ 55131 multiletter control sequences out of 15000+600000
+ 678695 words of font info for 125 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  136i,20n,138p,662b,932s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on Chapter1.pdf (9 pages).
+Output written on Chapter1.pdf (11 pages).

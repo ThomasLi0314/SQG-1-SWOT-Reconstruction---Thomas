@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.10.2)  15 DEC 2025 15:03
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.10.2)  24 DEC 2025 16:18
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -895,6 +895,8 @@ LaTeX Font Info:    Overwriting math alphabet `\mathbbmss' in version `bold'
 \ULC@box=\box140
 Package: ulem 2019/11/18
 \ULdepth=\dimen335
+) (d:/Program Files/texlive/2024/texmf-dist/tex/latex/cancel/cancel.sty
+Package: cancel 2013/04/12 v2.2 Cancel math terms
 )
 \myoddoffset=\skip78
 \spacelength=\skip79
@@ -925,7 +927,7 @@ File: lstlang1.sty 2024/02/21 1.10 listings language file
 \email@toks=\toks61
 \c@email@counter=\count383
 \affiliationsSep=\skip80
-LaTeX Font Info:    Trying to load font information for OT1+phv on input line 776.
+LaTeX Font Info:    Trying to load font information for OT1+phv on input line 778.
  (d:/Program Files/texlive/2024/texmf-dist/tex/latex/psnfss/ot1phv.fd
 File: ot1phv.fd 2020/03/25 scalable font definitions for OT1/phv.
 ) (d:/Program Files/texlive/2024/texmf-dist/tex/latex/titlesec/titlesec.sty
@@ -970,31 +972,31 @@ LaTeX Warning: Label `momentum equation' multiply defined.
 )
 \openout1 = `SQG_notes.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 15.
-LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 15.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 14.
+LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 14.
  (d:/Program Files/texlive/2024/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-Package hyperref Info: Link coloring ON on input line 15.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+Package hyperref Info: Link coloring ON on input line 14.
  (./SQG_notes.out) (./SQG_notes.out)
 \@outlinefile=\write4
 \openout4 = `SQG_notes.out'.
@@ -1089,56 +1091,56 @@ Package pdflscape Info: Auto-detected driver: dvipdfm (xetex) on input line 98.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Font Info:    Trying to load font information for T1+lmss on input line 22.
+LaTeX Font Info:    Trying to load font information for T1+lmss on input line 21.
  (d:/Program Files/texlive/2024/texmf-dist/tex/latex/lm/t1lmss.fd
 File: t1lmss.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 
 LaTeX Font Warning: Font shape `T1/lmr/m/scit' undefined
-(Font)              using `T1/lmr/m/scsl' instead on input line 22.
+(Font)              using `T1/lmr/m/scsl' instead on input line 21.
 
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 22.
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 21.
 (d:/Program Files/texlive/2024/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 22.
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 21.
  (d:/Program Files/texlive/2024/texmf-dist/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 22.
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 21.
  (d:/Program Files/texlive/2024/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 22.
+LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 21.
  (d:/Program Files/texlive/2024/texmf-dist/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 22.
+LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 21.
  (d:/Program Files/texlive/2024/texmf-dist/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 22.
+(Font)              <10> on input line 21.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 22.
+(Font)              <7> on input line 21.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 22.
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 22.
+(Font)              <5> on input line 21.
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 21.
  (d:/Program Files/texlive/2024/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
-LaTeX Font Info:    Trying to load font information for U+msa on input line 22.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 21.
  (d:/Program Files/texlive/2024/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 22.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 21.
  (d:/Program Files/texlive/2024/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [0
 
 
 ]
-Package marginnote Info: Using workaround for absolute page number on input line 22.
+Package marginnote Info: Using workaround for absolute page number on input line 21.
  (./SQG_notes.toc)
 \tf@toc=\write5
 \openout5 = `SQG_notes.toc'.
@@ -1146,7 +1148,7 @@ Package marginnote Info: Using workaround for absolute page number on input line
  [1] [1
 
 ]
-Package marginnote Info: Using workaround for absolute page number on input line 82.
+Package marginnote Info: Using workaround for absolute page number on input line 81.
  (./Literature_review/Chapter_0.tex
 Overfull \hbox (3.49998pt too wide) in paragraph at lines 8--8
 \T1/lmr/m/n/10 prox-i-ma-tion. It es-sen-tially re-fines the QG equa-tions by ac-count-ing for non-geostrophic (ageostrophic)
@@ -1171,61 +1173,63 @@ Package marginnote Info: xpos seems to be 204.28085pt on input line 33.
 Package marginnote Info: Margin note 6.5 is on absolute page 7 on input line 40.
 Package marginnote Info: right page because not two side mode on input line 40.
 Package marginnote Info: xpos seems to be 455.587pt on input line 40.
-[2]) [3] (./Chapter1_SQG/Chapter1.tex
-Package hyperref Info: bookmark level for unknown remark defaults to 0 on input line 41.
-Package marginnote Info: Margin note 8.1 is on absolute page 8 on input line 41.
-Package marginnote Info: right page because not two side mode on input line 41.
-Package marginnote Info: xpos seems to be 425.2758pt on input line 41.
+[2]
+Package hyperref Info: bookmark level for unknown remark defaults to 0 on input line 69.
+) [3] (./Chapter1_SQG/Chapter1.tex
+Package marginnote Info: Margin note 8.1 is on absolute page 9 on input line 47.
+Package marginnote Info: right page because not two side mode on input line 47.
+Package marginnote Info: xpos seems to be 425.2758pt on input line 47.
  [4]
-Package marginnote Info: Margin note 9.1 is on absolute page 9 on input line 59.
-Package marginnote Info: right page because not two side mode on input line 59.
-Package marginnote Info: xpos seems to be 323.14133pt on input line 59.
-Package marginnote Info: Margin note 9.2 is on absolute page 10 on input line 91.
-Package marginnote Info: right page because not two side mode on input line 91.
-Package marginnote Info: xpos seems to be 397.97527pt on input line 91.
+Package marginnote Info: Margin note 9.1 is on absolute page 9 on input line 66.
+Package marginnote Info: right page because not two side mode on input line 66.
+Package marginnote Info: xpos seems to be 323.14133pt on input line 66.
  [5]
-Package marginnote Info: Margin note 10.1 is on absolute page 10 on input line 101.
-Package marginnote Info: right page because not two side mode on input line 101.
-Package marginnote Info: xpos seems to be 122.44785pt on input line 101.
+Package marginnote Info: Margin note 10.1 is on absolute page 10 on input line 98.
+Package marginnote Info: right page because not two side mode on input line 98.
+Package marginnote Info: xpos seems to be 401.25327pt on input line 98.
+Package marginnote Info: Margin note 10.2 is on absolute page 10 on input line 109.
+Package marginnote Info: right page because not two side mode on input line 109.
+Package marginnote Info: xpos seems to be 122.44785pt on input line 109.
  [6]
-Package marginnote Info: right page because not two side mode on input line 145.
-Package marginnote Info: xpos seems to be \@mn@currxpos  on input line 145.
-Package marginnote Info: Margin note 11.2 is on absolute page 11 on input line 145.
-Package marginnote Info: right page because not two side mode on input line 145.
-Package marginnote Info: xpos seems to be 308.98708pt on input line 145.
-Package marginnote Info: Margin note 11.3 is on absolute page 11 on input line 146.
-Package marginnote Info: right page because not two side mode on input line 146.
-Package marginnote Info: xpos seems to be 125.79532pt on input line 146.
-Package marginnote Info: Margin note 11.4 is on absolute page 11 on input line 148.
-Package marginnote Info: right page because not two side mode on input line 148.
-Package marginnote Info: xpos seems to be 301.04607pt on input line 148.
- [7] [8]
-Package hyperref Info: bookmark level for unknown explanation defaults to 0 on input line 183.
-Package marginnote Info: Margin note 13.1 is on absolute page 14 on input line 202.
-Package marginnote Info: right page because not two side mode on input line 202.
-Package marginnote Info: xpos seems to be 392.80322pt on input line 202.
- [9]
-Package marginnote Info: Margin note 14.1 is on absolute page 14 on input line 206.
-Package marginnote Info: right page because not two side mode on input line 206.
-Package marginnote Info: xpos seems to be 171.12856pt on input line 206.
+Package marginnote Info: right page because not two side mode on input line 153.
+Package marginnote Info: xpos seems to be \@mn@currxpos  on input line 153.
+Package marginnote Info: Margin note 11.2 is on absolute page 11 on input line 153.
+Package marginnote Info: right page because not two side mode on input line 153.
+Package marginnote Info: xpos seems to be 308.98708pt on input line 153.
+Package marginnote Info: Margin note 11.3 is on absolute page 11 on input line 154.
+Package marginnote Info: right page because not two side mode on input line 154.
+Package marginnote Info: xpos seems to be 125.79532pt on input line 154.
+Package marginnote Info: Margin note 11.4 is on absolute page 11 on input line 156.
+Package marginnote Info: right page because not two side mode on input line 156.
+Package marginnote Info: xpos seems to be 301.04607pt on input line 156.
+ [7]
+Package hyperref Info: bookmark level for unknown theorem defaults to 0 on input line 183.
+ [8] [9]
+Package hyperref Info: bookmark level for unknown explanation defaults to 0 on input line 217.
+Package marginnote Info: Margin note 14.1 is on absolute page 15 on input line 236.
+Package marginnote Info: right page because not two side mode on input line 236.
+Package marginnote Info: xpos seems to be 392.80322pt on input line 236.
+ [10]
+Package marginnote Info: Margin note 15.1 is on absolute page 15 on input line 240.
+Package marginnote Info: right page because not two side mode on input line 240.
+Package marginnote Info: xpos seems to be 171.12856pt on input line 240.
+ [11]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <14.4> on input line 210.
+(Font)              <14.4> on input line 248.
 
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 210.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 210.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 210.
-
-)
+Missing character: There is no 、 ("3001) in font rm-lmr10!
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <12> on input line 282.
+Package marginnote Info: Margin note 16.1 is on absolute page 16 on input line 283.
+Package marginnote Info: right page because not two side mode on input line 283.
+Package marginnote Info: xpos seems to be 143.65619pt on input line 283.
+[12]
+Package marginnote Info: Margin note 17.1 is on absolute page 17 on input line 298.
+Package marginnote Info: right page because not two side mode on input line 298.
+Package marginnote Info: xpos seems to be 372.13406pt on input line 298.
+ [13])
 No file SQG_notes.bbl.
-[10] (./SQG_notes.aux)
+[14] (./SQG_notes.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
@@ -1235,15 +1239,15 @@ L3 programming layer <2024-02-20>
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `SQG_notes.out' has not changed.
-(rerunfilecheck)             Checksum: 85F178E7E7EFCB5757F52D0F98182FEC;1986.
+(rerunfilecheck)             Checksum: A4A8DF664C0FE9EAF0C36A4F12733369;3000.
  ) 
 Here is how much of TeX's memory you used:
- 33627 strings out of 474773
- 657605 string characters out of 5755059
+ 33722 strings out of 474773
+ 659421 string characters out of 5755059
  1936842 words of memory out of 5000000
- 55112 multiletter control sequences out of 15000+600000
- 689174 words of font info for 124 fonts, out of 8000000 for 9000
+ 55200 multiletter control sequences out of 15000+600000
+ 711483 words of font info for 137 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 116i,20n,121p,776b,1062s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 116i,20n,121p,776b,1095s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on SQG_notes.pdf (12 pages).
+Output written on SQG_notes.pdf (16 pages).
