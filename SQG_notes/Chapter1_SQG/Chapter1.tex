@@ -203,7 +203,6 @@
         \frac{\D \boldsymbol{\omega}_a}{\D t} = (\boldsymbol{\omega}_a \cdot \nabla)\mathbf{u} - \boldsymbol{\omega}_a (\nabla \cdot \mathbf{u}) + \frac{\nabla \rho \times \nabla p}{\rho^2}
     \end{equation}
 
-    \newpage
     \section{Surface Quasi-Geostrophic Equations}
     The surface Quasi-Geostrophic Equation takes the problem to the next step, how could we retrive the interior motion from surface measurements such as SSH and SST. Recall the Buoyancy Equation
     \begin{equation}
@@ -293,6 +292,8 @@
     w & =F_x+G_y
     \end{aligned}
     \]
+    The Horizontal Vorticity in vector potential form is 
+    \[ \xi = v_x - u_y = \Phi_{xx} - G_{zx} + \Phi_{yy} + F_{zy} = \nabla^2 \Phi + F_{zy} - G_{zx}\]
     However, this $\bm{A}$ isn't uniquely correspond to a velocity field. Since Gradient is Curl free, $\bu$ admits a gauge freedom in that the transformation 
     \[ \bm{A} \rightarrow \bm{A} + \nabla_3 \Gamma\]
     Left $\bu$ unchange. Now instead of assuming $\bm{A}$ is divergent free. \mn{if $\bm{A}$ is divergent free, then this is adding an additioal information to the system and $\bm{A}$ can be uniquely determined.} We fix the buoyancy to be roughly scaled version of $\nabla_3 \cdot \bm{A}$. 
@@ -336,14 +337,14 @@
             u &= -\Phi_y^0 - \epsilon(\Phi_y^1 + F_z^1) \\
             v &= \Phi_x^0 + \epsilon(\Phi_x^1 - G_z^1) \\
             w &= 0 + \epsilon(F_x^1 + G_y^1) \\
-            b &= f\Phi_z^0 + \epsilon f\left( \Phi_z^1 + \Bur \frac{N^2}{f^2}(G_x^1 - F_y^1)\right)
+            b &= f\Phi_z^0 + \epsilon f\left( \Phi_z^1 + \Bur \frac{N^2}{f^2}(G_x^1 - F_y^1)\right) \label{buoyancy in QG+1}
         \end{align}
     \end{subequations}
     Evaluate Eq \ref{Dimensionless PV} we have up to $O(\epsilon)$. 
     \begin{align}
         q &= N^2 (\nabla^2\Phi^0 + \nabla^2\Phi^1 - G_{zx}^1 + F_{zy}^1) + \frac{f^2}{\Bur}\Phi_z^0 + \epsilon \frac{f^2}{\Bur}\left( \Phi_z^1 + \Bur \frac{N^2}{f^2}(G_x^1 - F_y^1)\right) \nonumber \\
         &+ \underbrace{\left[-\Phi_{xz}^0, -\Phi_{yz}^0,\nabla^2\Phi^0\right]}_{\text{This is } \bm{\omega} = (-v_z, u_z, \xi)} \cdot \underbrace{\left[f\Phi_{zx}^0, f\Phi_{zy}^0, f\Phi_{zz}^0\right]}_{\text{this is } \nabla_3 b} \nonumber \\
-        &= \boxed{\mcalL(\Phi^0) + \epsilon \mcalL(\Phi^1) + \epsilon \frac{f}{\Bur}\Big(-|\nabla\Phi_z^0|^2 + \Phi_{zz}^0\nabla^2\Phi^0\Big) + O(\epsilon^2)}
+        &= \boxed{\mcalL(\Phi^0) + \epsilon \mcalL(\Phi^1) + \epsilon \frac{f}{\Bur}\Big(-|\nabla\Phi_z^0|^2 + \Phi_{zz}^0\nabla^2\Phi^0\Big) + O(\epsilon^2)} \label{potential vorticity up to first order}
     \end{align}
     The surface Buoyancy from 
     \begin{subequations}
@@ -353,7 +354,67 @@
         \end{align}
     \end{subequations}
 
+    To complete the inversion, we need to relate ageostrophic vertical streamfunctions $F^1$ and $G^1$ to $\Phi^0$. We start with the first order primitive equations 
+    \begin{subequations}
+        \begin{align}
+                \frac{\D u}{\D t} - f v^1 &= -p_x^1 \\
+                \frac{\D v}{\D t} + fu^1 &= -p_y^1 \label{first order primitive b}\\
+                \frac{\D b}{\D t} + \Bur N^2  w^1 &= 0 \label{first order primitive c}\\
+                p_z^1 &= b^1
+        \end{align}
+    \end{subequations}
+    Take the difference of $z$-derivative of $f$ times Eq \ref{first order primitive b} and $x$-derivetive Eq \ref{first order primitive c} we derive 
+    \begin{equation}
+        \mcalL(F^1) = \frac{2f}{\Bur} J(\Phi_z^0, \Phi_x^0) \label{F^1 and Phi^0 relation}
+    \end{equation}
+    and similarly 
+    \begin{equation}
+        \mcalL(G^1) = \frac{2f}{\Bur} J(\Phi_z^0, \Phi_y^0) \label{G^1 and Phi^0 relation}
+    \end{equation}
 
 
-    
+
+    \section{\texorpdfstring{$\SQGone$}{SQG1} Model}
+
+    From the Geostrophic Balance Equation we have 
+    \[ \nabla^2 p^0 = f\xi^0\]
+    To obtain the next order balance equation, we use Eq \ref{buoyancy in QG+1}, \ref{F^1 and Phi^0 relation} and \ref{G^1 and Phi^0 relation}.
+    \begin{equation}
+        \begin{aligned}
+            \nabla^2 b^1 - f\xi_z^1 &= f\left( \nabla^2 \Phi_z + \text{Bu}\frac{N^2}{f^2}\nabla^2(G_x - F_y)\right) - f\nabla^2\Phi_z - f\partial_{zz}(G_x - F_y) \\
+            &= \frac{\text{Bu}}{f}\mathcal{L}(G_x - F_y) \\[1.5ex]
+            &\quad \text{(Here apply Eq \ref{F^1 and Phi^0 relation} and Eq \ref{G^1 and Phi^0 relation})}  \\[1.5ex]
+            &= 2\partial_z J(\Phi_x^0, \Phi_y^0)
+        \end{aligned}
+    \end{equation}
+    Recall that $p_z = b$ by definition then we have 
+    \begin{equation}
+        \boxed{\nabla^2 p^1 - f\xi^1 = 2J(\Phi_x^0, \Phi_y^0)}
+    \end{equation}
+    This model captures the ageostrophic at first order and the term on the right hand side represents the \textbf{cyclogeostrophic correction}. In SQG, interior potential vorticity is $0$. Then from Eq \ref{potential vorticity up to first order}, since $q^1 = 0$. Then 
+    \[
+        \mcalL(\Phi^1) = \frac{f}{\Bur} \left( |\nabla\Phi_z^0|^2 - \Phi_{zz}^0 \nabla^2 \Phi^0 \right)
+    \]
+    Using $\mcalL(\Phi^0)= 0$. We have 
+    \begin{equation}
+        \mcalL(\Phi^1) = \frac{f}{N^2 \Bur} \left(N^2 |\nabla \Phi^0_z|^2 + \frac{f^2}{\Bur}\Phi_{zz}^0\Phi_{zz}^0\right) \label{main equation for Phi^1}
+    \end{equation}
+    Together with Eq \ref{F^1 and Phi^0 relation}, Eq \ref{G^1 and Phi^0 relation} and boundary conditions. 
+    \[ \Phi_z^1 = F^1 = G^1 = 0 \qquad \text{at } z = 0\]
+    Further we assume all potential vanish at infinity. 
+    \begin{explanation}
+        For this system, the goal is to know $\Phi^1, G^1$ and $F^1$. We recall that first order potential $G^0 = F^0 = 0$. And $\Phi^0$ can be obtain from geostrophic balance. This is a system of decoupled linear elliptic (Poisson) equations. \begin{enumerate}
+            \item  Decoupled: You can solve for $\Phi^1$, $F^1$, and $G^1$ independently of each other.
+            \item Linear/Poisson: Each equation takes the form $\mathcal{L}(\text{Potential}) = \text{Source Term}$.
+            \item Dependence: The "Source Terms" on the right-hand side (RHS) are known quantities derived entirely from the zeroth-order solution $\Phi^0$ (which is obtained from the observed SSH/buoyancy)
+        \end{enumerate} 
+    \end{explanation}
+    The inversion is carried on by decomposing potential into interior and surface part. The interior part satisfies the main equations but ignore the boundary condition. The surface part solves the homogeneous problem and but corrects the boundary conditions. For $\Phi^1$, we first notice that 
+    \[\Phi_{int}^1 = \frac{f}{2N^2\Bur}\Phi_z^0\Phi_z^0\]
+    Is a solution to Eq \ref{main equation for Phi^1}. Then it remains to solve the surface part given by 
+    \begin{align}
+        \mcalL(\Phi_{sur}^1) &= 0 \\
+        \Phi_{sur,z}^{1,t} &= C_b - \partial_z \Phi_{int,z}^{1,t} = C_b - \frac{f}{\Bur N^2}\Phi_z^{0,t}\Phi_{zz}^{0,t}
+    \end{align}
+
 \end{document}
