@@ -1,10 +1,10 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.10.2)  2 JAN 2026 11:23
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.10.2)  2 JAN 2026 12:08
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**d:/Documents/College/Research/Oceangrophy/Shafer_Project/Notes/SQG-1-SWOT-Reconstruction---Thomas/SQG_notes/Chapter1_SQG/Chapter1
-(d:/Documents/College/Research/Oceangrophy/Shafer_Project/Notes/SQG-1-SWOT-Reconstruction---Thomas/SQG_notes/Chapter1_SQG/Chapter1.tex
+**d:/Documents/College/Research/Oceangrophy/Shafer_Project/Notes/SQG-1-SWOT-Reconstruction---Thomas/SQG_notes/Chapter_2_SQG1/Chapter2
+(d:/Documents/College/Research/Oceangrophy/Shafer_Project/Notes/SQG-1-SWOT-Reconstruction---Thomas/SQG_notes/Chapter_2_SQG1/Chapter2.tex
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
 (d:/Program Files/texlive/2024/texmf-dist/tex/latex/subfiles/subfiles.cls
@@ -942,12 +942,8 @@ Package: longtable 2023-11-01 v4.19 Multi-page Table package (DPC)
 \c@LT@tables=\count387
 \c@LT@chunks=\count388
 \LT@p@ftn=\toks63
-)) (d:/Documents/Latex/Latex_Template/Custom_Commands.tex) (../../SQG_commands.tex))) (./Chapter1.aux
-
-LaTeX Warning: Label `momentum equation' multiply defined.
-
-)
-\openout1 = `Chapter1.aux'.
+)) (d:/Documents/Latex/Latex_Template/Custom_Commands.tex) (../../SQG_commands.tex))) (./Chapter2.aux)
+\openout1 = `Chapter2.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 3.
 LaTeX Font Info:    ... okay on input line 3.
@@ -974,9 +970,9 @@ LaTeX Font Info:    ... okay on input line 3.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 3.
 LaTeX Font Info:    ... okay on input line 3.
 Package hyperref Info: Link coloring ON on input line 3.
- (./Chapter1.out) (./Chapter1.out)
+ (./Chapter2.out) (./Chapter2.out)
 \@outlinefile=\write4
-\openout4 = `Chapter1.out'.
+\openout4 = `Chapter2.out'.
 
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: changepage package is loaded.
@@ -1036,113 +1032,127 @@ Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
 )
 Package pdflscape Info: Auto-detected driver: dvipdfm (xetex) on input line 98.
 ))
-LaTeX Font Info:    Trying to load font information for OT1+ppl on input line 8.
+LaTeX Font Info:    Trying to load font information for OT1+ppl on input line 5.
  (d:/Program Files/texlive/2024/texmf-dist/tex/latex/psnfss/ot1ppl.fd
 File: ot1ppl.fd 2001/06/04 font definitions for OT1/ppl.
 )
-LaTeX Font Info:    Trying to load font information for OML+zplm on input line 8.
+LaTeX Font Info:    Trying to load font information for OML+zplm on input line 5.
  (d:/Program Files/texlive/2024/texmf-dist/tex/latex/psnfss/omlzplm.fd
 File: omlzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OML/zplm.
 )
-LaTeX Font Info:    Trying to load font information for OMS+zplm on input line 8.
+LaTeX Font Info:    Trying to load font information for OMS+zplm on input line 5.
  (d:/Program Files/texlive/2024/texmf-dist/tex/latex/psnfss/omszplm.fd
 File: omszplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMS/zplm.
 )
-LaTeX Font Info:    Trying to load font information for OMX+zplm on input line 8.
+LaTeX Font Info:    Trying to load font information for OMX+zplm on input line 5.
  (d:/Program Files/texlive/2024/texmf-dist/tex/latex/psnfss/omxzplm.fd
 File: omxzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMX/zplm.
 )
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 8.
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 5.
  (d:/Program Files/texlive/2024/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
-LaTeX Font Info:    Trying to load font information for OT1+zplm on input line 8.
+LaTeX Font Info:    Trying to load font information for OT1+zplm on input line 5.
  (d:/Program Files/texlive/2024/texmf-dist/tex/latex/psnfss/ot1zplm.fd
 File: ot1zplm.fd 2002/09/08 Fontinst v1.914 font definitions for OT1/zplm.
 )
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 10.42007pt on input line 8.
+(Font)              scaled to size 15.0049pt on input line 5.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 7.91925pt on input line 8.
+(Font)              scaled to size 10.42007pt on input line 5.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 6.25204pt on input line 8.
+(Font)              scaled to size 8.33606pt on input line 5.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 10.42007pt on input line 8.
+(Font)              scaled to size 15.0049pt on input line 5.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 7.91925pt on input line 8.
+(Font)              scaled to size 10.42007pt on input line 5.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 6.25204pt on input line 8.
- [1
+(Font)              scaled to size 8.33606pt on input line 5.
+LaTeX Font Info:    Font shape `U/msa/m/n' will be
+(Font)              scaled to size 7.91925pt on input line 10.
+LaTeX Font Info:    Font shape `U/msa/m/n' will be
+(Font)              scaled to size 6.25204pt on input line 10.
+LaTeX Font Info:    Font shape `U/msb/m/n' will be
+(Font)              scaled to size 7.91925pt on input line 10.
+LaTeX Font Info:    Font shape `U/msb/m/n' will be
+(Font)              scaled to size 6.25204pt on input line 10.
 
-]
-LaTeX Font Info:    Trying to load font information for T1+lmss on input line 47.
- (d:/Program Files/texlive/2024/texmf-dist/tex/latex/lm/t1lmss.fd
+
+LaTeX Warning: Reference `dimensionless buoyancy equation' on page 1 undefined on input line 11.
+
+
+LaTeX Warning: Reference `dimensionless contiuity equation for ocean' on page 1 undefined on input line 11.
+
+
+LaTeX Warning: Reference `dimensionless hydrostatic balance equation' on page 1 undefined on input line 11.
+
+
+LaTeX Warning: Reference `dimensionless momentum equation' on page 1 undefined on input line 11.
+
+
+LaTeX Warning: Hyper reference `Ertel PV' on page 1 undefined on input line 11.
+
+
+LaTeX Warning: Reference `dimensionless buoyancy equation' on page 1 undefined on input line 11.
+
+Missing character: There is no 、 ("3001) in font pplr7t!
+LaTeX Font Info:    Trying to load font information for T1+lmss on input line 33.
+(d:/Program Files/texlive/2024/texmf-dist/tex/latex/lm/t1lmss.fd
 File: t1lmss.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-Package hyperref Info: bookmark level for unknown remark defaults to 0 on input line 47.
-Package marginnote Info: Margin note 2.1 is on absolute page 2 on input line 47.
-Package marginnote Info: right page because not two side mode on input line 47.
-Package marginnote Info: xpos seems to be 71.87282pt on input line 47.
+Package hyperref Info: bookmark level for unknown explanation defaults to 0 on input line 33.
+
+
+LaTeX Warning: Reference `temp QGPV' on page 1 undefined on input line 33.
+
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 8.33606pt on input line 47.
+(Font)              scaled to size 12.50409pt on input line 39.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 5.21004pt on input line 47.
+(Font)              scaled to size 9.37807pt on input line 39.
+LaTeX Font Info:    Font shape `U/msa/m/n' will be
+(Font)              scaled to size 7.29405pt on input line 39.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 8.33606pt on input line 47.
+(Font)              scaled to size 12.50409pt on input line 39.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 5.21004pt on input line 47.
-Package marginnote Info: Margin note 2.2 is on absolute page 2 on input line 66.
-Package marginnote Info: right page because not two side mode on input line 66.
-Package marginnote Info: xpos seems to be 308.3536pt on input line 66.
- [2]
-Package marginnote Info: Margin note 3.1 is on absolute page 3 on input line 98.
-Package marginnote Info: right page because not two side mode on input line 98.
-Package marginnote Info: xpos seems to be 404.56923pt on input line 98.
-Package marginnote Info: Margin note 3.2 is on absolute page 3 on input line 109.
-Package marginnote Info: right page because not two side mode on input line 109.
-Package marginnote Info: xpos seems to be 145.65178pt on input line 109.
- [3]
-Package marginnote Info: right page because not two side mode on input line 153.
-Package marginnote Info: xpos seems to be \@mn@currxpos  on input line 153.
-Package marginnote Info: Margin note 4.2 is on absolute page 4 on input line 153.
-Package marginnote Info: right page because not two side mode on input line 153.
-Package marginnote Info: xpos seems to be 290.2707pt on input line 153.
-Package marginnote Info: Margin note 4.3 is on absolute page 4 on input line 154.
-Package marginnote Info: right page because not two side mode on input line 154.
-Package marginnote Info: xpos seems to be 197.96092pt on input line 154.
-Package marginnote Info: Margin note 4.4 is on absolute page 5 on input line 156.
-Package marginnote Info: right page because not two side mode on input line 156.
-Package marginnote Info: xpos seems to be 294.38017pt on input line 156.
- [4]
-Package hyperref Info: bookmark level for unknown theorem defaults to 0 on input line 183.
- [5]
-Package hyperref Info: bookmark level for unknown explanation defaults to 0 on input line 216.
- [6]
-Package marginnote Info: Margin note 7.1 is on absolute page 7 on input line 235.
-Package marginnote Info: right page because not two side mode on input line 235.
-Package marginnote Info: xpos seems to be 374.14233pt on input line 235.
-Package marginnote Info: Margin note 7.2 is on absolute page 7 on input line 239.
-Package marginnote Info: right page because not two side mode on input line 239.
-Package marginnote Info: xpos seems to be 201.05138pt on input line 239.
- [7] [8] (./Chapter1.aux)
+(Font)              scaled to size 9.37807pt on input line 39.
+LaTeX Font Info:    Font shape `U/msb/m/n' will be
+(Font)              scaled to size 7.29405pt on input line 39.
+Package marginnote Info: Margin note 1.1 is on absolute page 2 on input line 40.
+Package marginnote Info: right page because not two side mode on input line 40.
+Package marginnote Info: xpos seems to be 156.64192pt on input line 40.
+LaTeX Font Info:    Font shape `U/msa/m/n' will be
+(Font)              scaled to size 5.21004pt on input line 40.
+LaTeX Font Info:    Font shape `U/msb/m/n' will be
+(Font)              scaled to size 5.21004pt on input line 40.
+[1
+
+]
+Package marginnote Info: Margin note 2.1 is on absolute page 2 on input line 57.
+Package marginnote Info: right page because not two side mode on input line 57.
+Package marginnote Info: xpos seems to be 351.27556pt on input line 57.
+ [2] [3] [4] [5]
+Package marginnote Info: Margin note 6.1 is on absolute page 6 on input line 202.
+Package marginnote Info: right page because not two side mode on input line 202.
+Package marginnote Info: xpos seems to be 163.10184pt on input line 202.
+ [6] [7] (./Chapter2.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
 
 
-LaTeX Warning: There were multiply-defined labels.
+LaTeX Warning: There were undefined references.
 
-Package rerunfilecheck Info: File `Chapter1.out' has not changed.
-(rerunfilecheck)             Checksum: DBC21088C9A2A820EA0D6E777E25FE5C;1826.
+Package rerunfilecheck Info: File `Chapter2.out' has not changed.
+(rerunfilecheck)             Checksum: DFB4BC780684962D2E5CE701F21C015B;602.
  ) 
 Here is how much of TeX's memory you used:
- 33663 strings out of 474773
- 657802 string characters out of 5755059
- 1934842 words of memory out of 5000000
- 55193 multiletter control sequences out of 15000+600000
- 602727 words of font info for 118 fonts, out of 8000000 for 9000
+ 33688 strings out of 474773
+ 658037 string characters out of 5755059
+ 1938842 words of memory out of 5000000
+ 55217 multiletter control sequences out of 15000+600000
+ 623490 words of font info for 171 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 136i,20n,138p,662b,967s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 136i,21n,138p,664b,928s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on Chapter1.pdf (8 pages).
+Output written on Chapter2.pdf (7 pages).

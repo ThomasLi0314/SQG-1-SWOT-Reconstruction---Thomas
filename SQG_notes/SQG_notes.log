@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.10.2)  1 JAN 2026 15:39
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.10.2)  1 JAN 2026 18:54
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1125,7 +1125,7 @@ Package marginnote Info: Using workaround for absolute page number on input line
  [1] [1
 
 ]
-Package marginnote Info: Using workaround for absolute page number on input line 81.
+Package marginnote Info: Using workaround for absolute page number on input line 83.
  (./Literature_review/Chapter_0.tex
 Package marginnote Info: Margin note 6.1 is on absolute page 6 on input line 10.
 Package marginnote Info: right page because not two side mode on input line 10.
@@ -1201,31 +1201,31 @@ Package marginnote Info: xpos seems to be 376.04234pt on input line 235.
 Package marginnote Info: Margin note 14.2 is on absolute page 14 on input line 239.
 Package marginnote Info: right page because not two side mode on input line 239.
 Package marginnote Info: xpos seems to be 204.85138pt on input line 239.
- [10]
+) [10] [11] (./Chapter_2_SQG1/Chapter2.tex
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 15.0049pt on input line 247.
+(Font)              scaled to size 15.0049pt on input line 5.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 15.0049pt on input line 247.
+(Font)              scaled to size 15.0049pt on input line 5.
 
 Missing character: There is no 、 ("3001) in font pplr7t!
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 12.50409pt on input line 281.
+(Font)              scaled to size 12.50409pt on input line 39.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 9.37807pt on input line 281.
+(Font)              scaled to size 9.37807pt on input line 39.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 12.50409pt on input line 281.
+(Font)              scaled to size 12.50409pt on input line 39.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 9.37807pt on input line 281.
-Package marginnote Info: Margin note 15.1 is on absolute page 16 on input line 282.
-Package marginnote Info: right page because not two side mode on input line 282.
-Package marginnote Info: xpos seems to be 160.44193pt on input line 282.
-[11]
-Package marginnote Info: Margin note 16.1 is on absolute page 16 on input line 299.
-Package marginnote Info: right page because not two side mode on input line 299.
-Package marginnote Info: xpos seems to be 361.56143pt on input line 299.
- [12] [13] [14])
+(Font)              scaled to size 9.37807pt on input line 39.
+Package marginnote Info: Margin note 16.1 is on absolute page 17 on input line 40.
+Package marginnote Info: right page because not two side mode on input line 40.
+Package marginnote Info: xpos seems to be 160.44193pt on input line 40.
+[12]
+Package marginnote Info: Margin note 17.1 is on absolute page 17 on input line 57.
+Package marginnote Info: right page because not two side mode on input line 57.
+Package marginnote Info: xpos seems to be 361.56143pt on input line 57.
+ [13] [14] [15] [16])
 No file SQG_notes.bbl.
-[15] (./SQG_notes.aux)
+[17] (./SQG_notes.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
@@ -1238,12 +1238,12 @@ Package rerunfilecheck Info: File `SQG_notes.out' has not changed.
 (rerunfilecheck)             Checksum: 1A22807D21A45C895669C754BC655568;3097.
  ) 
 Here is how much of TeX's memory you used:
- 33843 strings out of 474773
- 660747 string characters out of 5755059
+ 33852 strings out of 474773
+ 660993 string characters out of 5755059
  1935842 words of memory out of 5000000
- 55357 multiletter control sequences out of 15000+600000
+ 55361 multiletter control sequences out of 15000+600000
  639998 words of font info for 183 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  116i,20n,121p,776b,1123s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on SQG_notes.pdf (17 pages).
+Output written on SQG_notes.pdf (19 pages).
