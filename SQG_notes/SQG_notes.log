@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.10.2)  1 JAN 2026 18:54
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.10.2)  9 JAN 2026 14:08
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1125,7 +1125,7 @@ Package marginnote Info: Using workaround for absolute page number on input line
  [1] [1
 
 ]
-Package marginnote Info: Using workaround for absolute page number on input line 83.
+Package marginnote Info: Using workaround for absolute page number on input line 94.
  (./Literature_review/Chapter_0.tex
 Package marginnote Info: Margin note 6.1 is on absolute page 6 on input line 10.
 Package marginnote Info: right page because not two side mode on input line 10.
@@ -1151,19 +1151,19 @@ Package marginnote Info: xpos seems to be 223.6115pt on input line 28.
 Package marginnote Info: Margin note 6.4 is on absolute page 6 on input line 33.
 Package marginnote Info: right page because not two side mode on input line 33.
 Package marginnote Info: xpos seems to be 225.86748pt on input line 33.
+Package hyperref Info: bookmark level for unknown remark defaults to 0 on input line 38.
  [2]
-Package marginnote Info: Margin note 7.1 is on absolute page 7 on input line 40.
-Package marginnote Info: right page because not two side mode on input line 40.
-Package marginnote Info: xpos seems to be 466.86081pt on input line 40.
-LaTeX Font Info:    Trying to load font information for TS1+ppl on input line 42.
+Package marginnote Info: Margin note 7.1 is on absolute page 7 on input line 44.
+Package marginnote Info: right page because not two side mode on input line 44.
+Package marginnote Info: xpos seems to be 466.86081pt on input line 44.
+LaTeX Font Info:    Trying to load font information for TS1+ppl on input line 46.
  (d:/Program Files/texlive/2024/texmf-dist/tex/latex/psnfss/ts1ppl.fd
 File: ts1ppl.fd 2001/06/04 font definitions for TS1/ppl.
 )
-Overfull \hbox (3.46843pt too wide) in paragraph at lines 42--43
+Overfull \hbox (3.46843pt too wide) in paragraph at lines 46--47
 \T1/ppl/m/n/10 modes. How-ever, these modes are typ-i-cally cal-cu-lated by \T1/ppl/b/n/10 as-sum-ing buoy-ancy anoma-
  []
 
-Package hyperref Info: bookmark level for unknown remark defaults to 0 on input line 69.
 ) [3] (./Chapter1_SQG/Chapter1.tex [4]
 Package marginnote Info: Margin note 9.1 is on absolute page 9 on input line 47.
 Package marginnote Info: right page because not two side mode on input line 47.
@@ -1223,9 +1223,25 @@ Package marginnote Info: xpos seems to be 160.44193pt on input line 40.
 Package marginnote Info: Margin note 17.1 is on absolute page 17 on input line 57.
 Package marginnote Info: right page because not two side mode on input line 57.
 Package marginnote Info: xpos seems to be 361.56143pt on input line 57.
- [13] [14] [15] [16])
+ [13]
+Package marginnote Info: Margin note 18.1 is on absolute page 18 on input line 88.
+Package marginnote Info: right page because not two side mode on input line 88.
+Package marginnote Info: xpos seems to be 114.08243pt on input line 88.
+ [14] [15] [16] [17]
+Package marginnote Info: Margin note 22.1 is on absolute page 22 on input line 211.
+Package marginnote Info: right page because not two side mode on input line 211.
+Package marginnote Info: xpos seems to be 166.58177pt on input line 211.
+Package marginnote Info: Margin note 22.2 is on absolute page 22 on input line 219.
+Package marginnote Info: right page because not two side mode on input line 219.
+Package marginnote Info: xpos seems to be 166.90184pt on input line 219.
+Package marginnote Info: right page because not two side mode on input line 241.
+Package marginnote Info: xpos seems to be \@mn@currxpos  on input line 241.
+Package marginnote Info: Margin note 22.4 is on absolute page 23 on input line 241.
+Package marginnote Info: right page because not two side mode on input line 241.
+Package marginnote Info: xpos seems to be 408.20355pt on input line 241.
+ [18])
 No file SQG_notes.bbl.
-[17] (./SQG_notes.aux)
+[19] (./SQG_notes.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
@@ -1235,15 +1251,15 @@ L3 programming layer <2024-02-20>
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `SQG_notes.out' has not changed.
-(rerunfilecheck)             Checksum: 1A22807D21A45C895669C754BC655568;3097.
+(rerunfilecheck)             Checksum: BFA559C5170A4308B941227286D63398;3683.
  ) 
 Here is how much of TeX's memory you used:
- 33852 strings out of 474773
- 660993 string characters out of 5755059
- 1935842 words of memory out of 5000000
- 55361 multiletter control sequences out of 15000+600000
+ 33860 strings out of 474773
+ 661090 string characters out of 5755059
+ 1942842 words of memory out of 5000000
+ 55369 multiletter control sequences out of 15000+600000
  639998 words of font info for 183 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 116i,20n,121p,776b,1123s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 116i,21n,121p,776b,1116s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on SQG_notes.pdf (19 pages).
+Output written on SQG_notes.pdf (21 pages).

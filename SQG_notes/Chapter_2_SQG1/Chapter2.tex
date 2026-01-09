@@ -85,7 +85,7 @@
     \end{enumerate}
 
     \subsection{Evolution and Inversion Equations of \texorpdfstring{$\QGone$}{QG1}}
-    Assume 
+    Assume \mn{\color{red} Why? First order is geostrophic balance?}
     \[ G^0 = F^0 = 0\]
     and 
     \[ \epsilon \ll 1 \qquad \Bur \sim O(1)\]
@@ -158,7 +158,21 @@ Using $\mcalL(\Phi^0)= 0$. We have
 \end{equation}
 Together with Eq \ref{F^1 and Phi^0 relation}, Eq \ref{G^1 and Phi^0 relation} and boundary conditions. 
 \[ \Phi_z^1 = F^1 = G^1 = 0 \qquad \text{at } z = 0\]
-Further we assume all potential vanish at infinity. 
+Further we assume all potential vanish at infinity.
+
+\subsection{\texorpdfstring{$\Phi^0$}{Phi} Inversion}
+
+To get the $\Phi^0$ from SSH data, we do the standard inversion as in the Quasi-Geostrophic Balance Model.  \par
+
+The first order potential is geostrophic. And in the Surface Geostrophic Model, the interior PV is 0. So we have the Governing equation 
+\[ \mcalL(\Phi^0) = 0 \qquad f\Phi_z^0 = b\]
+In the Fourier space, since $\Phi$ vanish as $z \to -\infty$. Then the Horizontal Fourier modes are 
+\[ \widehat{\Phi}^0 = \frac{\hat{b}^{0,t}}{f \mu} e^{\mu z}\]
+With constant
+\[ \mu = \sqrt{\Bur} \frac{NK}{f} \qquad K = \sqrt{m^2 + l^2}\]
+
+\subsection{Higher Order Potential Inversion}
+Now the $\Phi^0$ is known already. 
 \begin{explanation}
     For this system, the goal is to know $\Phi^1, G^1$ and $F^1$. We recall that first order potential $G^0 = F^0 = 0$. And $\Phi^0$ can be obtain from geostrophic balance. This is a system of decoupled linear elliptic (Poisson) equations. \begin{enumerate}
         \item  Decoupled: You can solve for $\Phi^1$, $F^1$, and $G^1$ independently of each other.
@@ -170,7 +184,7 @@ The inversion is carried on by decomposing potential into interior and surface p
 \begin{equation}
     \Phi_{int}^1 = \frac{f}{2N^2\Bur}\Phi_z^0\Phi_z^0 \label{Analytic solution for phi_int}
 \end{equation}
-Is a solution to Eq \ref{main equation for Phi^1}. Then it remains to solve the surface part given by 
+Is an analytic solution to Eq \ref{main equation for Phi^1}. Then it remains to solve the surface part given by 
 \begin{align}
     \mcalL(\Phi_{sur}^1) &= 0 \\
     \Phi_{sur,z}^{1,t} &= C_b - \partial_z \Phi_{int,z}^{1,t} = C_b - \frac{f}{\Bur N^2}\Phi_z^{0,t}\Phi_{zz}^{0,t}
@@ -188,13 +202,16 @@ We see that
     &=  \frac{f}{\Bur N^2} \Big(2N^2(\Phi_{xy}^0\Phi_{xz}^0 + \Phi_{yy}^0\Phi_{zy}^0) - 2N^2\Phi_{yz}(\Phi_{xx}^0 + \Phi_{yy}^0)\Big) \\
     &= \frac{2f}{\Bur}J(\Phi_z^0, \Phi_x^0)
 \end{align*}
-This match with Eq \ref{F^1 and Phi^0 relation}. Similarly we can set 
-\[ G^1_{int} = \frac{f}{\Bur N^2} \Phi_x^0\Phi_z^0\]
-Then similar as $\Phi^1$. The total Fourier mode is the sum of interior part and surface part. Where surface part is set to match the boundary condition. THe equations are 
+This match with Eq \ref{F^1 and Phi^0 relation}. Then similar as $\Phi^1$. The total Fourier mode is the sum of interior part and surface part. Where surface part is set to match the boundary condition. THe equations are 
 \[ \mcalL(F_{int}^1) = \frac{2f}{\Bur} J(\Phi_z^0, \Phi_x^0) \quad \mcalL(F_{sur}^1) = 0 \ \& \ F_{sur}^{0}(z = 0) = -F_{int}(z = 0)\]
 \begin{equation}
     \widehat{F^1} = \frac{f}{\Bur N^2} \left( \widehat{\Phi_y^0\Phi_z^0} - \widehat{\Phi_y^{0,t}\Phi_z^{0,t}} e^{\mu z}\right)
 \end{equation}
+
+Similarly we can set \mn{Do the calculation for $G$ here later. }
+
+\[ G^1_{int} = -\frac{f}{\Bur N^2} \Phi_x^0\Phi_z^0\]
+
 and 
 \begin{equation}
     \widehat{G^1} = -\frac{f}{\Bur N^2} \left( \widehat{\Phi_x^0\Phi_z^0} - \widehat{\Phi_x^{0,t}\Phi_z^{0,t}} e^{\mu z}\right)

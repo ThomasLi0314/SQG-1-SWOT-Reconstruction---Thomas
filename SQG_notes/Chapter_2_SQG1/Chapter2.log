@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.10.2)  4 JAN 2026 00:38
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.10.2)  9 JAN 2026 13:58
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1130,17 +1130,23 @@ LaTeX Font Info:    Font shape `U/msb/m/n' will be
 Package marginnote Info: Margin note 2.1 is on absolute page 2 on input line 57.
 Package marginnote Info: right page because not two side mode on input line 57.
 Package marginnote Info: xpos seems to be 351.27556pt on input line 57.
- [2] [3] [4] [5]
-Package marginnote Info: Margin note 6.1 is on absolute page 6 on input line 202.
-Package marginnote Info: right page because not two side mode on input line 202.
-Package marginnote Info: xpos seems to be 163.10184pt on input line 202.
- [6]
-Package marginnote Info: right page because not two side mode on input line 224.
-Package marginnote Info: xpos seems to be \@mn@currxpos  on input line 224.
-Package marginnote Info: Margin note 7.2 is on absolute page 7 on input line 224.
-Package marginnote Info: right page because not two side mode on input line 224.
-Package marginnote Info: xpos seems to be 418.38351pt on input line 224.
- [7] (./Chapter2.aux)
+ [2]
+Package marginnote Info: Margin note 3.1 is on absolute page 3 on input line 88.
+Package marginnote Info: right page because not two side mode on input line 88.
+Package marginnote Info: xpos seems to be 110.28242pt on input line 88.
+ [3] [4] [5] [6]
+Package marginnote Info: Margin note 7.1 is on absolute page 7 on input line 211.
+Package marginnote Info: right page because not two side mode on input line 211.
+Package marginnote Info: xpos seems to be 162.78177pt on input line 211.
+Package marginnote Info: Margin note 7.2 is on absolute page 7 on input line 219.
+Package marginnote Info: right page because not two side mode on input line 219.
+Package marginnote Info: xpos seems to be 163.10184pt on input line 219.
+Package marginnote Info: right page because not two side mode on input line 241.
+Package marginnote Info: xpos seems to be \@mn@currxpos  on input line 241.
+Package marginnote Info: Margin note 7.4 is on absolute page 8 on input line 241.
+Package marginnote Info: right page because not two side mode on input line 241.
+Package marginnote Info: xpos seems to be 418.38351pt on input line 241.
+ [7] [8] (./Chapter2.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
@@ -1150,15 +1156,15 @@ L3 programming layer <2024-02-20>
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `Chapter2.out' has not changed.
-(rerunfilecheck)             Checksum: DFB4BC780684962D2E5CE701F21C015B;602.
+(rerunfilecheck)             Checksum: 1CD40EA58F2AB2A1FD2C8786B5FD6095;953.
  ) 
 Here is how much of TeX's memory you used:
- 33690 strings out of 474773
- 658059 string characters out of 5755059
- 1939842 words of memory out of 5000000
- 55219 multiletter control sequences out of 15000+600000
+ 33693 strings out of 474773
+ 658092 string characters out of 5755059
+ 1942842 words of memory out of 5000000
+ 55222 multiletter control sequences out of 15000+600000
  623490 words of font info for 171 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  136i,21n,138p,664b,928s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on Chapter2.pdf (7 pages).
+Output written on Chapter2.pdf (8 pages).
