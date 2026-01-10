@@ -22,7 +22,7 @@
     \[ \xi b_z - v_z bx + u_z b_y = \bm{\omega} \cdot \nabla_3 b\]
     where 
     \[ \bm{\omega} = (-v_z, u_z, \xi) = (-v_z, u_z, v_x - u_y)\]
-    Then after scaling anlysis we have 
+    Then after scaling anlysis we have \mn{\color{red} Check the Dimension Here!!!!!}
     \[Q = N^2 f + \epsilon q\]
     where 
     \begin{equation}
@@ -187,10 +187,10 @@ The inversion is carried on by decomposing potential into interior and surface p
 Is an analytic solution to Eq \ref{main equation for Phi^1}. Then it remains to solve the surface part given by 
 \begin{align}
     \mcalL(\Phi_{sur}^1) &= 0 \\
-    \Phi_{sur,z}^{1,t} &= C_b - \partial_z \Phi_{int,z}^{1,t} = C_b - \frac{f}{\Bur N^2}\Phi_z^{0,t}\Phi_{zz}^{0,t}
+    \Phi_{sur,z}^{1,t} &= C_b - \partial_z \Phi_{int}^{1,t} = C_b - \frac{f}{\Bur N^2}\Phi_z^{0,t}\Phi_{zz}^{0,t}
 \end{align}
 
-This problem is much more familiar, exactly the same problem when solving first order potential $\Phi^0$. The Fourier modes are 
+This problem is much more familiar, exactly the same problem when solving first order potential $\Phi^0$. The Fourier modes are \mn{$C_b$ is added }
 \[ \widehat{\Phi}_{sur}^1 =\left( C_b - \partial_z \Phi_{int,z}^{1,t} \right) \frac{1}{\mu}e^{\mu z}= \left(C_b - \frac{f}{\Bur N^2}\widehat{\Phi_z^{0,t}\Phi_{zz}^{0,t}}\right) \frac{1}{\mu}e^{\mu z}\]
 The analytic solution of $\Phi_{int}$ is given by Eq \ref{Analytic solution for phi_int} already. So the total Fourier mode of $\Phi$ is 
 \[ \widehat{\Phi}^1 = \widehat{\Phi}_{sur}^1 + \widehat{\Phi}_{int}^1\]
@@ -226,7 +226,7 @@ The inversion of surface horizontal velocity can be calculate as follow : \par
         u &= \sum \Big(-\hat{\Phi}_y^{0,t} 
         - \epsilon(\hat{\Phi}_y^{1,t} + \hat{F}_z^{1,t})\Big)e^{i(kx + ly)} \\ \vspace{5pt}
         &= -\epsilon \cdot \frac{f}{\Bur N^2}\left[\partial_y \left({\underbrace{\frac{ \Phi_{z}^{0,t}\Phi_z^{0,t}}{2}}_{\Phi_{int}^{1,t}}}\right) + \partial_z\left(\underbrace{\Phi_y^{0,t}\Phi_z^{0,t}}_{F^1_{int}}\right)\right] \\
-        &+ \sum  \left[-\hat{\Phi}_y^{0,t} e^{i(kx + ly)} - \epsilon \cdot \frac{f}{\Bur N^2}\partial_y\left( \left(\underbrace{ - \frac{\widehat{\Phi_z^{0,t}\Phi_{zz}^{0,t}}}{\mu}e^{\mu z}}_{\Phi^1_{sur}} \right) e^{i(kx + ly)} \right)      -\epsilon \cdot \frac{f}{\Bur N^2} \partial_z\left(\underbrace{\widehat{\Phi_y^{0,t}\Phi_z^{0,t}} e^{\mu z}}_{F^1_{sur}}\right) e^{i(kx + ly)} \right]
+        &+ \sum  \left[-\hat{\Phi}_y^{0,t} e^{i(kx + ly)} - \epsilon \cdot \frac{f}{\Bur N^2}\partial_y\left( \left(\underbrace{ - \frac{\widehat{\Phi_z^{0,t}\Phi_{zz}^{0,t}}}{\mu}e^{\mu z}}_{\Phi^1_{sur}} \right) e^{i(kx + ly)} \right)      -\epsilon \cdot \frac{f}{\Bur N^2} \partial_z\left(-\underbrace{\widehat{\Phi_y^{0,t}\Phi_z^{0,t}} e^{\mu z}}_{F^1_{sur}}\right) e^{i(kx + ly)} \right]
     \end{align*}
 }
 Then take the derivative, then take the Fourier Transform we have 

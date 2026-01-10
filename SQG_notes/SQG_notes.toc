@@ -2,6 +2,7 @@
 \contentsline {subsection}{\numberline {1.1}0108}{1}{subsection.1.1}%
 \contentsline {section}{\numberline {2}Literature Review}{2}{section.2}%
 \contentsline {subsection}{\numberline {2.1}Ryan et.al.}{2}{subsection.2.1}%
+\contentsline {subsubsection}{\numberline {2.1.1}Questions Regrading this Paper}{3}{subsubsection.2.1.1}%
 \contentsline {subsection}{\numberline {2.2}J.Wang et.al. Reconstructing the Ocean's Interior from Surface Data}{3}{subsection.2.2}%
 \contentsline {section}{\numberline {3}Quasi-Geostrophic Equations}{4}{section.3}%
 \contentsline {subsection}{\numberline {3.1}Governing Equations}{4}{subsection.3.1}%

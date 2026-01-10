@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.10.2)  9 JAN 2026 13:58
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.10.2)  10 JAN 2026 16:04
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1096,6 +1096,13 @@ LaTeX Warning: Hyper reference `Ertel PV' on page 1 undefined on input line 11.
 LaTeX Warning: Reference `dimensionless buoyancy equation' on page 1 undefined on input line 11.
 
 Missing character: There is no 、 ("3001) in font pplr7t!
+Package marginnote Info: Margin note 1.1 is on absolute page 1 on input line 25.
+Package marginnote Info: right page because not two side mode on input line 25.
+Package marginnote Info: xpos seems to be 225.71106pt on input line 25.
+LaTeX Font Info:    Font shape `U/msa/m/n' will be
+(Font)              scaled to size 5.21004pt on input line 25.
+LaTeX Font Info:    Font shape `U/msb/m/n' will be
+(Font)              scaled to size 5.21004pt on input line 25.
 LaTeX Font Info:    Trying to load font information for T1+lmss on input line 33.
 (d:/Program Files/texlive/2024/texmf-dist/tex/latex/lm/t1lmss.fd
 File: t1lmss.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
@@ -1117,13 +1124,9 @@ LaTeX Font Info:    Font shape `U/msb/m/n' will be
 (Font)              scaled to size 9.37807pt on input line 39.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
 (Font)              scaled to size 7.29405pt on input line 39.
-Package marginnote Info: Margin note 1.1 is on absolute page 2 on input line 40.
+Package marginnote Info: Margin note 1.2 is on absolute page 2 on input line 40.
 Package marginnote Info: right page because not two side mode on input line 40.
 Package marginnote Info: xpos seems to be 156.64192pt on input line 40.
-LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 5.21004pt on input line 40.
-LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 5.21004pt on input line 40.
 [1
 
 ]
@@ -1134,7 +1137,10 @@ Package marginnote Info: xpos seems to be 351.27556pt on input line 57.
 Package marginnote Info: Margin note 3.1 is on absolute page 3 on input line 88.
 Package marginnote Info: right page because not two side mode on input line 88.
 Package marginnote Info: xpos seems to be 110.28242pt on input line 88.
- [3] [4] [5] [6]
+ [3] [4] [5]
+Package marginnote Info: right page because not two side mode on input line 193.
+Package marginnote Info: xpos seems to be \@mn@currxpos  on input line 193.
+ [6]
 Package marginnote Info: Margin note 7.1 is on absolute page 7 on input line 211.
 Package marginnote Info: right page because not two side mode on input line 211.
 Package marginnote Info: xpos seems to be 162.78177pt on input line 211.
@@ -1155,14 +1161,17 @@ L3 programming layer <2024-02-20>
 
 LaTeX Warning: There were undefined references.
 
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package rerunfilecheck Info: File `Chapter2.out' has not changed.
 (rerunfilecheck)             Checksum: 1CD40EA58F2AB2A1FD2C8786B5FD6095;953.
  ) 
 Here is how much of TeX's memory you used:
- 33693 strings out of 474773
- 658092 string characters out of 5755059
+ 33695 strings out of 474773
+ 658114 string characters out of 5755059
  1942842 words of memory out of 5000000
- 55222 multiletter control sequences out of 15000+600000
+ 55224 multiletter control sequences out of 15000+600000
  623490 words of font info for 171 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  136i,21n,138p,664b,928s stack positions out of 10000i,1000n,20000p,200000b,200000s
