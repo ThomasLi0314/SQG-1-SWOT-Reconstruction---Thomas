@@ -8,12 +8,14 @@
 
     The derivation starts from the same set of equations above. We set
     \[ \epsilon = \Ro = \frac{U}{fL} \qquad \text{Bu} = \left( \frac{NH}{fL}\right)^2\]
-    The Derivation starts from Eq \ref{dimensionless buoyancy equation}, \ref{dimensionless contiuity equation for ocean}, \ref{dimensionless hydrostatic balance equation} and \ref{dimensionless momentum equation}. The \hyperref[Ertel PV]{Ertel Potential Vorticity} is conserved. In this case, the conserved quantity is the \textbf{total Buoyancy} since Eq \ref{dimensionless buoyancy equation} we define it as 
+    The Derivation starts from dimensional form of Eq \ref{dimensionless buoyancy equation}, \ref{dimensionless contiuity equation for ocean}, \ref{dimensionless hydrostatic balance equation} and \ref{dimensionless momentum equation}. The \hyperref[Ertel PV]{Ertel Potential Vorticity} is conserved. In this case, the conserved quantity is the \textbf{total Buoyancy} since Eq \ref{dimensionless buoyancy equation} we define it as 
+    \[ b_{tot} = \Bur \cdot z + \Ro \cdot b \]
     \[ b_{\text{tot}} = N^2z + b\]
     and
     \[ \bm{\omega}_a = \nabla_3 \times (u,v,0) + f\hat{z} = (-v_z, u_z, f + \xi)\]
     Then 
-    \begin{equation} Q = \underbrace{fN^2}_{\text{Background}} + \underbrace{(N^2\xi + fb_z)}_{\text{Linear terms, QGPV}} + \underbrace{(\xi b_z - v_zb_x + u_zb_y)}_{\text{Nonlinear terms}}\end{equation}
+    \begin{equation} Q = \underbrace{fN^2}_{\text{Background}} + \underbrace{(N^2\xi + fb_z)}_{\text{Linear terms, QGPV}} + \underbrace{(\xi b_z - v_zb_x + u_zb_y)}_{\text{Nonlinear terms}}\label{dimensional form of original Ertel PV}
+    \end{equation}
     and
     \[ q_{\text{QG}} = N^2 \xi + fb_z\]
     Use the vector identity 
@@ -22,13 +24,23 @@
     \[ \xi b_z - v_z bx + u_z b_y = \bm{\omega} \cdot \nabla_3 b\]
     where 
     \[ \bm{\omega} = (-v_z, u_z, \xi) = (-v_z, u_z, v_x - u_y)\]
-    Then after scaling anlysis we have \mn{\color{red} Check the Dimension Here!!!!!}
-    \[Q = N^2 f + \epsilon q\]
+    We apply the scalings
+    \[ \xi \sim \frac{U}{L} \quad b \sim \frac{fUL}{H} \quad v_z, u_z \sim \frac{U}{H}\]
+    Then Eq \ref{dimensional form of original Ertel PV} becomes 
+    \begin{equation}
+        Q = 1 + \epsilon\left( \xi + \frac{b_z}{\Bur} + \frac{\epsilon }{\Bur}(\xi b_z - v_z b_x + u_z b_y)\right) \label{Dimensionless Ertel PV}
+    \end{equation}
+    or in a more compact way, again we drop the hat for dimensionless variables for simplicity.
+    \begin{equation}
+        Q = 1 + \epsilon\left( \xi + \frac{b_z}{\Bur} + \frac{\epsilon}{\Bur} \nabla \cdot (\bm{\omega} b)\right)
+        \label{Ture Dimensionless PV}
+    \end{equation}
+    or express in the form of 
+    \[ Q = 1 + \epsilon q \]
     where 
     \begin{equation}
-        q = N^2 \xi + \frac{1}{\Bur} fb_z + \frac{\epsilon}{\Bur} \nabla_3 \cdot (\bm{\omega} b) \label{Dimensionless PV}
+        q = \xi + \frac{b_z}{\Bur} + \frac{\epsilon}{\Bur} \nabla \cdot (\bm{\omega} b) \label{dimensionless}
     \end{equation}
-    The first two term is the calssical Quasi Geostrophic Potential Vorticity. 
     \begin{explanation}
         Since here $N$ is constant and we assume the Boussinesq Equation, the third term in Eq \ref{temp QGPV} becomes,
         \[ \frac{f_0}{\cancel{\rho}} \cancel{\rho} \frac{\p b}{\p z} 
@@ -55,14 +67,14 @@
     However, this $\bm{A}$ isn't uniquely correspond to a velocity field. Since Gradient is Curl free, $\bu$ admits a gauge freedom in that the transformation 
     \[ \bm{A} \rightarrow \bm{A} + \nabla_3 \Gamma\]
     Left $\bu$ unchange. Now instead of assuming $\bm{A}$ is divergent free. \mn{if $\bm{A}$ is divergent free, then this is adding an additioal information to the system and $\bm{A}$ can be uniquely determined.} We fix the buoyancy to be roughly scaled version of $\nabla_3 \cdot \bm{A}$. 
-    \[ \nabla_3 \cdot \bm{A} = -G_x + F_y - \Phi_z \qrq b = f\Phi_z + \Bur \frac{N^2}{f}(G_x - F_y)\]
-    The advantage can be seen by calculating the QGPV Eq \ref{Dimensionless PV} (\textbf{Dimensionless form}) : 
+    \[ \nabla_3 \cdot \bm{A} = -G_x + F_y - \Phi_z \qrq b = \Phi_z + \Bur(G_x - F_y)\]
+    The advantage can be seen by calculating the QGPV Eq \ref{Ture Dimensionless PV} (\textbf{Dimensionless form}) : 
     \begin{equation}
-        q_{\text{QG}} = N^2 \xi + \frac{f}{\Bur}b_z = N^2(\Phi_{xx} + \Phi_{yy}) + \frac{f^2}{\Bur}\Phi_{zz} = \mcalL \Phi
+        q_{\text{QG}} = \xi + \frac{b_z}{\Bur} = \nabla^2 \Phi + F_{zy} - G_{zx} + \frac{1}{\Bur}\Phi_{zz} +(G_{xz} - F_{yz}) = (\Phi_{xx} + \Phi_{yy}) + \frac{\Phi_{zz}}{\Bur} = \mcalL \Phi
     \end{equation}
     Where 
     \begin{equation}
-        \mcalL = N^2 \nabla^2 + \frac{f^2}{\Bur}\p_{zz} \label{modified laplacian}
+        \mcalL = \nabla^2 + \frac{1}{\Bur}\p_{zz} \label{modified laplacian}
     \end{equation} 
     Then $\Phi$ is the only component related to the QGPV compare to dependence on all three component of velocity in the classical QGPV. When is the Buoyancy unchanged? \par
     \begin{explanation}
@@ -71,10 +83,10 @@
         Then 
         \[ G \rightarrow G - \Gamma_x  \quad F \rightarrow F + \Gamma_y \rightarrow \Phi \rightarrow \Phi - \Gamma_z\]
         And 
-        \[ b_{new} = \underbrace{\left[ f\Phi_z + \{Bu\}\frac{N^2}{f}(G_x - F_y) \right]}_{b_{origin}} - \underbrace{\left[ f\Gamma_{zz} + \{Bu\}\frac{N^2}{f}(\Gamma_{xx} + \Gamma_{yy}) \right]}_{b_{change}}\]
+        \[ b_{new} = \underbrace{\left[ \Phi_z + \Bur(G_x - F_y) \right]}_{b_{origin}} - \underbrace{\left[ \Gamma_{zz} + \Bur(\Gamma_{xx} + \Gamma_{yy}) \right]}_{b_{change}}\]
         So in order to have $b_{new} = b_{origin}$. We have 
         \begin{equation}
-            b_{change} =  f\Gamma_{zz} + \{Bu\}\frac{N^2}{f}(\Gamma_{xx} + \Gamma_{yy})  = \boxed{\mcalL(\Gamma) = 0} \label{unchanged buoyancy}
+            b_{change} =  \Gamma_{zz} + \Bur(\Gamma_{xx} + \Gamma_{yy}) \Rightarrow \boxed{\mcalL(\Gamma) = 0} \label{unchanged buoyancy}
         \end{equation}
     \end{explanation}
     Some Discussions
@@ -95,20 +107,20 @@
             u &= -\Phi_y^0 - \epsilon(\Phi_y^1 + F_z^1) \\
             v &= \Phi_x^0 + \epsilon(\Phi_x^1 - G_z^1) \\
             w &= 0 + \epsilon(F_x^1 + G_y^1) \\
-            b &= f\Phi_z^0 + \epsilon f\left( \Phi_z^1 + \Bur \frac{N^2}{f^2}(G_x^1 - F_y^1)\right) \label{buoyancy in QG+1}
+            b &= \Phi_z^0 + \epsilon \left( \Phi_z^1 + \Bur(G_x^1 - F_y^1)\right) \label{buoyancy in QG+1}
         \end{align}
     \end{subequations}
-    Evaluate Eq \ref{Dimensionless PV} we have up to $O(\epsilon)$. 
+    Evaluate Eq \ref{dimensionless QGPV} we have up to $O(\epsilon)$. 
     \begin{align}
-        q &= N^2 (\nabla^2\Phi^0 + \nabla^2\Phi^1 - G_{zx}^1 + F_{zy}^1) + \frac{f^2}{\Bur}\Phi_z^0 + \epsilon \frac{f^2}{\Bur}\left( \Phi_z^1 + \Bur \frac{N^2}{f^2}(G_x^1 - F_y^1)\right) \nonumber \\
-        &+ \underbrace{\left[-\Phi_{xz}^0, -\Phi_{yz}^0,\nabla^2\Phi^0\right]}_{\text{This is } \bm{\omega} = (-v_z, u_z, \xi)} \cdot \underbrace{\left[f\Phi_{zx}^0, f\Phi_{zy}^0, f\Phi_{zz}^0\right]}_{\text{this is } \nabla_3 b} \nonumber \\
-        &= \boxed{\mcalL(\Phi^0) + \epsilon \mcalL(\Phi^1) + \epsilon \frac{f}{\Bur}\Big(-|\nabla\Phi_z^0|^2 + \Phi_{zz}^0\nabla^2\Phi^0\Big) + O(\epsilon^2)} \label{potential vorticity up to first order}
+        q &= \underbrace{(\nabla^2\Phi^0 + \nabla^2\Phi^1 - G_{zx}^1 + F_{zy}^1)}_{\text{This is } \xi} +\left[ \frac{1}{\Bur}\Phi_{zz}^0 + \frac{\epsilon}{\Bur}\left( \Phi_{zz}^1 + \Bur (G_{xz}^1 - F_{yz}^1)\right) \right]\nonumber \\
+        &+ \frac{\epsilon}{\Bur} \underbrace{\left[-\Phi_{xz}^0, -\Phi_{yz}^0,\nabla^2\Phi^0\right]}_{\text{This is } \bm{\omega} = (-v_z, u_z, \xi)} \cdot \underbrace{\left[\Phi_{zx}^0, \Phi_{zy}^0, \Phi_{zz}^0\right]}_{\text{this is } \nabla_3 b} \nonumber \\
+        &= \boxed{\mcalL(\Phi^0) + \epsilon \mcalL(\Phi^1) +\frac{\epsilon}{\Bur}\Big(-|\nabla\Phi_z^0|^2 + \Phi_{zz}^0\nabla^2\Phi^0\Big) + O(\epsilon^2)} \label{potential vorticity up to first order}
     \end{align}
     The surface Buoyancy from 
     \begin{subequations}
         \begin{align}
-            b^t &= f\Phi_z^0\Big|_{z = 0} + f\Phi_z^1\Big|_{z = 0} + O(\epsilon^2) \\
-            b^b &= f\Phi_z^0\Big|_{z = -H} + f\Phi_z^1\Big|_{z = -H} + O(\epsilon^2)  
+            b^t &= \Phi_z^0\Big|_{z = 0} + \Phi_z^1\Big|_{z = 0} + O(\epsilon^2) \\
+            b^b &= \Phi_z^0\Big|_{z = -H} + \Phi_z^1\Big|_{z = -H} + O(\epsilon^2)  
         \end{align}
     \end{subequations}
 
@@ -123,23 +135,23 @@
     \end{subequations}
     Take the difference of $z$-derivative of $f$ times Eq \ref{first order primitive b} and $x$-derivetive Eq \ref{first order primitive c} we derive 
     \begin{equation}
-        \mcalL(F^1) = \frac{2f}{\Bur} J(\Phi_z^0, \Phi_x^0) \label{F^1 and Phi^0 relation}
+        \mcalL(F^1) = \frac{2}{\Bur} J(\Phi_z^0, \Phi_x^0) \label{F^1 and Phi^0 relation}
     \end{equation}
     and similarly 
     \begin{equation}
-        \mcalL(G^1) = \frac{2f}{\Bur} J(\Phi_z^0, \Phi_y^0) \label{G^1 and Phi^0 relation}
+        \mcalL(G^1) = \frac{2}{\Bur} J(\Phi_z^0, \Phi_y^0) \label{G^1 and Phi^0 relation}
     \end{equation}
 \newpage
 
 \section{\texorpdfstring{$\SQGone$}{SQG1} Model}
 
 From the Geostrophic Balance Equation we have 
-\[ \nabla^2 p^0 = f\xi^0\]
+\[ \nabla^2 p^0 = \xi^0\]
 To obtain the next order balance equation, we use Eq \ref{buoyancy in QG+1}, \ref{F^1 and Phi^0 relation} and \ref{G^1 and Phi^0 relation}.
 \begin{equation}
     \begin{aligned}
-        \nabla^2 b^1 - f\xi_z^1 &= f\left( \nabla^2 \Phi_z + \text{Bu}\frac{N^2}{f^2}\nabla^2(G_x - F_y)\right) - f\nabla^2\Phi_z - f\partial_{zz}(G_x - F_y) \\
-        &= \frac{\text{Bu}}{f}\mathcal{L}(G_x - F_y) \\[1.5ex]
+        \nabla^2 b^1 - \xi_z^1 &= \left( \nabla^2 \Phi_z + \text{Bu}\nabla^2(G_x - F_y)\right) - \nabla^2\Phi_z - \partial_{zz}(G_x - F_y) \\
+        &= \text{Bu} \cdot \mathcal{L}(G_x - F_y) \\[1.5ex]
         &\quad \text{(Here apply Eq \ref{F^1 and Phi^0 relation} and Eq \ref{G^1 and Phi^0 relation})}  \\[1.5ex]
         &= 2\partial_z J(\Phi_x^0, \Phi_y^0)
     \end{aligned}
@@ -148,13 +160,16 @@ Recall that $p_z = b$ by definition then we have
 \begin{equation}
     \boxed{\nabla^2 p^1 - f\xi^1 = 2J(\Phi_x^0, \Phi_y^0)}
 \end{equation}
+\begin{explanation}
+    The RHS is called the cyclogeostrophic term because it represents the centrifugal force generated by the curvature of the fluid flow. However, real ocean/atmospheric eddies are curved (swirling). When fluid moves in a curve, it experiences a Centrifugal Force ($V^2/R$).Gradient Wind Balance (Cyclogeostrophic): Coriolis Force + Centrifugal Force $\approx$ Pressure Gradient Force.
+\end{explanation}
 This model captures the ageostrophic at first order and the term on the right hand side represents the \textbf{cyclogeostrophic correction}. In SQG, interior potential vorticity is $0$. Then from Eq \ref{potential vorticity up to first order}, since $q^1 = 0$. Then 
 \[
-    \mcalL(\Phi^1) = \frac{f}{\Bur} \left( |\nabla\Phi_z^0|^2 - \Phi_{zz}^0 \nabla^2 \Phi^0 \right)
+    \mcalL(\Phi^1) = \frac{1}{\Bur} \left( |\nabla\Phi_z^0|^2 - \Phi_{zz}^0 \nabla^2 \Phi^0 \right)
 \]
 Using $\mcalL(\Phi^0)= 0$. We have 
 \begin{equation}
-    \mcalL(\Phi^1) = \frac{f}{N^2 \Bur} \left(N^2 |\nabla \Phi^0_z|^2 + \frac{f^2}{\Bur}\Phi_{zz}^0\Phi_{zz}^0\right) \label{main equation for Phi^1}
+    \mcalL(\Phi^1) = \frac{1}{\Bur} \left(|\nabla \Phi^0_z|^2 + \frac{1}{\Bur}\Phi_{zz}^0\Phi_{zz}^0\right) \label{main equation for Phi^1}
 \end{equation}
 Together with Eq \ref{F^1 and Phi^0 relation}, Eq \ref{G^1 and Phi^0 relation} and boundary conditions. 
 \[ \Phi_z^1 = F^1 = G^1 = 0 \qquad \text{at } z = 0\]
@@ -182,39 +197,39 @@ Now the $\Phi^0$ is known already.
 \end{explanation}
 The inversion is carried on by decomposing potential into interior and surface part. The interior part satisfies the main equations but ignore the boundary condition. The surface part solves the homogeneous problem and but corrects the boundary conditions. For $\Phi^1$, we first notice that 
 \begin{equation}
-    \Phi_{int}^1 = \frac{f}{2N^2\Bur}\Phi_z^0\Phi_z^0 \label{Analytic solution for phi_int}
+    \Phi_{int}^1 = \frac{1}{2\Bur}\Phi_z^0\Phi_z^0 \label{Analytic solution for phi_int}
 \end{equation}
 Is an analytic solution to Eq \ref{main equation for Phi^1}. Then it remains to solve the surface part given by 
 \begin{align}
     \mcalL(\Phi_{sur}^1) &= 0 \\
-    \Phi_{sur,z}^{1,t} &= C_b - \partial_z \Phi_{int}^{1,t} = C_b - \frac{f}{\Bur N^2}\Phi_z^{0,t}\Phi_{zz}^{0,t}
+    \Phi_{sur,z}^{1,t} &= C_b - \partial_z \Phi_{int}^{1,t} = C_b - \frac{1}{\Bur}\Phi_z^{0,t}\Phi_{zz}^{0,t}
 \end{align}
 
 This problem is much more familiar, exactly the same problem when solving first order potential $\Phi^0$. The Fourier modes are \mn{$C_b$ is added }
-\[ \widehat{\Phi}_{sur}^1 =\left( C_b - \partial_z \Phi_{int,z}^{1,t} \right) \frac{1}{\mu}e^{\mu z}= \left(C_b - \frac{f}{\Bur N^2}\widehat{\Phi_z^{0,t}\Phi_{zz}^{0,t}}\right) \frac{1}{\mu}e^{\mu z}\]
+\[ \widehat{\Phi}_{sur}^1 =\left( C_b - \partial_z \Phi_{int,z}^{1,t} \right) \frac{1}{\mu}e^{\mu z}= \left(C_b - \frac{1}{\Bur}\widehat{\Phi_z^{0,t}\Phi_{zz}^{0,t}}\right) \frac{1}{\mu}e^{\mu z}\]
 The analytic solution of $\Phi_{int}$ is given by Eq \ref{Analytic solution for phi_int} already. So the total Fourier mode of $\Phi$ is 
 \[ \widehat{\Phi}^1 = \widehat{\Phi}_{sur}^1 + \widehat{\Phi}_{int}^1\]
 Similarly, by setting
-\[ F^1_{int} = \frac{f}{\Bur N^2} \Phi_y^0 \Phi_z^0\]
+\[ F^1_{int} = \frac{1}{\Bur} \Phi_y^0 \Phi_z^0\]
 We see that 
 \begin{align*}
-    \mcalL(F^1) &=  \frac{f}{\Bur N^2}\left(\underbrace{\mcalL(\Phi_y^0)\Phi_z^0}_{=0 \text{ since } \mcalL(\Phi_0) = 0} +\underbrace{\mcalL(\Phi_z^0)\Phi_y^0}_{\text{same}} + 2N^2(\nabla\Phi_y^0 \cdot \nabla \Phi_z^0) + \underbrace{\frac{2f^2}{\Bur}\Phi_{yz}\Phi_{zz}}_{\text{rewrite using } \mcalL(\Phi^0) = 0}\right) \\
-    &=  \frac{f}{\Bur N^2} \Big(2N^2(\Phi_{xy}^0\Phi_{xz}^0 + \Phi_{yy}^0\Phi_{zy}^0) - 2N^2\Phi_{yz}(\Phi_{xx}^0 + \Phi_{yy}^0)\Big) \\
-    &= \frac{2f}{\Bur}J(\Phi_z^0, \Phi_x^0)
+    \mcalL(F^1) &=  \frac{1}{\Bur}\left(\underbrace{\mcalL(\Phi_y^0)\Phi_z^0}_{=0 \text{ since } \mcalL(\Phi_0) = 0} +\underbrace{\mcalL(\Phi_z^0)\Phi_y^0}_{\text{same}} + 2(\nabla\Phi_y^0 \cdot \nabla \Phi_z^0) + \underbrace{\frac{2}{\Bur}\Phi_{yz}\Phi_{zz}}_{\text{rewrite using } \mcalL(\Phi^0) = 0}\right) \\
+    &=  \frac{1}{\Bur} \Big(2(\Phi_{xy}^0\Phi_{xz}^0 + \Phi_{yy}^0\Phi_{zy}^0) - 2\Phi_{yz}(\Phi_{xx}^0 + \Phi_{yy}^0)\Big) \\
+    &= \frac{2}{\Bur}J(\Phi_z^0, \Phi_x^0)
 \end{align*}
 This match with Eq \ref{F^1 and Phi^0 relation}. Then similar as $\Phi^1$. The total Fourier mode is the sum of interior part and surface part. Where surface part is set to match the boundary condition. THe equations are 
 \[ \mcalL(F_{int}^1) = \frac{2f}{\Bur} J(\Phi_z^0, \Phi_x^0) \quad \mcalL(F_{sur}^1) = 0 \ \& \ F_{sur}^{0}(z = 0) = -F_{int}(z = 0)\]
 \begin{equation}
-    \widehat{F^1} = \frac{f}{\Bur N^2} \left( \widehat{\Phi_y^0\Phi_z^0} - \widehat{\Phi_y^{0,t}\Phi_z^{0,t}} e^{\mu z}\right)
+    \widehat{F^1} = \frac{1}{\Bur} \left( \widehat{\Phi_y^0\Phi_z^0} - \widehat{\Phi_y^{0,t}\Phi_z^{0,t}} e^{\mu z}\right)
 \end{equation}
 
 Similarly we can set \mn{Do the calculation for $G$ here later. }
 
-\[ G^1_{int} = -\frac{f}{\Bur N^2} \Phi_x^0\Phi_z^0\]
+\[ G^1_{int} = -\frac{1}{\Bur} \Phi_x^0\Phi_z^0\]
 
 and 
 \begin{equation}
-    \widehat{G^1} = -\frac{f}{\Bur N^2} \left( \widehat{\Phi_x^0\Phi_z^0} - \widehat{\Phi_x^{0,t}\Phi_z^{0,t}} e^{\mu z}\right)
+    \widehat{G^1} = -\frac{1}{\Bur} \left( \widehat{\Phi_x^0\Phi_z^0} - \widehat{\Phi_x^{0,t}\Phi_z^{0,t}} e^{\mu z}\right)
 \end{equation}
 We don't see the $\mu$ here on the denominator since the surface part for $F$ and $G$ has Dirichlet Boundary condition \mn{condition on the function} while $\Phi$ has Neumann Boundary Condition. \par
 
@@ -225,19 +240,19 @@ The inversion of surface horizontal velocity can be calculate as follow : \par
     \begin{align*}
         u &= \sum \Big(-\hat{\Phi}_y^{0,t} 
         - \epsilon(\hat{\Phi}_y^{1,t} + \hat{F}_z^{1,t})\Big)e^{i(kx + ly)} \\ \vspace{5pt}
-        &= -\epsilon \cdot \frac{f}{\Bur N^2}\left[\partial_y \left({\underbrace{\frac{ \Phi_{z}^{0,t}\Phi_z^{0,t}}{2}}_{\Phi_{int}^{1,t}}}\right) + \partial_z\left(\underbrace{\Phi_y^{0,t}\Phi_z^{0,t}}_{F^1_{int}}\right)\right] \\
-        &+ \sum  \left[-\hat{\Phi}_y^{0,t} e^{i(kx + ly)} - \epsilon \cdot \frac{f}{\Bur N^2}\partial_y\left( \left(\underbrace{ - \frac{\widehat{\Phi_z^{0,t}\Phi_{zz}^{0,t}}}{\mu}e^{\mu z}}_{\Phi^1_{sur}} \right) e^{i(kx + ly)} \right)      -\epsilon \cdot \frac{f}{\Bur N^2} \partial_z\left(-\underbrace{\widehat{\Phi_y^{0,t}\Phi_z^{0,t}} e^{\mu z}}_{F^1_{sur}}\right) e^{i(kx + ly)} \right]
+        &= -\epsilon \cdot \frac{1}{\Bur}\left[\partial_y \left({\underbrace{\frac{ \Phi_{z}^{0,t}\Phi_z^{0,t}}{2}}_{\Phi_{int}^{1,t}}}\right) + \partial_z\left(\underbrace{\Phi_y^{0,t}\Phi_z^{0,t}}_{F^1_{int}}\right)\right] \\
+        &+ \sum  \left[-\hat{\Phi}_y^{0,t} e^{i(kx + ly)} - \epsilon \cdot \frac{1}{\Bur}\partial_y\left( \left(\underbrace{ - \frac{\widehat{\Phi_z^{0,t}\Phi_{zz}^{0,t}}}{\mu}e^{\mu z}}_{\Phi^1_{sur}} \right) e^{i(kx + ly)} \right)      -\epsilon \cdot \frac{1}{\Bur} \partial_z\left(-\underbrace{\widehat{\Phi_y^{0,t}\Phi_z^{0,t}} e^{\mu z}}_{F^1_{sur}}\right) e^{i(kx + ly)} \right]
     \end{align*}
 }
 Then take the derivative, then take the Fourier Transform we have 
 \begin{align}
     \hat{u}^t &= \hat{u}(z = 0)  \nonumber \\
-    &= -\Phi_y^{0,t} - \epsilon \cdot \frac{f}{\Bur N^2} \left[ \underbrace{\widehat{\Phi_y^{0,t}\Phi_{zz}^{0,t}} + 2\widehat{\Phi_{yz}^{0,t}\Phi_z^{0,t}}}_{\text{Interior Part}} {\color{red} - } \underbrace{\mu \widehat{\Phi_y^{0,t}\Phi_{zz}^{0,t}}  {\color{red} - }  \frac{il}{\mu}\widehat{\Phi_{z}^{0,t}\Phi_{zz}^{0,t}}}_{\text{Surface Part}}\right]
+    &= -\Phi_y^{0,t} - \epsilon \cdot \frac{1}{\Bur} \left[ \underbrace{\widehat{\Phi_y^{0,t}\Phi_{zz}^{0,t}} + 2\widehat{\Phi_{yz}^{0,t}\Phi_z^{0,t}}}_{\text{Interior Part}} {\color{red} - } \underbrace{\mu \widehat{\Phi_y^{0,t}\Phi_{zz}^{0,t}}  {\color{red} - }  \frac{il}{\mu}\widehat{\Phi_{z}^{0,t}\Phi_{zz}^{0,t}}}_{\text{Surface Part}}\right]
 \end{align}
 Similarly
 \begin{align}
     \hat{v}^t &= \hat{v}(z =0)  \nonumber \\
-    &= \Phi_x^{0,t} + \epsilon \cdot \frac{f}{\Bur N^2} \left[\underbrace{ 2\widehat{\Phi_{xz}^{0,t}\Phi_z^{0,t}}+ \widehat{\Phi_x^{0,t}\Phi_{zz}^{0,t}}}_{\text{Interior Part}}  {\color{red} - }  \underbrace{\frac{ik}{\mu} \widehat{\Phi_z^{0,t}\Phi_{zz}^{0,t}}  {\color{red} - }  \mu \widehat{\Phi_x^{0,t} \Phi_z^{0,t}}}_{\text{Surface Part}}\right] \mn{The sign here? Should be both minus sign perhaps?}
+    &= \Phi_x^{0,t} + \epsilon \cdot \frac{1}{\Bur} \left[\underbrace{ 2\widehat{\Phi_{xz}^{0,t}\Phi_z^{0,t}}+ \widehat{\Phi_x^{0,t}\Phi_{zz}^{0,t}}}_{\text{Interior Part}}  {\color{red} - }  \underbrace{\frac{ik}{\mu} \widehat{\Phi_z^{0,t}\Phi_{zz}^{0,t}}  {\color{red} - }  \mu \widehat{\Phi_x^{0,t} \Phi_z^{0,t}}}_{\text{Surface Part}}\right] \mn{The sign here? Should be both minus sign perhaps?}
 \end{align}
 For the Vertical Velocity : 
 {
@@ -245,14 +260,14 @@ For the Vertical Velocity :
     Start in the primitive space 
     \begin{align*}
         w &= \epsilon (F_x^1 + G_y^1) \\
-        &= \epsilon \frac{f}{\Bur N^2} \sum \partial_x \left[\left( \widehat{\Phi_y^0\Phi_z^0} - \widehat{\Phi_y^{0,t}\Phi_z^{0,t}} e^{\mu z}\right)e^{i(kx + ly)}\right] - \partial_y \left[ \left(\widehat{\Phi_x^0\Phi_z^0} - \widehat{\Phi_x^{0,t}\Phi_z^{0,t}} e^{\mu z}\right)e^{i(kx + ly)}\right] \\
+        &= \epsilon \frac{1}{\Bur} \sum \partial_x \left[\left( \widehat{\Phi_y^0\Phi_z^0} - \widehat{\Phi_y^{0,t}\Phi_z^{0,t}} e^{\mu z}\right)e^{i(kx + ly)}\right] - \partial_y \left[ \left(\widehat{\Phi_x^0\Phi_z^0} - \widehat{\Phi_x^{0,t}\Phi_z^{0,t}} e^{\mu z}\right)e^{i(kx + ly)}\right] \\
         \intertext{\text{The Fourier Transform aren't function of $x$ or $y$}} 
-        &= \epsilon \frac{f}{\Bur N^2} \sum \left(ik\widehat{\Phi_y^0\Phi_z^0} -il\widehat{\Phi_x^0\Phi_z^0}\right)e^{i(kx + ly)} - \left(ik\widehat{\Phi_y^{0,t}\Phi_z^{0,t}} - il\widehat{\Phi_x^{0,t}\Phi_z^{0,t}}\right)e^{i(kx + ly)}
+        &= \epsilon \frac{1}{\Bur} \sum \left(ik\widehat{\Phi_y^0\Phi_z^0} -il\widehat{\Phi_x^0\Phi_z^0}\right)e^{i(kx + ly)} - \left(ik\widehat{\Phi_y^{0,t}\Phi_z^{0,t}} - il\widehat{\Phi_x^{0,t}\Phi_z^{0,t}}\right)e^{i(kx + ly)}
     \end{align*}
 }
 Taking $x$ derivative to Fourier Component pulls down an additional fact of $ik$. Then 
 \begin{equation}
-    \hat{w} = \epsilon \frac{f}{\Bur N^2} 
+    \hat{w} = \epsilon \frac{1}{\Bur} 
 \end{equation}
 
 
