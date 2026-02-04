@@ -110,8 +110,8 @@ phi0_3d_opt = derive_phi0_3d(phi0_surf_opt, K, z, Bu);
 % w_opt = compute_w(F1_opt, G1_opt, kx, ky, Ro);
 
 % Compute horizontal velocity
-[usurf_true, vsurf_true] = compute_horizontal_surf(phi0_3d_true, F1_true, G1_true, Phi1_true, kx, ky, Ro, z);
-[usurf_opt, vsurf_opt] = compute_horizontal_surf(phi0_3d_opt, F1_opt, G1_opt, Phi1_opt, kx, ky, Ro, z);
+[usurf_true, vsurf_true] = compute_horizontal_surf(phi0_3d_true, F1_true, G1_true, Phi1_true, kx, ky, Ro, z, dx, dz);
+[usurf_opt, vsurf_opt] = compute_horizontal_surf(phi0_3d_opt, F1_opt, G1_opt, Phi1_opt, kx, ky, Ro, z, dx, dz);
 
 % Metrics
 % z_idx = floor(nz/2);
