@@ -25,7 +25,7 @@ Similarly from the first order correction we have
 \[ \eta^1 = \frac{p^1}{g}\]
 So in general, considering the first order correction to the hydrostatic balance Eq \ref{surface pressure}, we have 
 \begin{equation}
-    \eta \sim \eta^0 + \epsilon\eta^1 = \frac{f\Phi^0}{g} +\epsilon \frac{p^1}{g}
+    \eta \sim \eta^0 + \epsilon\eta^1 = \frac{f\Phi^0}{g} +\epsilon \frac{p^1}{g} \label{True sea surface height}
 \end{equation}
 This is the equation 40 in Ryan's note. \par
 
@@ -35,14 +35,93 @@ Now remember our goal is to use $\eta$ to invert for $\Phi^0$. What is the relat
 \]
 Where $J$ is the Jacobian operator. This is a non-linear relationship, recall that $\zeta^1$ is related to the potentials via Eq \ref{vorticity in terms of potentials}. So 
 \[
-\nabla^2 p^1 = f\left(\nabla^2\Phi^1 + F_{zy}^1 - G_{zx}^1\right) + 2J(\Phi_x^0, \Phi_y^0)
+\nabla^2 p^1 = f\left(\nabla^2\Phi^1 + F_{zy}^1 - G_{zx}^1\right) + 2J(\Phi_x^0, \Phi_y^0) \quad \rightarrow \quad \Phi^{0,s} + \epsilon \mcalN(\Phi^{0,s}) = \eta(x,y)
 \]
-Here the relationship between $\Phi^1, F^1$ and $G^1$ are given by Eq \ref{Fourier transform of Phi^1}, \ref{F^1 fourier transform} and \ref{G^1 fourier transform}. Then the whole inversion problem is clear.
+Where $\mcalN$ is a non-linear operator. Here the relationship between $\Phi^1, F^1$ and $G^1$ are given by Eq \ref{Fourier transform of Phi^1}, \ref{F^1 fourier transform} and \ref{G^1 fourier transform}. Then the whole inversion problem is clear. Given $\eta(x,y)$ we wish to find a $\Phi^{0,s}$ \mn{given $\Phi^{0,s}$ we can reconstruct the 3D $\Phi$ already. }
 
 \subsection{Pre-Defined Velocity Fields}
 We start with a very simple case to play around with this model. \par
 
 \subsubsection{Toy Model Setup}
-The toy model start with a pre-defined potential $\Phi^0$. 
+The toy model start with a pre-defined potential $\Phi^0$. I use a random generator here and make the spectrum follow a power law with slope -3, which is typical for 3D turbulence. 
+\begin{lstlisting}
+rng(42); % Set seed for reproducibility
+% We produce a random $\Phi^0$ here. 
+k_peak = 4;
+slope = -3; % This slope matches the energy cascade in 3D turbulance
+phase = rand(N, N) * 2 * pi;
+amplitude = (K ./ k_peak).^(slope) .* exp(-(K./k_peak).^2);
+
+amplitude(1,1) = 0;
+% Compute the hat
+phi0_hat = amplitude .* exp(1i * phase);
+% Inverse transform to get to the physical space
+phi0_surf = real(ifft2(phi0_hat));
+% Normalize
+phi0_surf = phi0_surf / std(phi0_surf(:));
+\end{lstlisting}
+
+\subsubsection{Forward Process to get the true velocity fields}
+Then some functions are defined for different purposes.
+\begin{enumerate}
+    \item This function compute the 3D potential $\Phi^0$ from the surface data. The fourier components has an exponential decay in the vertical direction.
+    \begin{lstlisting}
+    phi0_3d_true = derive_phi0_3d(phi0_surf, K, z, Bu);
+    \end{lstlisting}
+    \item This function compute all the other first order potential $F^1, G^1$ and $\Phi^1$ using Eq \ref{Fourier transform of Phi^1}, \ref{F^1 fourier transform} and \ref{G^1 fourier transform}. A possion problem is solved in the spectral space.
+    \begin{lstlisting}
+    [F1_true, G1_true, Phi1_true] = calculate_higher_order(phi0_3d_true, K, kx, ky, z, Bu, N, nz);
+    \end{lstlisting}
+    \item This function computes the first order pressure $p^1$ using Eq \ref{cyclogeostrophic correction}.
+    \begin{lstlisting}
+    p1_true = solve_p1(f, dx, dz, kx, ky, z, Bu, Ro, phi0_3d_true, F1_true, G1_true, Phi1_true);
+    \end{lstlisting}
+    \item With all the data above, we can compute the true surface sea height using Eq \ref{True sea surface height}.
+    \begin{lstlisting}
+    p1_surf = p1_true(:, :, end);
+ssh_true = phi0_surf + Ro * p1_surf;
+    \end{lstlisting}
+    Here I use end because the $z$ corredinate starts from the bottom to the top. 
+\end{enumerate}
+Now we have the surface sea height. This is where the inversion starts.
+
+\subsubsection{Inversion Process solving the Optimization Problem}
+The inversion process starts with $\eta$. We make an initial guess for $\Phi^0$, in my code I use a zero initial $\Phi^0$. 
+\begin{lstlisting}
+phi0_guess_flat = zeros(N, N);
+\end{lstlisting}
+Then use the function 
+\begin{lstlisting}
+cost_func = @(phi0_flat) sqg_cost_function(phi0_flat, f, ssh_true, K, kx, ky, z, Bu, Ro, N, nz, dx, dz);
+\end{lstlisting}
+To compute the cost. In this \texttt{sqg\_cost\_function} basically do the same thing as the forward process, compute the 3D potential $\Phi^0$ first, then solve the Possion equation to get $F^1, G^1, \Phi^1$, then compute $p^1$ and finally compute the SSH. The difference is that at the final step, we compute the difference between the computed SSH and the true SSH to obtain the cost. 
+\begin{lstlisting}
+    % Cost
+    difference = ssh_guess - ssh_obs;
+    cost = sum(difference(:).^2);
+\end{lstlisting}
+This is the returned value of that function. I then use a built in Matlab toolbox to solve the optimization problem. 
+\begin{lstlisting}
+num_iteration = 20;
+options = optimoptions('fminunc', 'Display', 'iter', 'Algorithm', 'quasi-newton', 'MaxIterations', num_iteration);
+
+% Compute the cost function
+cost_func = @(phi0_flat) sqg_cost_function(phi0_flat, f, ssh_true, K, kx, ky, z, Bu, Ro, N, nz, dx, dz);
+
+% Run Optimization
+tic;
+try
+    [phi0_opt_flat, fval] = fminunc(cost_func, phi0_guess_flat, options);
+    phi0_surf_opt = reshape(phi0_opt_flat, N, N);
+    disp('Optimization Complete.');
+catch ME
+    disp('Optimization failed or interrupted.');
+    disp(ME.message);
+    phi0_surf_opt = reshape(phi0_guess_flat, N, N); % Fallback
+end
+toc;
+\end{lstlisting}
+Then plot the results. \mn{{\color{red} The plot part is writen by Gemini}}
+
 
 \end{document}
