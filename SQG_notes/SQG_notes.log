@@ -1,10 +1,10 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.10.2)  3 FEB 2026 23:02
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.10.2)  3 FEB 2026 23:05
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**d:/Documents/College/Research/Oceangrophy/Shafer_Project/Notes/SQG-1-SWOT-Reconstruction---Thomas/SQG_notes/SQG_notes
-(d:/Documents/College/Research/Oceangrophy/Shafer_Project/Notes/SQG-1-SWOT-Reconstruction---Thomas/SQG_notes/SQG_notes.tex
+**d:/Documents/College/Research/Oceangrophy/Shafer_Project/SQG-1-SWOT-Reconstruction---Thomas/SQG_notes/SQG_notes
+(d:/Documents/College/Research/Oceangrophy/Shafer_Project/SQG-1-SWOT-Reconstruction---Thomas/SQG_notes/SQG_notes.tex
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
 (d:/Program Files/texlive/2024/texmf-dist/tex/latex/base/article.cls
@@ -939,11 +939,7 @@ Package: longtable 2023-11-01 v4.19 Multi-page Table package (DPC)
 \c@LT@tables=\count387
 \c@LT@chunks=\count388
 \LT@p@ftn=\toks63
-)) (d:/Documents/Latex/Latex_Template/Custom_Commands.tex) (../SQG_commands.tex) (./SQG_notes.aux
-
-LaTeX Warning: Label `momentum equation' multiply defined.
-
-)
+)) (d:/Documents/Latex/Latex_Template/Custom_Commands.tex) (../SQG_commands.tex) (./SQG_notes.aux)
 \openout1 = `SQG_notes.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 14.
@@ -1243,55 +1239,23 @@ Package marginnote Info: xpos seems to be \@mn@currxpos  on input line 260.
 Package marginnote Info: Margin note 22.4 is on absolute page 23 on input line 260.
 Package marginnote Info: right page because not two side mode on input line 260.
 Package marginnote Info: xpos seems to be 413.78851pt on input line 260.
- [18]) [19] (./Chapter_3_SQG/Chapter3.tex
-
-LaTeX Warning: Reference `surface pressure' on page 20 undefined on input line 26.
-
-
-LaTeX Warning: Reference `cyclogeostrophic correction' on page 20 undefined on input line 32.
-
-
-LaTeX Warning: Reference `vorticity in terms of potentials' on page 20 undefined on input line 36.
-
-
-LaTeX Warning: Reference `Fourier transform of Phi^1' on page 20 undefined on input line 40.
-
-
-LaTeX Warning: Reference `F^1 fourier transform' on page 20 undefined on input line 40.
-
-
-LaTeX Warning: Reference `G^1 fourier transform' on page 20 undefined on input line 40.
-
-[20])
+ [18]) [19] (./Chapter_3_SQG/Chapter3.tex [20])
 No file SQG_notes.bbl.
 [21] (./SQG_notes.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
-
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: There were multiply-defined labels.
-
-
-Package rerunfilecheck Warning: File `SQG_notes.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `SQG_notes.out':
-(rerunfilecheck)             Before: 3360178A1123EF643B401A3A09E85444;3910
-(rerunfilecheck)             After:  79192BA797413A2758E508793DE5CB19;4539.
+Package rerunfilecheck Info: File `SQG_notes.out' has not changed.
+(rerunfilecheck)             Checksum: 79192BA797413A2758E508793DE5CB19;4539.
  ) 
 Here is how much of TeX's memory you used:
- 33901 strings out of 474773
- 662201 string characters out of 5755059
+ 33903 strings out of 474773
+ 662210 string characters out of 5755059
  1941842 words of memory out of 5000000
- 55402 multiletter control sequences out of 15000+600000
+ 55404 multiletter control sequences out of 15000+600000
  639998 words of font info for 183 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 116i,21n,121p,776b,1153s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 116i,21n,121p,770b,1153s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 Output written on SQG_notes.pdf (23 pages).
