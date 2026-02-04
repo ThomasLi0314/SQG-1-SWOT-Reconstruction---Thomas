@@ -1,0 +1,48 @@
+\documentclass[../SQG_notes.tex]{subfiles}
+
+\begin{document}
+
+\section{Simulation Set Up}
+
+In this section, I briefly describe the simulation set up from the most trivial case all the way up to the true problem. We start with a brief introduction about how the inversion process proceed. 
+
+\subsection{Inversion Process}
+From hydrostatic balance, the surface pressure is propotional to the surface sea height (SSH). 
+\begin{equation}
+    \eta = \frac{p\{z = 0\}}{g} \label{surface pressure}
+\end{equation}
+In all the QG models, the pressure is expanded asymptotically in the form of 
+\begin{equation}
+    p_{total} \sim p^0 + \epsilon p^1
+\end{equation}
+The first order pressure is directly related to the first order potential $\Phi^0$ by the formula 
+\[ p^0 = f\Phi^0\]
+As from geostrophic balance we have 
+\[ p^0_y = -f u^0 = -f \p_y \Phi^0 \qquad p^0_x = f v^0 = f \p_x \Phi^0\]
+Now we have 
+\[ \eta^0 = \frac{f\Phi^0}{g}\]
+Similarly from the first order correction we have 
+\[ \eta^1 = \frac{p^1}{g}\]
+So in general, considering the first order correction to the hydrostatic balance Eq \ref{surface pressure}, we have 
+\begin{equation}
+    \eta \sim \eta^0 + \epsilon\eta^1 = \frac{f\Phi^0}{g} +\epsilon \frac{p^1}{g}
+\end{equation}
+This is the equation 40 in Ryan's note. \par
+
+Now remember our goal is to use $\eta$ to invert for $\Phi^0$. What is the relationship between $p^1$ and $\Phi^0$? The relationship is given by eq \ref{cyclogeostrophic correction}. We copy it here 
+\[
+\boxed{\nabla^2 p^1 - f\zeta^1 = 2J(\Phi_x^0, \Phi_y^0)}
+\]
+Where $J$ is the Jacobian operator. This is a non-linear relationship, recall that $\zeta^1$ is related to the potentials via Eq \ref{vorticity in terms of potentials}. So 
+\[
+\nabla^2 p^1 = f\left(\nabla^2\Phi^1 + F_{zy}^1 - G_{zx}^1\right) + 2J(\Phi_x^0, \Phi_y^0)
+\]
+Here the relationship between $\Phi^1, F^1$ and $G^1$ are given by Eq \ref{Fourier transform of Phi^1}, \ref{F^1 fourier transform} and \ref{G^1 fourier transform}. Then the whole inversion problem is clear.
+
+\subsection{Pre-Defined Velocity Fields}
+We start with a very simple case to play around with this model. \par
+
+\subsubsection{Toy Model Setup}
+The toy model start with a pre-defined potential $\Phi^0$. 
+
+\end{document}
