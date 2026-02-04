@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.10.2)  2 JAN 2026 11:23
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.10.2)  3 FEB 2026 23:02
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -900,13 +900,13 @@ File: t1ppl.fd 2001/06/04 font definitions for T1/ppl.
 \c@example=\count382
  (d:/Program Files/texlive/2024/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2024/02/21 1.10 listings language file
-)
+) (d:/Documents/Latex/Latex_Template/Commands_math.tex)
 \auth@toks=\toks59
 \affil@toks=\toks60
 \email@toks=\toks61
 \c@email@counter=\count383
 \affiliationsSep=\skip80
-LaTeX Font Info:    Trying to load font information for OT1+phv on input line 814.
+LaTeX Font Info:    Trying to load font information for OT1+phv on input line 696.
  (d:/Program Files/texlive/2024/texmf-dist/tex/latex/psnfss/ot1phv.fd
 File: ot1phv.fd 2020/03/25 scalable font definitions for OT1/phv.
 ) (d:/Program Files/texlive/2024/texmf-dist/tex/latex/titlesec/titlesec.sty
@@ -1137,10 +1137,10 @@ Package rerunfilecheck Info: File `Chapter1.out' has not changed.
 (rerunfilecheck)             Checksum: DBC21088C9A2A820EA0D6E777E25FE5C;1826.
  ) 
 Here is how much of TeX's memory you used:
- 33663 strings out of 474773
- 657802 string characters out of 5755059
+ 33673 strings out of 474773
+ 658130 string characters out of 5755059
  1934842 words of memory out of 5000000
- 55193 multiletter control sequences out of 15000+600000
+ 55200 multiletter control sequences out of 15000+600000
  602727 words of font info for 118 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  136i,20n,138p,662b,967s stack positions out of 10000i,1000n,20000p,200000b,200000s

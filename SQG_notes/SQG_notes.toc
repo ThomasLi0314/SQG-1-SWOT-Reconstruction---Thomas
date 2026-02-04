@@ -19,3 +19,7 @@
 \contentsline {section}{\numberline {6}$\text {SQG}^{+1}$ Model}{16}{section.6}%
 \contentsline {subsection}{\numberline {6.1}$\Phi ^0$ Inversion}{16}{subsection.6.1}%
 \contentsline {subsection}{\numberline {6.2}Higher Order Potential Inversion}{17}{subsection.6.2}%
+\contentsline {section}{\numberline {7}Simulation Set Up}{20}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Inversion Process}{20}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}Pre-Defined Velocity Fields}{21}{subsection.7.2}%
+\contentsline {subsubsection}{\numberline {7.2.1}Toy Model Setup}{21}{subsubsection.7.2.1}%
