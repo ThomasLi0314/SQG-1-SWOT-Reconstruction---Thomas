@@ -37,7 +37,7 @@ k_peak = 4;
 slope = -3; % This slope matches the energy cascade in 3D turbulance
 phase = rand(N, N) * 2 * pi;
 % amplitude = (K ./ k_peak).^(slope) .* exp(-(K./k_peak).^2);
-amplitude = cos(X);
+amplitude = cos(X) + sin(Y);
 
 amplitude(1,1) = 0;
 % Compute the hat
@@ -82,14 +82,7 @@ phi0_guess_flat = zeros(N, N);
 % Optimization Options
 % Control the number of iterations.
 num_iteration = 20;
-
-% Check and start parallel pool if not already running
-if isempty(gcp('nocreate'))
-    parpool;
-end
-
-options = optimoptions('fminunc', 'Display', 'iter', 'Algorithm', 'quasi-newton', ...
-    'MaxIterations', num_iteration, 'UseParallel', true);
+options = optimoptions('fminunc', 'Display', 'iter', 'Algorithm', 'quasi-newton', 'MaxIterations', num_iteration);
 
 % Compute the cost function
 cost_func = @(phi0_flat) sqg_cost_function(phi0_flat, f, ssh_true, K, kx, ky, z, Bu, Ro, N, nz, dx, dz);

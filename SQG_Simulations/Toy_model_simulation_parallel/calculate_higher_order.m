@@ -6,10 +6,11 @@ function [F1, G1, Phi1] = calculate_higher_order(phi0_3d, K, kx, ky, z, Bu, N, n
     
     phi0_z = zeros(N, N, nz);
     
-    % Vectorized calculation for phi0_z
-    decay = exp(mu .* reshape(z, 1, 1, nz));
-    f_z_hat = phi0_surf_hat .* decay .* mu;
-    phi0_z = real(ifft2(f_z_hat));
+    for k = 1:nz
+        decay = exp(mu * z(k));
+        f_z_hat = phi0_surf_hat .* decay .* mu;
+        phi0_z(:,:,k) = real(ifft2(f_z_hat));
+    end
     
     % Horizontal derivatives
     phi0_x = diff_spectral(phi0_3d, kx, 1);
