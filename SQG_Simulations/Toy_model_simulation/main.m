@@ -33,17 +33,18 @@ K(1,1) = 1.0; % Arbitrary value, similar to Python script
 %% Initial Conditions
 rng(42); % Set seed for reproducibility
 % We produce a random $\Phi^0$ here. 
-k_peak = 4;
-slope = -3; % This slope matches the energy cascade in 3D turbulance
-phase = rand(N, N) * 2 * pi;
-% amplitude = (K ./ k_peak).^(slope) .* exp(-(K./k_peak).^2);
-amplitude = cos(X) + sin(Y);
+% k_peak = 4;
+% slope = -3; % This slope matches the energy cascade in 3D turbulance
+% phase = rand(N, N) * 2 * pi;
+% % amplitude = (K ./ k_peak).^(slope) .* exp(-(K./k_peak).^2);
+% amplitude = cos(X) + sin(Y);
 
-amplitude(1,1) = 0;
-% Compute the hat
-phi0_hat = amplitude .* exp(1i * phase);
-% Inverse transform to get to the physical space
-phi0_surf = real(ifft2(phi0_hat));
+% amplitude(1,1) = 0;
+% % Compute the hat
+% phi0_hat = amplitude .* exp(1i * phase);
+% % Inverse transform to get to the physical space
+% phi0_surf = real(ifft2(phi0_hat));
+phi0_surf = cos(X) + sin(Y);
 % Normalize
 phi0_surf = phi0_surf / std(phi0_surf(:));
 
@@ -56,13 +57,45 @@ phi0_3d_true = derive_phi0_3d(phi0_surf, K, z, Bu);
 % Compute the true p1
 p1_true = solve_p1(f, dx, dz, kx, ky, z, Bu, Ro, phi0_3d_true, F1_true, G1_true, Phi1_true);
 
+% Plot Higher Order Terms
+% [X3_mesh, Y3_mesh, Z3_mesh] = meshgrid(x, y, z);
+% % Permute data dimensions [2 1 3] to swap x and y for meshgrid format
+% F1_plot = permute(F1_true, [2 1 3]);
+% G1_plot = permute(G1_true, [2 1 3]);
+% Phi1_plot = permute(Phi1_true, [2 1 3]);
+
+figure;
+volshow(F1_true, 'RenderingStyle', 'VolumeRendering');
+
+figure;
+volshow(G1_true, 'RenderingStyle', 'VolumeRendering');
+
+figure;
+volshow(Phi1_true, 'RenderingStyle', 'VolumeRendering');
+
+% subplot(1, 3, 1);
+% slice(X3_mesh, Y3_mesh, Z3_mesh, F1_plot, L/2, L/2, z_min/2);
+% shading interp; colorbar; title('F1 True'); xlabel('x'); ylabel('y'); zlabel('z');
+
+% subplot(1, 3, 2);
+% slice(X3_mesh, Y3_mesh, Z3_mesh, G1_plot, L/2, L/2, z_min/2);
+% shading interp; colorbar; title('G1 True'); xlabel('x'); ylabel('y'); zlabel('z');
+
+% subplot(1, 3, 3);
+% slice(X3_mesh, Y3_mesh, Z3_mesh, Phi1_plot, L/2, L/2, z_min/2);
+% shading interp; colorbar; title('Phi1 True'); xlabel('x'); ylabel('y'); zlabel('z');
+
+
 % Compute the true SSH
 % Note: p1_true is 3D, we need the surface value (at z=0, which is index 'end')
 p1_surf = p1_true(:, :, end);
 ssh_true = phi0_surf + Ro * p1_surf;
 
-disp(size(p1_surf));
-disp(size(phi0_surf));
+figure;
+pcolor(X, Y, ssh_true);
+shading interp;
+colorbar;
+title('SSH True');
 
 disp('Truth SSH Generated.');
 
@@ -77,7 +110,11 @@ disp('Starting Inversion.......');
 
 % Initial guess for the surface potential phi0(x,y), which is the leading order of SSH.
 % phi0_guess_flat = reshape(ssh_true, [], 1);
-phi0_guess_flat = zeros(N, N);
+% phi0_guess_flat = zeros(N, N);
+
+% Plot the maximum value of phi0_surface
+max_phi0_surf = max(phi0_surf(:));
+phi0_surf_guess = phi0_surf + 0.001 * max_phi0_surf * randn(N, N);
 
 % Optimization Options
 % Control the number of iterations.
@@ -85,12 +122,12 @@ num_iteration = 20;
 options = optimoptions('fminunc', 'Display', 'iter', 'Algorithm', 'quasi-newton', 'MaxIterations', num_iteration);
 
 % Compute the cost function
-cost_func = @(phi0_flat) sqg_cost_function(phi0_flat, f, ssh_true, K, kx, ky, z, Bu, Ro, N, nz, dx, dz);
+cost_func = @(phi0_flat) sqg_cost_function(phi0_surf_guess, f, ssh_true, K, kx, ky, z, Bu, Ro, N, nz, dx, dz);
 
 % Run Optimization
 tic;
 try
-    [phi0_opt_flat, fval] = fminunc(cost_func, phi0_guess_flat, options);
+    [phi0_opt_guess, fval] = fminunc(cost_func, phi0_surf_guess, options);
     phi0_surf_opt = reshape(phi0_opt_flat, N, N);
     disp('Optimization Complete.');
 catch ME
