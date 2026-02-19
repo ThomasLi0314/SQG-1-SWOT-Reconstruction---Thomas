@@ -1,4 +1,4 @@
-function cost = sqg_cost_function(phi0_flat, f, ssh_obs, K, kx, ky, z, Bu, Ro, N, nz, dx, dz)
+function cost = sqg_cost_function(phi0_flat, f, ssh_ture, K, kx, ky, z, Bu, Ro, N, nz, dx, dz)
     % 3D phi0
     phi0_surf = reshape(phi0_flat, N, N);
     phi0_3d_flat = derive_phi0_3d(phi0_surf, K, z, Bu);
@@ -14,6 +14,6 @@ function cost = sqg_cost_function(phi0_flat, f, ssh_obs, K, kx, ky, z, Bu, Ro, N
     ssh_guess = phi0_flat + Ro * p1_guess_surf;
 
     % Cost
-    difference = ssh_guess - ssh_obs;
-    cost = sum(difference(:).^2);
+    difference = ssh_guess - ssh_ture;
+    cost = difference(:);
 end

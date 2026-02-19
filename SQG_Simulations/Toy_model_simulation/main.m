@@ -7,8 +7,8 @@ N = 64; % Grid Size
 L = 2 * pi; % Length
 Bu = 1; % Burger's number
 Ro = 0.1; % Rossby Number \epsilon
-z_min = -1.0; % minimum deep
-nz = 32; % vertical grid size
+z_min = -5.0; % minimum deep
+nz = 64; % vertical grid size
 f = 1; % Corriori force parameter
 
 % Grid Setup
@@ -39,14 +39,24 @@ rng(42); % Set seed for reproducibility
 % % amplitude = (K ./ k_peak).^(slope) .* exp(-(K./k_peak).^2);
 % amplitude = cos(X) + sin(Y);
 
+% phase = rand(N, N) * 2 * pi;
+% 
+% amplitude = cos(X);
+% amplitude(1,1) = 0;
+% 
+% phi0_hat = amplitude .* exp(1i * phase);
+% 
+% phi0_surf = real(ifft2(phi0_hat));
+
 % amplitude(1,1) = 0;
 % % Compute the hat
 % phi0_hat = amplitude .* exp(1i * phase);
 % % Inverse transform to get to the physical space
 % phi0_surf = real(ifft2(phi0_hat));
-phi0_surf = cos(X) + sin(Y);
+phi0_surf = cos(X) + cos(Y);
+% phi0_surf = ones(N, N);
 % Normalize
-phi0_surf = phi0_surf / std(phi0_surf(:));
+% phi0_surf = phi0_surf / std(phi0_surf(:));
 
 %Derive 3D Potential $Phi^0$
 phi0_3d_true = derive_phi0_3d(phi0_surf, K, z, Bu);
@@ -64,14 +74,14 @@ p1_true = solve_p1(f, dx, dz, kx, ky, z, Bu, Ro, phi0_3d_true, F1_true, G1_true,
 % G1_plot = permute(G1_true, [2 1 3]);
 % Phi1_plot = permute(Phi1_true, [2 1 3]);
 
-figure;
-volshow(F1_true, 'RenderingStyle', 'VolumeRendering');
-
-figure;
-volshow(G1_true, 'RenderingStyle', 'VolumeRendering');
-
-figure;
-volshow(Phi1_true, 'RenderingStyle', 'VolumeRendering');
+% figure;
+% volshow(F1_true, 'RenderingStyle', 'VolumeRendering');
+% 
+% figure;
+% volshow(G1_true, 'RenderingStyle', 'VolumeRendering');
+% 
+% figure;
+% volshow(Phi1_true, 'RenderingStyle', 'VolumeRendering');
 
 % subplot(1, 3, 1);
 % slice(X3_mesh, Y3_mesh, Z3_mesh, F1_plot, L/2, L/2, z_min/2);
@@ -119,15 +129,15 @@ phi0_surf_guess = phi0_surf + 0.001 * max_phi0_surf * randn(N, N);
 % Optimization Options
 % Control the number of iterations.
 num_iteration = 20;
-options = optimoptions('fminunc', 'Display', 'iter', 'Algorithm', 'quasi-newton', 'MaxIterations', num_iteration);
+options = optimoptions('lsqnonlin', 'Display', 'iter', 'Algorithm', 'trust-region-reflective', 'MaxIterations', num_iteration);
 
 % Compute the cost function
-cost_func = @(phi0_flat) sqg_cost_function(phi0_surf_guess, f, ssh_true, K, kx, ky, z, Bu, Ro, N, nz, dx, dz);
+cost_func = @(phi0_flat) sqg_cost_function(phi0_flat, f, ssh_true, K, kx, ky, z, Bu, Ro, N, nz, dx, dz);
 
 % Run Optimization
 tic;
 try
-    [phi0_opt_guess, fval] = fminunc(cost_func, phi0_surf_guess, options);
+    [phi0_opt_flat, resnorm] = lsqnonlin(cost_func, phi0_surf_guess, [], [], options);
     phi0_surf_opt = reshape(phi0_opt_flat, N, N);
     disp('Optimization Complete.');
 catch ME

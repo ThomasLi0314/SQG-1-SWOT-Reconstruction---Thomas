@@ -5,8 +5,7 @@ function phi0_3d = derive_phi0_3d(phi0_surf, K, z, Bu)
     phi0_3d = zeros(N, N, nz);
     mu = sqrt(Bu) * K;
     
-    for k = 1:nz
-        decay = exp(mu * z(k));
-        phi0_3d(:,:,k) = real(ifft2(phi0_surf_hat .* decay));
-    end
+    % Vectorized calculation
+    decay = exp(mu .* reshape(z, 1, 1, nz));
+    phi0_3d = real(ifft2(phi0_surf_hat .* decay));
 end

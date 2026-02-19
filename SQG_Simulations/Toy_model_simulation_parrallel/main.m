@@ -77,7 +77,9 @@ disp('Starting Inversion.......');
 
 % Initial guess for the surface potential phi0(x,y), which is the leading order of SSH.
 % phi0_guess_flat = reshape(ssh_true, [], 1);
-phi0_guess_flat = zeros(N, N);
+% Plot the maximum value of phi0_surface
+max_phi0_surf = max(phi0_surf(:));
+phi0_surf_guess = phi0_surf + 0.0001 * max_phi0_surf * randn(N, N);
 
 % Optimization Options
 % Control the number of iterations.
@@ -88,16 +90,18 @@ if isempty(gcp('nocreate'))
     parpool;
 end
 
-options = optimoptions('fminunc', 'Display', 'iter', 'Algorithm', 'quasi-newton', ...
-    'MaxIterations', num_iteration, 'UseParallel', true);
+% options = optimoptions('fminunc', 'Display', 'iter', 'Algorithm', 'quasi-newton', ...
+%     'MaxIterations', num_iteration, 'UseParallel', true);
+options = optimoptions('lsqnonlin', 'Display', 'iter', 'Algorithm', 'trust-region-reflective', 'MaxIterations', num_iteration ...
+    ,'UseParallel', true);
 
 % Compute the cost function
-cost_func = @(phi0_flat) sqg_cost_function(phi0_flat, f, ssh_true, K, kx, ky, z, Bu, Ro, N, nz, dx, dz);
+cost_func = @(phi0_guess) sqg_cost_function(phi0_guess, f, ssh_true, K, kx, ky, z, Bu, Ro, N, nz, dx, dz);
 
 % Run Optimization
 tic;
 try
-    [phi0_opt_flat, fval] = fminunc(cost_func, phi0_guess_flat, options);
+    [phi0_opt_flat, resnorm] = lsqnonlin(cost_func, phi0_surf_guess, [], [], options);
     phi0_surf_opt = reshape(phi0_opt_flat, N, N);
     disp('Optimization Complete.');
 catch ME
