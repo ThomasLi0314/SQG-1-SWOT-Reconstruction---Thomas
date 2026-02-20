@@ -23,3 +23,5 @@
 \contentsline {subsection}{\numberline {7.1}Inversion Process}{20}{subsection.7.1}%
 \contentsline {subsection}{\numberline {7.2}Pre-Defined Velocity Fields}{21}{subsection.7.2}%
 \contentsline {subsubsection}{\numberline {7.2.1}Toy Model Setup}{21}{subsubsection.7.2.1}%
+\contentsline {subsubsection}{\numberline {7.2.2}Forward Process to get the true velocity fields}{21}{subsubsection.7.2.2}%
+\contentsline {subsubsection}{\numberline {7.2.3}Inversion Process solving the Optimization Problem}{22}{subsubsection.7.2.3}%

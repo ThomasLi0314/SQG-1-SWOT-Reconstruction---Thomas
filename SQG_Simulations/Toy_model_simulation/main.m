@@ -3,12 +3,12 @@ clc;
 close all;
 
 %% Parameters
-N = 32; % Grid Size
+N = 64; % Grid Size
 L = 2 * pi; % Length
 Bu = 1; % Burger's number
 Ro = 0.1; % Rossby Number \epsilon
-z_min = -20.0; % minimum deep
-nz = 32; % vertical grid size
+z_min = -60.0; % minimum deep
+nz = 64; % vertical grid size
 f = 1; % Corriori force parameter
 
 % Grid Setup

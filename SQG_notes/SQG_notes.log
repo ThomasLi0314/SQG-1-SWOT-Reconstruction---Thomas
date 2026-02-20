@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.10.2)  3 FEB 2026 23:05
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.10.2)  20 FEB 2026 01:44
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1239,23 +1239,31 @@ Package marginnote Info: xpos seems to be \@mn@currxpos  on input line 260.
 Package marginnote Info: Margin note 22.4 is on absolute page 23 on input line 260.
 Package marginnote Info: right page because not two side mode on input line 260.
 Package marginnote Info: xpos seems to be 413.78851pt on input line 260.
- [18]) [19] (./Chapter_3_SQG/Chapter3.tex [20])
+ [18]) [19] (./Chapter_3_SQG/Chapter3.tex
+Package marginnote Info: Margin note 24.1 is on absolute page 25 on input line 40.
+Package marginnote Info: right page because not two side mode on input line 40.
+Package marginnote Info: xpos seems to be 123.60896pt on input line 40.
+ [20] [21]
+Package marginnote Info: Margin note 26.1 is on absolute page 26 on input line 124.
+Package marginnote Info: right page because not two side mode on input line 124.
+Package marginnote Info: xpos seems to be 172.0814pt on input line 124.
+)
 No file SQG_notes.bbl.
-[21] (./SQG_notes.aux)
+[22] (./SQG_notes.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
 Package rerunfilecheck Info: File `SQG_notes.out' has not changed.
-(rerunfilecheck)             Checksum: 79192BA797413A2758E508793DE5CB19;4539.
+(rerunfilecheck)             Checksum: 5FB721CA738A9A2064A506EDD3BD3BF0;5196.
  ) 
 Here is how much of TeX's memory you used:
- 33903 strings out of 474773
- 662210 string characters out of 5755059
- 1941842 words of memory out of 5000000
- 55404 multiletter control sequences out of 15000+600000
- 639998 words of font info for 183 fonts, out of 8000000 for 9000
+ 34528 strings out of 474773
+ 669301 string characters out of 5755059
+ 2009842 words of memory out of 5000000
+ 56028 multiletter control sequences out of 15000+600000
+ 640317 words of font info for 184 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 116i,21n,121p,770b,1153s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 116i,21n,121p,770b,1705s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on SQG_notes.pdf (23 pages).
+Output written on SQG_notes.pdf (24 pages).
