@@ -3,12 +3,12 @@ clc;
 close all;
 
 %% Parameters
-N = 32; % Grid Size
+N = 64; % Grid Size
 L = 2 * pi; % Length
 Bu = 1; % Burger's number
 Ro = 0.1; % Rossby Number \epsilon
-z_min = -20.0; % minimum deep
-nz = 32; % vertical grid size
+z_min = -.0; % minimum deep
+nz = 64; % vertical grid size
 f = 1; % Corriori force parameter
 
 % Grid Setup
@@ -65,19 +65,14 @@ phi0_3d_true = derive_phi0_3d(phi0_surf, K, z, Bu);
 [F1_true, G1_true, Phi1_true] = calculate_higher_order(phi0_3d_true, K, kx, ky, z, Bu, N, nz);
 
 %% Code for Check
-% [X, Y, Z] = ndgrid(x, y, z);
-% F1_numerical = (exp(sqrt(2) * Z) - exp(2 * Z)) .* cos(X) .* sin(Y);
-% G1_numerical = (exp(2 .* Z) - exp( sqrt(2) .* Z)) .* cos(Y) .* sin(X);
-% 
-% [error_F1, idx_F1] = max(abs(F1_numerical - F1_true), [], 'all');
-% [i1, j1, k1] = ind2sub(size(F1_numerical), idx_F1);
-% fprintf('Max error F1: %e at linear index %d (%d, %d, %d)\n', error_F1, idx_F1, i1, j1, k1);
-% 
-% [error_G1, idx_G1] = max(abs(G1_numerical - G1_true), [], 'all');
-% [i2, j2, k2] = ind2sub(size(G1_numerical), idx_G1);
-% fprintf('Max error G1: %e at linear index %d (%d, %d, %d)\n', error_G1, idx_G1, i2, j2, k2);
-% 
-% disp(max(error_G1, error_F1));
+[X, Y, Z] = ndgrid(x, y, z);
+F1_numerical = (exp(sqrt(2) * Z) - exp(2 * Z)) .* cos(X) .* sin(Y);
+G1_numerical = (exp(2 .* Z) - exp( sqrt(2) .* Z)) .* cos(Y) .* sin(X);
+
+error_F1 = max(F1_numerical - F1_true, [], 'all');
+error_G1 = max(G1_numerical - G1_true, [], 'all');
+
+disp(max(error_G1, error_F1));
 
 % Compute the true p1
 p1_true = solve_p1(f, dx, dz, kx, ky, z, Bu, Ro, phi0_3d_true, F1_true, G1_true, Phi1_true);
@@ -124,12 +119,6 @@ title('SSH True');
 
 disp('Truth SSH Generated.');
 
-%% Parallel Computing
-% Check and start parallel pool if not already running
-if isempty(gcp('nocreate'))
-    parpool;
-end
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %% Optimization-Based Inversion
@@ -150,17 +139,10 @@ phi0_surf_guess = phi0_surf + 0.001 * max_phi0_surf * randn(N, N);
 % Optimization Options
 % Control the number of iterations.
 num_iteration = 20;
-
-% no parallel
-% options = optimoptions('lsqnonlin', 'Display', 'iter', 'Algorithm', 'trust-region-reflective', 'MaxIterations', num_iteration);
-
-% parallel, pick one
-options = optimoptions('lsqnonlin', 'Display', 'iter', 'Algorithm', 'trust-region-reflective', 'MaxIterations', num_iteration ...
-    ,'UseParallel', true);
-
+options = optimoptions('lsqnonlin', 'Display', 'iter', 'Algorithm', 'trust-region-reflective', 'MaxIterations', num_iteration);
 
 % Compute the cost function
-cost_func = @(phi0_guess) sqg_cost_function(phi0_guess, f, ssh_true, K, kx, ky, z, Bu, Ro, N, nz, dx, dz);
+cost_func = @(phi0_flat) sqg_cost_function(phi0_flat, f, ssh_true, K, kx, ky, z, Bu, Ro, N, nz, dx, dz);
 
 % Run Optimization
 tic;
@@ -171,9 +153,10 @@ try
 catch ME
     disp('Optimization failed or interrupted.');
     disp(ME.message);
-    % phi0_surf_opt = reshape(phi0_guess_flat, N, N); % Fallback
+    phi0_surf_opt = reshape(phi0_guess_flat, N, N); % Fallback
 end
 toc;
+
 %% Validation
 % Reconstruct full state from optimized surface
 phi0_3d_opt = derive_phi0_3d(phi0_surf_opt, K, z, Bu);
