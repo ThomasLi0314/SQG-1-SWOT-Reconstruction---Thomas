@@ -1,7 +1,7 @@
 % This function returns the physical value of surface zonal velocity u.
 
 
-function [u_surface, v_surface] = calcualte_surface_u(phi0_s_hat, mu, kx, ky, K2, Kn2, epsilon, Bu)
+function [u_surface, v_surface] = calculate_surface_u(phi0_s_hat, mu, inv_mu, kx, ky, K2, inv_K2, epsilon, Bu)
 
     %% u = -\Phi_y - F_1
 
@@ -10,7 +10,7 @@ function [u_surface, v_surface] = calcualte_surface_u(phi0_s_hat, mu, kx, ky, K2
     phi0_s_z = ifft2(phi0_s_hat .* mu);
     Phi_1_term1 = fft2(1 / 2 * phi0_s_z .^2);
     phi0_s_zz = ifft2(phi0_s_hat .* mu .* mu);
-    Phi_1_term2 = -fft2(phi0_s_z .* phi0_s_zz) ./ mu;
+    Phi_1_term2 = -fft2(phi0_s_z .* phi0_s_zz) .* inv_mu;
 
     % y_derivative for u_surface
     Phi1_s_hat_y = (Phi_1_term1 + Phi_1_term2) .* (1i) .* ky;

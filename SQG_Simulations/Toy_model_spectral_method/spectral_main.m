@@ -12,7 +12,7 @@ Ny = 128;
 Lx = 2 * pi;
 Ly = 2 * pi;
 
-Ro = 0.01; %Rossby number
+Ro = 0.01; %Rossby number same as epsilon
 
 initialize;
 
@@ -26,10 +26,10 @@ phi0_s_hat = fft2(phi0_s);
 % This part derives the true fourier SSH 
 
 cyclogeo_term_true = cyclogeo_term(phi0_s_hat, kx, ky);
-vorticity_term_true = vorticity_term(phi0_s_hat, mu, kx, ky, K2, Bu);
+vorticity_term_true = vorticity_term(phi0_s_hat, mu, inv_mu, kx, ky, K2, Bu);
 
 % True pressure field 
-p1_s_hat_true = (f * cyclogeo_term_true + vorticity_term_true) .* Kn2;
+p1_s_hat_true = -(f * vorticity_term_true + cyclogeo_term_true) .* inv_K2;
 
 eta_s_hat_true = f * phi0_s_hat + p1_s_hat_true * epsilon; 
 
@@ -46,9 +46,9 @@ phi0_s_hat_guess = fft2(phi0_s_guess);
 num_iteration = 20;
 
 % Parallel computing
-if isempty(gcp('nocreate'))
-    parpool;
-end
+% if isempty(gcp('nocreate'))
+%     parpool;
+% end
 
 % No parallel
 % options = optimoptions('lsqnonlin', 'Display', 'iter', 'Algorithm', 'trust-region-reflective', 'MaxIterations', num_iteration);
@@ -57,7 +57,7 @@ end
 options = optimoptions('lsqnonlin', 'Display', 'iter', 'Algorithm', 'trust-region-reflective', 'MaxIterations', num_iteration, 'UseParallel', true);
 
 % Compute the cost function
-cost_func = @(phi0_s_hat_guess) cost_function(phi0_s_hat_guess, kx, ky, mu, Bu, K2, eta_s_hat_true);
+cost_func = @(phi0_s_hat_guess) cost_function(phi0_s_hat_guess, f, kx, ky, mu, inv_mu, Bu, epsilon, K2, inv_K2, eta_s_hat_true);
 
 % Run the optimization
 tic;
@@ -73,10 +73,10 @@ toc;
 %% Forward Second round to obtain the velocity field.
 
 % Calculate the surface u
-[u_surface_opt, v_surface_opt] = calculate_surface_u(phi0_s_hat_opt, mu, kx, ky, K2, Kn2, epsilon, Bu);
+[u_surface_opt, v_surface_opt] = calculate_surface_u(phi0_s_hat_opt, mu, inv_mu, kx, ky, K2, inv_K2, epsilon, Bu);
 
 % Calculate the true surface u
-[u_surface_true, v_surface_true] = calculate_surface_u(phi0_s_hat, mu, kx, ky, K2, Kn2, epsilon, Bu);
+[u_surface_true, v_surface_true] = calculate_surface_u(phi0_s_hat, mu, inv_mu, kx, ky, K2, inv_K2, epsilon, Bu);
 
 %% Plotting the difference
 figure('Position', [100, 100, 1200, 400]);

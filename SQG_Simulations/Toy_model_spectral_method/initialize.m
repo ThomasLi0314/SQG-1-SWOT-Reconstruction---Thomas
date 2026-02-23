@@ -27,18 +27,27 @@ y = (0 : Ny - 1) * dy;
 dk = 2 * pi / Nx;
 dl = 2 * pi / Ny;
 
-k_zonal = [0 : Nx/2 -1, -Nx/2 : -1] * dk;
-l_meridional = [0 : Ny/2 -1, -Ny/2 : -1] * dl;
+k_zonal = [0 : (Nx/2 - 1), -Nx/2 : -1] * dk;
+l_meridional = [0 : (Ny/2 - 1), -Ny/2 : -1] * dl;
 
-% [kx, ky] = ndgrid(k_zonal, l_meridional);
-kx = k_zonal;
-ky = l_meridional;
+[kx, ky] = ndgrid(k_zonal, l_meridional);
+% kx = k_zonal;
+% ky = l_meridional;
 
 % Wave number
-K2 = sqrt(kx.^2 + ky.^2);
-K2(1, 1) = 1e-13; % Avoid division by zero
-Kn2 = 1 ./ K2;
-Kn2(1, 1) = 1e16; % Avoid division by zero
+% Wave number
+K2 = kx.^2 + ky.^2;
+K = sqrt(K2);
+
+% Explicitly handle inverse of wave numbers to avoid division by zero
+inv_K = zeros(size(K));
+inv_K(K > 0) = 1 ./ K(K > 0);
+
+inv_K2 = zeros(size(K2));
+inv_K2(K2 > 0) = 1 ./ K2(K2 > 0);
 
 % \mu appears in the \Phi^0 analytic solution.
-mu = sqrt(Bu) * K2;
+mu = sqrt(Bu) * K;
+
+inv_mu = zeros(size(mu));
+inv_mu(mu > 0) = 1 ./ mu(mu > 0);

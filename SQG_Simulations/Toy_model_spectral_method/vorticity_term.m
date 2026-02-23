@@ -1,6 +1,6 @@
 % This function calculated the vorticity term at the surface
 
-function zeta_s_hat = vorticity_term(phi0_s_hat, mu, kx, ky, K2, Bu)
+function zeta_s_hat = vorticity_term(phi0_s_hat, mu, inv_mu, kx, ky, K2, Bu)
     
     % First term % \nabla \Phi_z \cdot \nabla_{zz}
 
@@ -34,9 +34,9 @@ function zeta_s_hat = vorticity_term(phi0_s_hat, mu, kx, ky, K2, Bu)
     I_4_temp = 2 * phi0_s_z .* phi0_s_lap_z;
     I_4 = fft2(I_4_temp);
 
-    % Fiftth term % K2 / \mu \Phi_z \Phi_zz
+    % Fiftth term % K2^2 / \mu \Phi_z \Phi_zz
     I_5_temp = phi0_s_z .* phi0_s_zz;
-    I_5 = fft2(I_5_temp) * K2 ./ mu;
+    I_5 = fft2(I_5_temp) .* K2.^2 .* inv_mu;
 
     % Sixth term $kiy \mu \Phi_y \Phi_z$
     I_6_temp = phi0_s_y .* phi0_s_z;
