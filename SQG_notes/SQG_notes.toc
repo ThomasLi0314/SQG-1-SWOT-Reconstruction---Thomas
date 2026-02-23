@@ -12,16 +12,20 @@
 \contentsline {subsection}{\numberline {3.4}Ertel PV Conservation}{8}{subsection.3.4}%
 \contentsline {section}{\numberline {4}Surface Quasi-Geostrophic Equations}{9}{section.4}%
 \contentsline {subsection}{\numberline {4.1}Surface Buoyancy Induced Dynamics}{10}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}Retriving Vertical Velocity}{11}{subsection.4.2}%
-\contentsline {section}{\numberline {5}$\text {QG}^{+1}$ Model}{12}{section.5}%
-\contentsline {subsection}{\numberline {5.1}$\text {QG}^{+1}$ Vector Field}{13}{subsection.5.1}%
-\contentsline {subsection}{\numberline {5.2}Evolution and Inversion Equations of $\text {QG}^{+1}$}{14}{subsection.5.2}%
-\contentsline {section}{\numberline {6}$\text {SQG}^{+1}$ Model}{16}{section.6}%
-\contentsline {subsection}{\numberline {6.1}$\Phi ^0$ Inversion}{16}{subsection.6.1}%
-\contentsline {subsection}{\numberline {6.2}Higher Order Potential Inversion}{17}{subsection.6.2}%
-\contentsline {section}{\numberline {7}Simulation Set Up}{20}{section.7}%
-\contentsline {subsection}{\numberline {7.1}Inversion Process}{20}{subsection.7.1}%
-\contentsline {subsection}{\numberline {7.2}Pre-Defined Velocity Fields}{21}{subsection.7.2}%
-\contentsline {subsubsection}{\numberline {7.2.1}Toy Model Setup}{21}{subsubsection.7.2.1}%
-\contentsline {subsubsection}{\numberline {7.2.2}Forward Process to get the true velocity fields}{21}{subsubsection.7.2.2}%
-\contentsline {subsubsection}{\numberline {7.2.3}Inversion Process solving the Optimization Problem}{22}{subsubsection.7.2.3}%
+\contentsline {subsection}{\numberline {4.2}Retriving Vertical Velocity}{10}{subsection.4.2}%
+\contentsline {section}{\numberline {5}$\text {QG}^{+1}$ Model}{11}{section.5}%
+\contentsline {subsection}{\numberline {5.1}$\text {QG}^{+1}$ Vector Field}{12}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Evolution and Inversion Equations of $\text {QG}^{+1}$}{13}{subsection.5.2}%
+\contentsline {section}{\numberline {6}$\text {SQG}^{+1}$ Model}{15}{section.6}%
+\contentsline {subsection}{\numberline {6.1}$\Phi ^0$ Inversion}{15}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}Higher Order Potential Inversion}{16}{subsection.6.2}%
+\contentsline {section}{\numberline {7}Simulation Set Up}{19}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Inversion Process (Primal Space)}{19}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}Inversion Process (Spectral Space)}{20}{subsection.7.2}%
+\contentsline {subsubsection}{\numberline {7.2.1}First Order Potential}{20}{subsubsection.7.2.1}%
+\contentsline {subsubsection}{\numberline {7.2.2}Surface Ageostrophic Vorticity}{20}{subsubsection.7.2.2}%
+\contentsline {subsubsection}{\numberline {7.2.3}Surface Cyclogeostrophic Correction}{21}{subsubsection.7.2.3}%
+\contentsline {subsection}{\numberline {7.3}Pre-Defined Velocity Fields}{22}{subsection.7.3}%
+\contentsline {subsubsection}{\numberline {7.3.1}Toy Model Setup}{22}{subsubsection.7.3.1}%
+\contentsline {subsubsection}{\numberline {7.3.2}Forward Process to get the true velocity fields}{22}{subsubsection.7.3.2}%
+\contentsline {subsubsection}{\numberline {7.3.3}Inversion Process solving the Optimization Problem}{23}{subsubsection.7.3.3}%

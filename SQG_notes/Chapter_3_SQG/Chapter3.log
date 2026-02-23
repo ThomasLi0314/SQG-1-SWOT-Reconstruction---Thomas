@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.10.2)  4 FEB 2026 17:49
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.10.2)  22 FEB 2026 21:11
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -885,7 +885,7 @@ File: t1ppl.fd 2001/06/04 font definitions for T1/ppl.
 \c@solution=\count367
 \c@problem=\count368
 \c@property=\count369
-\c@equations=\count370
+\c@formula=\count370
 \c@definition=\count371
 \c@corollary=\count372
 \c@lemma=\count373
@@ -906,7 +906,7 @@ File: lstlang1.sty 2024/02/21 1.10 listings language file
 \email@toks=\toks61
 \c@email@counter=\count383
 \affiliationsSep=\skip80
-LaTeX Font Info:    Trying to load font information for OT1+phv on input line 696.
+LaTeX Font Info:    Trying to load font information for OT1+phv on input line 726.
  (d:/Program Files/texlive/2024/texmf-dist/tex/latex/psnfss/ot1phv.fd
 File: ot1phv.fd 2020/03/25 scalable font definitions for OT1/phv.
 ) (d:/Program Files/texlive/2024/texmf-dist/tex/latex/titlesec/titlesec.sty
@@ -1032,6 +1032,10 @@ Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
 )
 Package pdflscape Info: Auto-detected driver: dvipdfm (xetex) on input line 98.
 ))
+LaTeX Font Info:    Trying to load font information for T1+lmss on input line 5.
+ (d:/Program Files/texlive/2024/texmf-dist/tex/latex/lm/t1lmss.fd
+File: t1lmss.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
 LaTeX Font Info:    Trying to load font information for OT1+ppl on input line 11.
  (d:/Program Files/texlive/2024/texmf-dist/tex/latex/psnfss/ot1ppl.fd
 File: ot1ppl.fd 2001/06/04 font definitions for OT1/ppl.
@@ -1084,7 +1088,7 @@ LaTeX Warning: Reference `F^1 fourier transform' on page 1 undefined on input li
 
 LaTeX Warning: Reference `G^1 fourier transform' on page 1 undefined on input line 40.
 
-Package marginnote Info: Margin note 1.1 is on absolute page 2 on input line 40.
+Package marginnote Info: Margin note 1.1 is on absolute page 1 on input line 40.
 Package marginnote Info: right page because not two side mode on input line 40.
 Package marginnote Info: xpos seems to be 119.80896pt on input line 40.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
@@ -1098,45 +1102,79 @@ LaTeX Font Info:    Font shape `U/msb/m/n' will be
 [1
 
 ]
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 47.
+
+LaTeX Warning: Reference `cyclogeostrophic correction' on page 2 undefined on input line 46.
+
+Package marginnote Info: Margin note 2.1 is on absolute page 2 on input line 50.
+Package marginnote Info: right page because not two side mode on input line 50.
+Package marginnote Info: xpos seems to be 407.93158pt on input line 50.
+
+LaTeX Warning: Reference `Fourier transform of Phi^1' on page 2 undefined on input line 62.
+
+
+LaTeX Warning: Reference `G^1 fourier transform' on page 2 undefined on input line 64.
+
+
+LaTeX Warning: Reference `F^1 fourier transform' on page 2 undefined on input line 66.
+
+[2]
+
+LaTeX Warning: Reference `cyclogeostrophic correction' on page 3 undefined on input line 69.
+
+
+LaTeX Warning: Reference `vorticity in terms of potentials' on page 3 undefined on input line 71.
+
+Package marginnote Info: right page because not two side mode on input line 75.
+Package marginnote Info: xpos seems to be \@mn@currxpos  on input line 75.
+Package marginnote Info: Margin note 3.2 is on absolute page 3 on input line 75.
+Package marginnote Info: right page because not two side mode on input line 75.
+Package marginnote Info: xpos seems to be 300.85016pt on input line 75.
+Package hyperref Info: bookmark level for unknown formula defaults to 0 on input line 94.
+[3]
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 121.
  (d:/Program Files/texlive/2024/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 
-LaTeX Warning: Reference `Fourier transform of Phi^1' on page 2 undefined on input line 71.
+LaTeX Warning: Reference `Fourier transform of Phi^1' on page 4 undefined on input line 145.
 
 
-LaTeX Warning: Reference `F^1 fourier transform' on page 2 undefined on input line 71.
+LaTeX Warning: Reference `F^1 fourier transform' on page 4 undefined on input line 145.
 
 
-LaTeX Warning: Reference `G^1 fourier transform' on page 2 undefined on input line 71.
+LaTeX Warning: Reference `G^1 fourier transform' on page 4 undefined on input line 145.
 
+[4]
 
-LaTeX Warning: Reference `cyclogeostrophic correction' on page 2 undefined on input line 75.
+LaTeX Warning: Reference `cyclogeostrophic correction' on page 5 undefined on input line 149.
 
-[2]
-Package marginnote Info: Margin note 3.1 is on absolute page 3 on input line 124.
-Package marginnote Info: right page because not two side mode on input line 124.
-Package marginnote Info: xpos seems to be 168.2814pt on input line 124.
- [3] (./Chapter3.aux)
+[5]
+Package marginnote Info: Margin note 6.1 is on absolute page 6 on input line 198.
+Package marginnote Info: right page because not two side mode on input line 198.
+Package marginnote Info: xpos seems to be 168.2814pt on input line 198.
+ [6] (./Chapter3.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
 
 
+LaTeX Font Warning: Size substitutions with differences
+(Font)              up to 0.43996pt have occurred.
+
+
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `Chapter3.out' has not changed.
-(rerunfilecheck)             Checksum: 3604085FCA56F9F10FA56C9EBB159119;1280.
+(rerunfilecheck)             Checksum: 758FA2E1DBA3FD08ADD629D45AED6935;2259.
  ) 
 Here is how much of TeX's memory you used:
- 34168 strings out of 474773
- 662030 string characters out of 5755059
- 2008842 words of memory out of 5000000
- 55694 multiletter control sequences out of 15000+600000
- 597080 words of font info for 117 fonts, out of 8000000 for 9000
+ 34339 strings out of 474773
+ 665782 string characters out of 5755059
+ 2010842 words of memory out of 5000000
+ 55860 multiletter control sequences out of 15000+600000
+ 622640 words of font info for 145 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 136i,12n,138p,657b,1575s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 136i,20n,138p,657b,1741s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on Chapter3.pdf (3 pages).
+Output written on Chapter3.pdf (6 pages).
