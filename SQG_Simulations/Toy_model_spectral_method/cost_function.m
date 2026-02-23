@@ -1,10 +1,10 @@
-function cost = cost_function(phi0_s_hat_guess, f, kx, ky, mu, Bu, epsilon, K2, inv_K2, eta_s_hat_true)
+function cost = cost_function(phi0_s_hat_guess, f, kx, ky, mu, inv_mu, Bu, epsilon, K2, inv_K2, eta_s_hat_true)
 
     % this function compute the cost function for the optimization
 
     % cyclogeo term
     cyclogeo_term_guess = cyclogeo_term(phi0_s_hat_guess, kx, ky);
-    vorticity_term_guess = vorticity_term(phi0_s_hat_guess, mu, kx, ky, K2, Bu);
+    vorticity_term_guess = vorticity_term(phi0_s_hat_guess, mu, inv_mu, kx, ky, K2, Bu);
 
     % p1 guess field
     % The equation is \nabla^2 p^1 = f \zeta^1 + 2J
