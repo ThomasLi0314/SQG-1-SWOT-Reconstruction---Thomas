@@ -3,13 +3,13 @@
 % Everythin is at the surface and 
 
 function J_Phi_s_hat = cyclogeo_term(phi0_s_hat, kx, ky)
-    phi0_s_xx = irfft2(phi0_s_hat .* (-1) .* kx .^ 2);
-    phi0_s_yy = irfft2(phi0_s_hat .* (-1) .* ky .^ 2);
-    phi0_s_xy = irfft2(phi0_s_hat .* (-1) .* ky .* kx);
+    phi0_s_xx = ifft2(phi0_s_hat .* (-1) .* kx .^ 2);
+    phi0_s_yy = ifft2(phi0_s_hat .* (-1) .* ky .^ 2);
+    phi0_s_xy = ifft2(phi0_s_hat .* (-1) .* ky .* kx);
 
     % Compute the jacobian
     J_Phi_s = phi0_s_xx .* phi0_s_yy - phi0_s_xy .^ 2;
 
     % Return to spectral space
-    J_Phi_s_hat = 2 * rfft2(J_Phi_s);
+    J_Phi_s_hat = 2 * fft2(J_Phi_s);
 end

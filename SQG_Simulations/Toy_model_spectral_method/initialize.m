@@ -12,7 +12,7 @@
 Bu = 1; %Burger number
 f = 1; %Coriolis parameter
 % N = 1; % Brunt Vaisala frequency
-epsilon = Ro
+epsilon = Ro;
 
 % grid spacing
 dx = Lx / Nx;
@@ -30,7 +30,9 @@ dl = 2 * pi / Ny;
 k_zonal = [0 : Nx/2 -1, -Nx/2 : -1] * dk;
 l_meridional = [0 : Ny/2 -1, -Ny/2 : -1] * dl;
 
-[kx, ky] = ndgrid(k_zonal, l_meridional);
+% [kx, ky] = ndgrid(k_zonal, l_meridional);
+kx = k_zonal;
+ky = l_meridional;
 
 % Wave number
 K2 = sqrt(kx.^2 + ky.^2);

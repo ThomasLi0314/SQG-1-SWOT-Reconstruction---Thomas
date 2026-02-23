@@ -20,7 +20,7 @@ initialize;
 phi0_s = cos(X) + cos(Y);
 
 % Compute the fourier transform 
-phi0_s_hat = rfft2(phi0_s);
+phi0_s_hat = fft2(phi0_s);
 
 %% Forward Part
 % This part derives the true fourier SSH 
@@ -40,7 +40,7 @@ fprintf('True SSH data generated\n');
 % Initial guess very close to the true value
 max_phi0_s = max(phi0_s(:));
 phi0_s_guess = phi0_s + 0.001 * max_phi0_s * randn(Nx, Ny);
-phi0_s_hat_guess = rfft2(phi0_s_guess);
+phi0_s_hat_guess = fft2(phi0_s_guess);
 
 % Optimization options
 num_iteration = 20;
@@ -70,4 +70,45 @@ catch ME
 end
 toc;
 
+%% Forward Second round to obtain the velocity field.
 
+% Calculate the surface u
+[u_surface_opt, v_surface_opt] = calculate_surface_u(phi0_s_hat_opt, mu, kx, ky, K2, Kn2, epsilon, Bu);
+
+% Calculate the true surface u
+[u_surface_true, v_surface_true] = calculate_surface_u(phi0_s_hat, mu, kx, ky, K2, Kn2, epsilon, Bu);
+
+%% Plotting the difference
+figure('Position', [100, 100, 1200, 400]);
+
+% Plot Optimized Surface U
+subplot(1, 3, 1);
+imagesc(x, y, u_surface_opt');
+set(gca, 'YDir', 'normal');
+colorbar;
+title('Optimized u_{surface}');
+xlabel('x'); ylabel('y');
+axis equal tight;
+
+% Plot True Surface U
+subplot(1, 3, 2);
+imagesc(x, y, u_surface_true');
+set(gca, 'YDir', 'normal');
+colorbar;
+title('True u_{surface}');
+xlabel('x'); ylabel('y');
+axis equal tight;
+
+% Plot Difference
+subplot(1, 3, 3);
+u_diff = u_surface_opt - u_surface_true;
+imagesc(x, y, u_diff');
+set(gca, 'YDir', 'normal');
+colorbar;
+title('Difference (Opt - True)');
+xlabel('x'); ylabel('y');
+axis equal tight;
+
+colormap jet;
+sgtitle('Surface Zonal Velocity Comparison');
+saveas(gcf, 'u_surface_comparison.png');
