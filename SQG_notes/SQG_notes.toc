@@ -23,8 +23,9 @@
 \contentsline {subsection}{\numberline {7.1}Inversion Process (Primal Space)}{19}{subsection.7.1}%
 \contentsline {subsection}{\numberline {7.2}Inversion Process (Spectral Space)}{20}{subsection.7.2}%
 \contentsline {subsubsection}{\numberline {7.2.1}First Order Potential}{20}{subsubsection.7.2.1}%
-\contentsline {subsubsection}{\numberline {7.2.2}Surface Ageostrophic Vorticity}{20}{subsubsection.7.2.2}%
-\contentsline {subsubsection}{\numberline {7.2.3}Surface Cyclogeostrophic Correction}{21}{subsubsection.7.2.3}%
+\contentsline {subsubsection}{\numberline {7.2.2}Surface Ageostrophic Vorticity}{21}{subsubsection.7.2.2}%
+\contentsline {subsubsection}{\numberline {7.2.3}Surface Cyclogeostrophic Correction}{22}{subsubsection.7.2.3}%
+\contentsline {subsubsection}{\numberline {7.2.4}Derive the Velocity Field}{22}{subsubsection.7.2.4}%
 \contentsline {subsection}{\numberline {7.3}Pre-Defined Velocity Fields}{22}{subsection.7.3}%
 \contentsline {subsubsection}{\numberline {7.3.1}Toy Model Setup}{22}{subsubsection.7.3.1}%
 \contentsline {subsubsection}{\numberline {7.3.2}Forward Process to get the true velocity fields}{22}{subsubsection.7.3.2}%

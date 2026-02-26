@@ -3,7 +3,7 @@
 % Everythin is at the surface and 
 
 function J_Phi_s_hat = cyclogeo_term(phi0_s_hat, kx, ky)
-    phi0_s_xx = ifft2(phi0_s_hat .* (-1) .* kx .^ 2);
+    phi0_s_xx = ifft2(phi0_s_hat .* (-1) .* kx .^ 2);  
     phi0_s_yy = ifft2(phi0_s_hat .* (-1) .* ky .^ 2);
     phi0_s_xy = ifft2(phi0_s_hat .* (-1) .* ky .* kx);
 

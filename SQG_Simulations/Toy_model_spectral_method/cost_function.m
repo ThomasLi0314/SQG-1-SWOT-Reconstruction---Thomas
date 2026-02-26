@@ -16,5 +16,14 @@ function cost = cost_function(phi0_s_hat_guess, f, kx, ky, mu, inv_mu, Bu, epsil
 
     % cost function 
     cost = abs(eta_s_hat_guess - eta_s_hat_true);
+
+    cost = norm(cost,2);
+
+    % Optimization method check,
+    % close 
+
+
+    %% check
+   
     
 end

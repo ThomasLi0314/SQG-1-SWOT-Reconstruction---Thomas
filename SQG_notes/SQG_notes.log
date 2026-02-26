@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.10.2)  22 FEB 2026 20:20
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.10.2)  23 FEB 2026 15:32
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1249,20 +1249,18 @@ Package marginnote Info: xpos seems to be 123.60896pt on input line 40.
 Package marginnote Info: Margin note 24.1 is on absolute page 24 on input line 50.
 Package marginnote Info: right page because not two side mode on input line 50.
 Package marginnote Info: xpos seems to be 411.73158pt on input line 50.
-Package marginnote Info: right page because not two side mode on input line 67.
-Package marginnote Info: xpos seems to be \@mn@currxpos  on input line 67.
-Package marginnote Info: Margin note 24.3 is on absolute page 24 on input line 67.
-Package marginnote Info: right page because not two side mode on input line 67.
-Package marginnote Info: xpos seems to be 304.65016pt on input line 67.
  [20]
-Package hyperref Info: bookmark level for unknown formula defaults to 0 on input line 86.
- [21] [22]
-Package marginnote Info: Margin note 27.1 is on absolute page 27 on input line 190.
-Package marginnote Info: right page because not two side mode on input line 190.
-Package marginnote Info: xpos seems to be 172.0814pt on input line 190.
+Package marginnote Info: right page because not two side mode on input line 75.
+Package marginnote Info: xpos seems to be \@mn@currxpos  on input line 75.
+Package marginnote Info: right page because not two side mode on input line 75.
+Package marginnote Info: xpos seems to be \@mn@currxpos  on input line 75.
+Package hyperref Info: bookmark level for unknown formula defaults to 0 on input line 94.
+ [21] [22] [23]
+Package marginnote Info: right page because not two side mode on input line 201.
+Package marginnote Info: xpos seems to be \@mn@currxpos  on input line 201.
 )
 No file SQG_notes.bbl.
-[23] (./SQG_notes.aux)
+[24] (./SQG_notes.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
@@ -1272,16 +1270,25 @@ L3 programming layer <2024-02-20>
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.43996pt have occurred.
 
-Package rerunfilecheck Info: File `SQG_notes.out' has not changed.
-(rerunfilecheck)             Checksum: 19882804F343D1F9513C65163F668F43;6178.
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
+Package rerunfilecheck Warning: File `SQG_notes.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `SQG_notes.out':
+(rerunfilecheck)             Before: 19882804F343D1F9513C65163F668F43;6178
+(rerunfilecheck)             After:  BC911703EEA8D3E85C0659E41DF2E222;6380.
  ) 
 Here is how much of TeX's memory you used:
- 34591 strings out of 474773
- 670511 string characters out of 5755059
- 2009842 words of memory out of 5000000
- 56090 multiletter control sequences out of 15000+600000
+ 34595 strings out of 474773
+ 670571 string characters out of 5755059
+ 2007842 words of memory out of 5000000
+ 56094 multiletter control sequences out of 15000+600000
  657821 words of font info for 207 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 116i,21n,121p,770b,1729s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 116i,21n,121p,770b,1915s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on SQG_notes.pdf (26 pages).
+Output written on SQG_notes.pdf (27 pages).

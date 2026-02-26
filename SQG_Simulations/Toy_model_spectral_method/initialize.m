@@ -10,7 +10,7 @@
 
 
 Bu = 1; %Burger number
-f = 1; %Coriolis parameter
+f = 1; %Coriolis parameter   %%% CHECK
 % N = 1; % Brunt Vaisala frequency
 epsilon = Ro;
 
@@ -41,7 +41,8 @@ K = sqrt(K2);
 
 % Explicitly handle inverse of wave numbers to avoid division by zero
 inv_K = zeros(size(K));
-inv_K(K > 0) = 1 ./ K(K > 0);
+inv_K(K > 0) = 1 ./ K(K > 0); %% this is fine!
+
 
 inv_K2 = zeros(size(K2));
 inv_K2(K2 > 0) = 1 ./ K2(K2 > 0);
